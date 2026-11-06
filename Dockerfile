@@ -7,9 +7,10 @@ ENV CROWDNAV_ENDPOINT=http://http-server:8080
 COPY requirements.txt .
 RUN python -m pip install --no-cache-dir -r requirements.txt
 
-COPY UPISAS/ ./UPISAS/
+COPY UPISAS/__init__.py UPISAS/strategy.py UPISAS/knowledge.py UPISAS/exceptions.py ./UPISAS/
+COPY UPISAS/exemplars/ ./UPISAS/exemplars/
+COPY UPISAS/strategies/ ./UPISAS/strategies/
 COPY run_crawdnav.py .
 COPY run_challenge.py .
 
-EXPOSE 8090
 ENTRYPOINT ["python", "run_crawdnav.py"]

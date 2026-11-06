@@ -5,7 +5,7 @@ This branch contains the CrowdNav strategy, the UPISAS runtime it needs, and a l
 - **`development`**: shared workspace for the strategy, dashboard, tests, and container setup.
 - **`main`**: the three-file submission. Keep dashboard/runtime files off this branch.
 
-The runner connects to CrowdNav over HTTP. CrowdNav's API, Kafka, and SUMO simulation run in a separate repository and Compose stack.
+The strategy runner and optional dashboard connect to CrowdNav independently over HTTP. The strategy image contains no dashboard code; the dashboard image contains no strategy code. CrowdNav's API, Kafka, and SUMO simulation run in a separate repository and Compose stack.
 
 ## 1. Clone into this layout
 
@@ -74,7 +74,7 @@ Confirm the command reply contains `"status":"success"`. After restarting, wait 
 
 This topic preparation is needed after a fresh stack is created. Between experiments, `docker restart crowdnav` is generally enough; use Compose `stop`/`start` to retain containers and Kafka state instead of `down`/`up`.
 
-## 3. Start the strategy and dashboard
+## 3. Start the strategy, optionally with the dashboard
 
 From the CrowdNav folder:
 
@@ -83,17 +83,33 @@ cd ../UPISAS
 docker compose up -d --build
 ```
 
-If an older manually launched runner already owns the name `crawd-strat`, stop/remove that old container first, then rerun Compose. Avoid running two strategy processes against the same simulation.
+This starts only `strategy-runner`. To also build and start the optional dashboard image:
 
-Open **http://localhost:8090/dashboard**.
+```sh
+docker compose --profile dashboard up -d --build
+```
 
-The runner waits for monitoring data, polls the strategy every three seconds, and independently samples dashboard metrics every three seconds. CrowdNav applies commands every ten simulation ticks. The initial policy changes exploration to `0.0` and rerouting to `60`, while keeping `750` cars and preserving the other knobs.
+To observe CrowdNav without running a strategy (for example, for a baseline):
+
+```sh
+docker compose stop strategy-runner
+docker compose --profile dashboard up -d --build dashboard
+```
+
+The dashboard never sends adaptations. To disable a dashboard already running, use `docker compose --profile dashboard stop dashboard`; omitting the profile on a later `up` does not stop an existing container.
+
+If an older manually launched runner already owns the name `crawd-strat`, stop/remove that old container first, then rerun Compose. The previous combined container also owns port 8090, so migrate it before enabling the separate dashboard. Avoid running two strategy processes against the same simulation.
+
+When the dashboard profile is enabled, open **http://localhost:8090/dashboard**.
+
+The strategy waits for monitoring data and polls every three seconds. The optional dashboard samples independently every three seconds, even when the strategy is stopped. CrowdNav applies commands every ten simulation ticks. The initial policy changes exploration to `0.0` and rerouting to `60`, while keeping `750` cars and preserving the other knobs.
 
 Useful checks:
 
 ```sh
 docker compose ps
 docker compose logs --tail 60 strategy-runner
+docker compose --profile dashboard logs --tail 60 dashboard
 curl -sS http://localhost:8090/api/metrics
 curl -sS http://localhost:8080/monitor/
 ```
@@ -104,9 +120,9 @@ The runner joins the external network `fas-net`, created by CrowdNav. Its API ad
 
 Each metric has a history chart and a difference chart. **Δ = current sample − previous sample**, without dividing by elapsed time. Sampling uses fixed scheduled deadlines, independently of strategy execution. Errors, missed slots, and simulation resets break the delta sequence; unchanged snapshots produce zero differences.
 
-Use the time-window and metric selectors, hover over a chart for sample values, or export JSON. The HTTP data endpoint is `/api/metrics`. History retains 1,200 samples in memory (about one hour at three seconds); restarting the runner clears it.
+Use the time-window and metric selectors, hover over a chart for sample values, or export JSON. The HTTP data endpoint is `/api/metrics`. History retains 1,200 samples in memory (about one hour at three seconds); restarting the dashboard clears it. Restarting the strategy leaves dashboard history intact.
 
-The dashboard shows trip duration, trip overhead, completed trips, complaints, active cars, and processing timings. A strategy exception appears on the dashboard while sampling continues.
+The dashboard shows trip duration, trip overhead, completed trips, complaints, active cars, and processing timings. Dashboard status describes the monitoring connection, not whether a strategy is running. Check strategy logs for policy errors; dashboard sampling continues independently.
 
 **The challenge scores median individual-trip overhead.** The dashboard's `total_trip_overhead_average` is a running average; taking a median of its snapshots does not reproduce the grading metric. Five paired-seed evaluations still need to collect individual trip events from `crowd-nav-trips` and compare their per-run medians through tick 10,000.
 
@@ -134,13 +150,14 @@ Main edit points:
 | `UPISAS/strategies/my_strategy.py` | Analyze observations, choose all nine knobs, execute adaptations |
 | `UPISAS/exemplars/crowdnav.py` | API connection and startup readiness |
 | `run_challenge.py` | Submission loop, exiting at the first observed step at or above 10,000 |
-| `run_crawdnav.py` | Continuous development runner with dashboard |
+| `run_crawdnav.py` | Continuous strategy-only development runner |
+| `run_dashboard.py` | Optional read-only dashboard process |
 | `UPISAS/dashboard.py` | Sampling, history, and dashboard HTTP routes |
 | `UPISAS/dashboard.html` | Charts and dashboard UI |
 
-Set `STRATEGY`, `ENDPOINT`, `SAMPLE_INTERVAL`, and `DASHBOARD_PORT` at the top of `run_crawdnav.py`. `ENDPOINT` reads `CROWDNAV_ENDPOINT` from the environment to support Docker and local execution. If changing the dashboard port, update `compose.yaml` too.
+Set `STRATEGY`, `ENDPOINT`, and `POLL_INTERVAL` in `run_crawdnav.py`. Set dashboard `ENDPOINT`, `SAMPLE_INTERVAL`, and `DASHBOARD_PORT` in `run_dashboard.py`. Both endpoints read `CROWDNAV_ENDPOINT` from the environment for Docker/local execution. If changing the dashboard port, update `compose.yaml` too.
 
-After changing code, rebuild/recreate the runner:
+After changing strategy code, rebuild/recreate the runner (use `docker compose --profile dashboard up -d --build` when also updating the dashboard):
 
 ```sh
 docker compose up -d --build
@@ -160,12 +177,12 @@ python3 -m venv .venv
 .venv/bin/python run_crawdnav.py
 ```
 
-The local dashboard is also at http://localhost:8090/dashboard. Ctrl+C stops the local runner. To run the challenge entry point instead, restart CrowdNav, wait for fresh monitoring, then run `.venv/bin/python run_challenge.py`.
+For a local dashboard, run `.venv/bin/python run_dashboard.py` in a second terminal, or leave the optional Docker dashboard running. Stop a Docker dashboard before starting a local one on the same port. Open http://localhost:8090/dashboard. Ctrl+C stops each local process independently. To run the challenge entry point instead, restart CrowdNav, wait for fresh monitoring, then run `.venv/bin/python run_challenge.py`.
 
 You can run the dashboard checks with Docker instead of installing local Python dependencies:
 
 ```sh
-docker compose run --rm --no-deps --entrypoint python strategy-runner \
+docker compose run --rm --no-deps --entrypoint python -v "$PWD:/upisas:ro" strategy-runner \
   -m unittest UPISAS.tests.upisas.test_dashboard -v
 ```
 
@@ -196,7 +213,7 @@ The tree listing must contain only the three required paths. That submission is 
 - **Runner or port conflict:** stop the previous `crawd-strat` container/local runner; only one service can bind host port 8090.
 - **Challenge script exits immediately:** monitoring may still show the previous run above tick 10,000. Wait for the restarted simulation's fresh snapshots.
 
-Stop the runner with `docker compose stop` from `UPISAS/`. Stop CrowdNav with `docker compose stop` from its own folder. To start both again, start CrowdNav first, then the strategy runner.
+Stop the strategy with `docker compose stop strategy-runner` and the dashboard with `docker compose --profile dashboard stop dashboard` from `UPISAS/`. Stop CrowdNav with `docker compose stop` from its own folder. To start both again, start CrowdNav first, then the strategy runner.
 
 ## Upstream code
 

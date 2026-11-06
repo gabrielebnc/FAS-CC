@@ -19,7 +19,6 @@ class MetricHistory:
         self.interval = interval
         self.samples = deque(maxlen=capacity)
         self.lock = Lock()
-        self.strategy_error = None
 
     def record(self, slot, timestamp, payload=None, error=None):
         stats = payload.get("car_stats", {}) if isinstance(payload, dict) else {}
@@ -53,11 +52,7 @@ class MetricHistory:
     def snapshot(self):
         with self.lock:
             return {"interval": self.interval, "capacity": self.samples.maxlen,
-                    "strategy_error": self.strategy_error, "samples": list(self.samples)}
-
-    def set_strategy_error(self, message):
-        with self.lock:
-            self.strategy_error = message
+                    "samples": list(self.samples)}
 
 
 class Dashboard:
