@@ -1,0 +1,14 @@
+#!/bin/sh
+# Check the final tree of every commit being pushed to remote main.
+expected=$(printf '%s\n' UPISAS/exemplars/crowdnav.py UPISAS/strategies/my_strategy.py run_challenge.py)
+while read -r local_ref local_sha remote_ref remote_sha; do
+    [ "$remote_ref" = refs/heads/main ] || continue
+    # A branch deletion has an all-zero local SHA.
+    case "$local_sha" in *[!0]*) ;; *) continue ;; esac
+    actual=$(git ls-tree -r --name-only "$local_sha" | LC_ALL=C sort) || exit 1
+    if [ "$actual" != "$expected" ]; then
+        echo "Push blocked: remote main must contain exactly the three submission files." >&2
+        echo "Push the development branch for dashboard/runtime changes." >&2
+        exit 1
+    fi
+done

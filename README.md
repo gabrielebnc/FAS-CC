@@ -1,34 +1,48 @@
 # CrowdNav challenge: development and dashboard
 
-This branch contains the CrowdNav strategy, the UPISAS runtime it needs, and a live dashboard. A fresh clone can build the runner directly; there is no need to clone the original UPISAS repository or copy its files into this checkout.
+This branch contains the CrowdNav strategy, a tracked UPISAS runtime for the Docker images, and an optional dashboard. For integration with the two original backbones, nest this checkout inside the original UPISAS repository and run the one-time setup below. All development tooling is committed; the submission still consists of exactly three files.
 
 - **`development`**: shared workspace for the strategy, dashboard, tests, and container setup.
 - **`main`**: the three-file submission. Keep dashboard/runtime files off this branch.
 
 The strategy runner and optional dashboard connect to CrowdNav independently over HTTP. The strategy image contains no dashboard code; the dashboard image contains no strategy code. CrowdNav's API, Kafka, and SUMO simulation run in a separate repository and Compose stack.
 
-## 1. Clone into this layout
+## 1. Clone inside the backbone checkout
 
-Install Docker Desktop with Compose v2. Python 3.9+ is needed only if you want to run outside Docker; the runner image supplies Python 3.12.
-
-From a parent directory of your choice:
+Install Docker Desktop with Compose v2 and Python 3.9+. Keep the original two backbone repositories, then clone **this repository inside the original UPISAS checkout**:
 
 ```sh
 mkdir fas-workspace
 cd fas-workspace
 git clone https://github.com/JeremyGDiamond/Crowdnav-FAS2024.git Crowdnav-FAS2024
-git clone --branch development https://github.com/gabrielebnc/FAS-CC.git UPISAS
+git clone https://github.com/S2-group/UPISAS.git UPISAS
+git -C UPISAS clone --branch development https://github.com/gabrielebnc/FAS-CC.git FAS-CC
+cd UPISAS/FAS-CC
+python3 tools/integrate.py
 ```
 
-You should have:
+If both backbones already exist, only run the last three commands from their shared parent. Layout:
 
 ```text
 fas-workspace/
-├── Crowdnav-FAS2024/   # Simulation, Kafka, HTTP API; its own Git repository
-└── UPISAS/            # This repository, checked out on development
+├── Crowdnav-FAS2024/             # Original simulation / Kafka / API repository
+└── UPISAS/                      # Original UPISAS framework repository
+    ├── UPISAS/                  # Framework package; assignment files link below
+    ├── run_challenge.py         # Link into FAS-CC
+    └── FAS-CC/                  # THIS Git repository, on development
+        ├── .git/
+        ├── UPISAS/exemplars/crowdnav.py
+        ├── UPISAS/strategies/my_strategy.py
+        └── run_challenge.py
 ```
 
-Keep these as sibling repositories. Do not nest this checkout inside another UPISAS checkout, replace `.git`, or copy the dashboard into CrowdNav. The sibling names make the commands below convenient; runtime communication uses Docker's network, not relative filesystem paths.
+`tools/integrate.py` uses only Python's standard library and Git. It links the three canonical assignment files from `FAS-CC` into the backbone's expected paths. Existing files are preserved in the backbone's `.fas-cc-backup/`; rerunning setup is safe when links already match. It also installs main-branch commit/push guards and adds local excludes to the parent repository for the nested checkout and new links. If an assignment path was already tracked by the parent, Git will still show its replacement there; commit assignment changes only from the nested FAS-CC repository.
+
+**Edit, commit, and push from `UPISAS/FAS-CC`, not the original UPISAS repository.** The links immediately reflect edits; there is no repeated copying or synchronization step. Backups and links are local setup artifacts, not runtime dependencies of the submitted code. If you move the checkout, rerun setup after resolving any old backups/links.
+
+A clone can physically live inside the CrowdNav backbone instead, but not inside two directories at once. In that layout pass the original framework explicitly: `python3 tools/integrate.py --upisas ../../UPISAS`. Nesting inside the original UPISAS checkout is the documented default.
+
+The development images remain self-contained: all Python runtime and dashboard files they use are tracked in this repository. The backbone UPISAS run uses its original framework plus the three linked assignment files; the submitted code never imports `tools/` or the dashboard.
 
 ## 2. Prepare CrowdNav once
 
@@ -42,7 +56,7 @@ From `fas-workspace/Crowdnav-FAS2024`, edit `crowdnav/knobs.json` and set these 
 Build and start CrowdNav:
 
 ```sh
-cd Crowdnav-FAS2024
+cd ../../Crowdnav-FAS2024
 docker compose up -d --build
 ```
 
@@ -79,7 +93,7 @@ This topic preparation is needed after a fresh stack is created. Between experim
 From the CrowdNav folder:
 
 ```sh
-cd ../UPISAS
+cd ../UPISAS/FAS-CC
 docker compose up -d --build
 ```
 
@@ -128,7 +142,7 @@ The dashboard shows trip duration, trip overhead, completed trips, complaints, a
 
 ## 5. Edit and commit normally
 
-Work from the `UPISAS` repository, on `development` or a feature branch based on it:
+Work from the **nested `UPISAS/FAS-CC` repository**, on `development` or a feature branch based on it:
 
 ```sh
 git pull --ff-only
@@ -139,7 +153,7 @@ git commit -m "Adjust CrowdNav adaptation policy"
 git push -u origin feature/my-policy
 ```
 
-Open a pull request targeting **`development`**. For small shared changes directly on `development`, use `git push origin development` after committing. Git operates on this checkout only; edits to the sibling CrowdNav repository must be committed there separately.
+Open a pull request targeting **`development`**. For small shared changes directly on `development`, use `git push origin development` after committing. Git operates on this checkout only; edits to the backbone repositories must be committed there separately. Confirm `git remote -v` points to `gabrielebnc/FAS-CC`, and use `git -C /path/to/UPISAS/FAS-CC ...` if your terminal is elsewhere.
 
 The tracked `.gitignore` excludes virtual environments, Python caches, results, and legacy files left over from the original local checkout. New strategy modules and development files can be added normally; no local Git allowlist or force-add is needed.
 
@@ -167,19 +181,19 @@ Restart CrowdNav separately when you need to begin from the bad initial configur
 
 ## 6. Run locally and test
 
-For local execution, stop the Docker strategy runner first so only one policy controls CrowdNav:
+For local execution, stop the Docker strategy runner first so only one policy controls CrowdNav. From `UPISAS/FAS-CC`:
 
 ```sh
 docker compose stop strategy-runner
+cd ..
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python -m unittest UPISAS.tests.upisas.test_dashboard -v
-.venv/bin/python run_crawdnav.py
+.venv/bin/python -m run_challenge
 ```
 
-For a local dashboard, run `.venv/bin/python run_dashboard.py` in a second terminal, or leave the optional Docker dashboard running. Stop a Docker dashboard before starting a local one on the same port. Open http://localhost:8090/dashboard. Ctrl+C stops each local process independently. To run the challenge entry point instead, restart CrowdNav, wait for fresh monitoring, then run `.venv/bin/python run_challenge.py`.
+Running `-m run_challenge` from the original UPISAS directory uses the original framework and the linked submission code, stopping at tick 10,000. For a local dashboard, run `../.venv/bin/python run_dashboard.py` from `UPISAS/FAS-CC` in a second terminal, or leave the optional Docker dashboard running. Stop a Docker dashboard before starting a local one on the same port. Open http://localhost:8090/dashboard. Ctrl+C stops each local process independently. For continuous development instead, run `../.venv/bin/python run_crawdnav.py` from the nested repo. Run checks there with `../.venv/bin/python -m unittest UPISAS.tests.upisas.test_integration UPISAS.tests.upisas.test_dashboard -v`.
 
-You can run the dashboard checks with Docker instead of installing local Python dependencies:
+You can run the dashboard checks with Docker instead of installing local Python dependencies (nested integration/guard tests require host Git and run with the local command above):
 
 ```sh
 docker compose run --rm --no-deps --entrypoint python -v "$PWD:/upisas:ro" strategy-runner \
@@ -188,18 +202,20 @@ docker compose run --rm --no-deps --entrypoint python -v "$PWD:/upisas:ro" strat
 
 ## 7. Keep the submission to three files
 
+Setup installs standalone Git hooks into this repository's Git metadata. They persist across branches and worktrees, even though main contains no helper files: a main commit or push is rejected unless its tree has exactly the three required paths. Run `python3 tools/integrate.py --hooks-only` to install the guards without linking backbones. They are local safeguards, not server-side branch protection; do not bypass them with `--no-verify`.
+
 Do not merge the complete development branch into `main` for submission. To transfer a tested policy, use a separate clean worktree so development files stay available:
 
 ```sh
-git worktree add ../FAS-CC-submission main
-git -C ../FAS-CC-submission restore --source development -- \
+git worktree add ../../FAS-CC-submission main
+git -C ../../FAS-CC-submission restore --source development -- \
   UPISAS/exemplars/crowdnav.py UPISAS/strategies/my_strategy.py run_challenge.py
-git -C ../FAS-CC-submission add UPISAS/exemplars/crowdnav.py UPISAS/strategies/my_strategy.py run_challenge.py
-git -C ../FAS-CC-submission diff --cached
+git -C ../../FAS-CC-submission add UPISAS/exemplars/crowdnav.py UPISAS/strategies/my_strategy.py run_challenge.py
+git -C ../../FAS-CC-submission diff --cached
 # If there are intended changes:
-git -C ../FAS-CC-submission commit -m "Update challenge strategy"
-git -C ../FAS-CC-submission ls-tree -r --name-only HEAD
-git -C ../FAS-CC-submission push origin main
+git -C ../../FAS-CC-submission commit -m "Update challenge strategy"
+git -C ../../FAS-CC-submission ls-tree -r --name-only HEAD
+git -C ../../FAS-CC-submission push origin main
 ```
 
 The tree listing must contain only the three required paths. That submission is an overlay for the original UPISAS project; the development branch includes the runtime so collaborators can boot it directly.
@@ -213,7 +229,7 @@ The tree listing must contain only the three required paths. That submission is 
 - **Runner or port conflict:** stop the previous `crawd-strat` container/local runner; only one service can bind host port 8090.
 - **Challenge script exits immediately:** monitoring may still show the previous run above tick 10,000. Wait for the restarted simulation's fresh snapshots.
 
-Stop the strategy with `docker compose stop strategy-runner` and the dashboard with `docker compose --profile dashboard stop dashboard` from `UPISAS/`. Stop CrowdNav with `docker compose stop` from its own folder. To start both again, start CrowdNav first, then the strategy runner.
+Stop the strategy with `docker compose stop strategy-runner` and the dashboard with `docker compose --profile dashboard stop dashboard` from `UPISAS/FAS-CC/`. Stop CrowdNav with `docker compose stop` from its own folder. To start both again, start CrowdNav first, then the strategy runner.
 
 ## Upstream code
 

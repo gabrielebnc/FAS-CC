@@ -1,0 +1,11 @@
+#!/bin/sh
+# On main, the staged tree must contain exactly the assignment's three files.
+branch=$(git symbolic-ref --quiet --short HEAD) || exit 0
+[ "$branch" = main ] || exit 0
+expected=$(printf '%s\n' UPISAS/exemplars/crowdnav.py UPISAS/strategies/my_strategy.py run_challenge.py)
+actual=$(git ls-files | LC_ALL=C sort)
+if [ "$actual" != "$expected" ]; then
+    echo "Commit blocked: main must contain exactly the three submission files." >&2
+    echo "Commit development tooling on development instead." >&2
+    exit 1
+fi
