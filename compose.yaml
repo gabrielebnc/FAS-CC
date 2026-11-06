@@ -1,0 +1,16 @@
+services:
+  strategy-runner:
+    build: .
+    image: upisas-strategy
+    container_name: crawd-strat
+    init: true
+    environment:
+      CROWDNAV_ENDPOINT: http://http-server:8080
+    ports:
+      - "8090:8090"
+    networks:
+      - fas-net
+
+networks:
+  fas-net:
+    external: true
