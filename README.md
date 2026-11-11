@@ -1,15 +1,23 @@
-# CrowdNav challenge: development and dashboard
+# CrowdNav challenge
 
-This branch contains the CrowdNav strategy, a tracked UPISAS runtime for the Docker images, and an optional dashboard. For integration with the two original backbones, nest this checkout inside the original UPISAS repository and run the one-time setup below. All development tooling is committed; the submission still consists of exactly three files.
+The strategy and dashboard run locally in Python. CrowdNav, its HTTP API, and
+Kafka run in the separate CrowdNav backbone repository. The evaluator starts
+isolated backbone containers and runs the strategy as a local subprocess.
 
-- **`development`**: shared workspace for the strategy, dashboard, tests, and container setup.
-- **`main`**: the three-file submission. Keep dashboard/runtime files off this branch.
+- `main` contains exactly the three assignment files.
+- `development` adds the required framework runtime, optional dashboard,
+  evaluator, integration helper, tests, and this guide.
 
-The strategy runner and optional dashboard connect to CrowdNav independently over HTTP. The strategy image contains no dashboard code; the dashboard image contains no strategy code. CrowdNav's API, Kafka, and SUMO simulation run in a separate repository and Compose stack.
+The submitted strategy is [commit 08cdc84](https://github.com/gabrielebnc/FAS-CC/commit/08cdc84d83cff5072df3f161f785d3a11aecc37f).
+It reduced median trip overhead in all five tested seed pairs by 18.02–22.49%.
+The initial correction sets exploration to `0.0` and rerouting to `60`; the
+reactive policy then adjusts rerouting using recent trip overhead. It sends
+all nine knobs and preserves the 750-car workload.
 
-## 1. Clone inside the backbone checkout
+## Set up the repositories
 
-Install Docker Desktop with Compose v2 and Python 3.9+. Keep the original two backbone repositories, then clone **this repository inside the original UPISAS checkout**:
+Install Python 3.9+, Git, and Docker Desktop with Compose v2. To integrate with
+both original backbones, clone this repository inside the original UPISAS checkout:
 
 ```sh
 mkdir fas-workspace
@@ -19,63 +27,55 @@ git clone https://github.com/S2-group/UPISAS.git UPISAS
 git -C UPISAS clone --branch development https://github.com/gabrielebnc/FAS-CC.git FAS-CC
 cd UPISAS/FAS-CC
 python3 tools/integrate.py
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
 ```
 
-If both backbones already exist, only run the last three commands from their shared parent. Layout:
+If both backbones already exist, start with the nested clone command. Layout:
 
 ```text
 fas-workspace/
-├── Crowdnav-FAS2024/             # Original simulation / Kafka / API repository
-└── UPISAS/                      # Original UPISAS framework repository
-    ├── UPISAS/                  # Framework package; assignment files link below
-    ├── run_challenge.py         # Link into FAS-CC
-    └── FAS-CC/                  # THIS Git repository, on development
-        ├── .git/
-        ├── UPISAS/exemplars/crowdnav.py
-        ├── UPISAS/strategies/my_strategy.py
-        └── run_challenge.py
+├── Crowdnav-FAS2024/          # Simulation, Kafka, API
+└── UPISAS/                   # Original framework
+    ├── UPISAS/               # Assignment paths link into FAS-CC
+    ├── run_challenge.py      # Link into FAS-CC
+    └── FAS-CC/               # This repository; edit and commit here
 ```
 
-`tools/integrate.py` uses only Python's standard library and Git. It links the three canonical assignment files from `FAS-CC` into the backbone's expected paths. Existing files are preserved in the backbone's `.fas-cc-backup/`; rerunning setup is safe when links already match. It also installs main-branch commit/push guards and adds local excludes to the parent repository for the nested checkout and new links. If an assignment path was already tracked by the parent, Git will still show its replacement there; commit assignment changes only from the nested FAS-CC repository.
+The helper links the three assignment files into the original framework,
+backs up existing files in the backbone's `.fas-cc-backup/`, and installs
+local Git guards that keep main limited to those three paths. Setup is
+repeatable when the links already match. It refuses conflicting backups or
+hooks. Already-tracked backbone paths may still appear modified there;
+commit assignment changes only from the nested FAS-CC repository.
 
-**Edit, commit, and push from `UPISAS/FAS-CC`, not the original UPISAS repository.** The links immediately reflect edits; there is no repeated copying or synchronization step. Backups and links are local setup artifacts, not runtime dependencies of the submitted code. If you move the checkout, rerun setup after resolving any old backups/links.
+For a checkout elsewhere, pass the framework explicitly with
+`python3 tools/integrate.py --upisas /path/to/original/UPISAS`. For a standalone
+development checkout, `python3 tools/integrate.py --hooks-only` installs only
+the guards. The tracked runtime supports local execution without those links.
 
-A clone can physically live inside the CrowdNav backbone instead, but not inside two directories at once. In that layout pass the original framework explicitly: `python3 tools/integrate.py --upisas ../../UPISAS`. Nesting inside the original UPISAS checkout is the documented default.
+## Prepare CrowdNav
 
-The development images remain self-contained: all Python runtime and dashboard files they use are tracked in this repository. The backbone UPISAS run uses its original framework plus the three linked assignment files; the submitted code never imports `tools/` or the dashboard.
-
-## 2. Prepare CrowdNav once
-
-From `fas-workspace/Crowdnav-FAS2024`, edit `crowdnav/knobs.json` and set these values, leaving the rest unchanged:
-
-```json
-"explorationPercentage": 0.5,
-"reRouteEveryTicks": 600
-```
-
-Build and start CrowdNav:
+In `Crowdnav-FAS2024/crowdnav/knobs.json`, set exploration to `0.5` and
+rerouting to `600`, leaving the other settings unchanged. From that repository:
 
 ```sh
-cd ../../Crowdnav-FAS2024
 docker compose up -d --build
 ```
 
-The challenge's Kafka broker requires aiokafka 0.12.0. If your API requirements already pin that version, no runtime installation is needed. Otherwise apply the challenge fix:
+The old Kafka broker requires `aiokafka==0.12.0`. Prefer pinning it in
+`api/requirements.txt` before building. Otherwise apply the assignment's fix:
 
 ```sh
 docker exec http-server pip install 'aiokafka==0.12.0'
 docker restart http-server
 ```
 
-A runtime installation survives restarts, but must be reapplied when the API container is recreated or rebuilt. Pinning `aiokafka==0.12.0` in the CrowdNav API's requirements and rebuilding makes it persistent.
+A runtime pip fix survives restarts but not container recreation. Check that
+`curl -sS http://localhost:8080/monitor/` eventually returns `car_stats` and
+`configs` rather than `null`.
 
-Wait for the API to start, then check monitoring:
-
-```sh
-curl -sS http://localhost:8080/monitor/
-```
-
-Expect JSON containing `car_stats` and `configs`; during startup it may return `null`. To create the command topic before CrowdNav subscribes, send the initial nine-knob command:
+Create the command topic before restarting the simulation:
 
 ```sh
 curl -sS -X PUT http://localhost:8080/execute/ \
@@ -84,153 +84,154 @@ curl -sS -X PUT http://localhost:8080/execute/ \
 docker restart crowdnav
 ```
 
-Confirm the command reply contains `"status":"success"`. After restarting, wait for monitoring to show a fresh, increasing simulation step. The API may briefly retain an old snapshot.
+The command must return `"status":"success"`. Repeat topic preparation after
+a fresh stack is created. Between runs, restart only `crowdnav`; Compose
+`stop`/`start` retains containers and Kafka state.
 
-This topic preparation is needed after a fresh stack is created. Between experiments, `docker restart crowdnav` is generally enough; use Compose `stop`/`start` to retain containers and Kafka state instead of `down`/`up`.
+## Run the strategy and dashboard
 
-## 3. Start the strategy, optionally with the dashboard
-
-From the CrowdNav folder:
-
-```sh
-cd ../UPISAS/FAS-CC
-docker compose up -d --build
-```
-
-This starts only `strategy-runner`. To also build and start the optional dashboard image:
+From this development repository:
 
 ```sh
-docker compose --profile dashboard up -d --build
+docker restart crowdnav
+# Wait until /monitor/ shows the fresh run near zero and baseline values.
+.venv/bin/python run_challenge.py
 ```
 
-To observe CrowdNav without running a strategy (for example, for a baseline):
+The strategy polls every three seconds and stops at the first observed step
+at or above 10,000. Monitoring can briefly retain the previous run's snapshot
+after a restart. CrowdNav itself continues after the strategy stops. Ctrl+C
+stops the local strategy; `docker stop crowdnav` stops the simulation.
+
+For the optional dashboard, use a second terminal in this repository:
 
 ```sh
-docker compose stop strategy-runner
-docker compose --profile dashboard up -d --build dashboard
+.venv/bin/python run_dashboard.py
 ```
 
-The dashboard never sends adaptations. To disable a dashboard already running, use `docker compose --profile dashboard stop dashboard`; omitting the profile on a later `up` does not stop an existing container.
+Open **http://localhost:8090/dashboard**. It samples independently every three
+seconds, plots metric values and `current − previous` differences, and exposes
+JSON at `/api/metrics`. Errors, missed samples, and simulation resets break the
+difference sequence. History holds 1,200 samples in memory; restarting the
+dashboard clears it. Ctrl+C stops it.
 
-If an older manually launched runner already owns the name `crawd-strat`, stop/remove that old container first, then rerun Compose. The previous combined container also owns port 8090, so migrate it before enabling the separate dashboard. Avoid running two strategy processes against the same simulation.
+The dashboard is read-only and can observe a baseline without a strategy.
+Its cumulative average overhead is not the assignment's individual-trip median.
+Set dashboard timing and port constants in `run_dashboard.py`. Both entry points
+read `CROWDNAV_ENDPOINT`, defaulting to `http://localhost:8080`.
 
-When the dashboard profile is enabled, open **http://localhost:8090/dashboard**.
+Run only one strategy against a simulation. If an old container owns the API or
+dashboard port, stop it before starting these local processes. This repository
+has no strategy/dashboard Dockerfiles or Compose services.
 
-The strategy waits for monitoring data and polls every three seconds. The optional dashboard samples independently every three seconds, even when the strategy is stopped. CrowdNav applies commands every ten simulation ticks. The initial policy changes exploration to `0.0` and rerouting to `60`, while keeping `750` cars and preserving the other knobs.
+To verify the submitted code with the original framework instead, install that
+framework's requirements and run `.venv/bin/python -m run_challenge` from its
+root. The linked assignment files contain no imports of development helpers.
 
-Useful checks:
+## Compare baseline and adaptive runs
 
 ```sh
-docker compose ps
-docker compose logs --tail 60 strategy-runner
-docker compose --profile dashboard logs --tail 60 dashboard
-curl -sS http://localhost:8090/api/metrics
-curl -sS http://localhost:8080/monitor/
+.venv/bin/python tools/evaluate.py --seeds 11 22 33 44 55
 ```
 
-The runner joins the external network `fas-net`, created by CrowdNav. Its API address inside Docker is `http://http-server:8080`; local Python uses `http://localhost:8080`.
+Start with `--seeds 11` for a smoke test. Each baseline/strategy pair starts with
+the exact assignment knobs, 750 cars, and matched Python/SUMO seeds. Fresh Kafka,
+API, and simulation containers isolate each run. The strategy runs locally with
+the evaluator's Python interpreter. The baseline receives no adaptations. Each
+simulation stops after completing tick 10,000.
 
-## 4. Read the dashboard
+The evaluator uses installed backbone images, falling back from stale container
+IDs to their configured tags. If no usable image remains, it rebuilds from the
+sibling `Crowdnav-FAS2024` source. Use `--backbone /path/to/Crowdnav-FAS2024` for a
+different location, or select installed tags with `--crowdnav-image` and
+`--api-image`. The API image itself must contain `aiokafka==0.12.0`; changes made
+only inside an existing container do not carry over.
 
-Each metric has a history chart and a difference chart. **Δ = current sample − previous sample**, without dividing by elapsed time. Sampling uses fixed scheduled deadlines, independently of strategy execution. Errors, missed slots, and simulation resets break the delta sequence; unchanged snapshots produce zero differences.
+Existing development containers are left untouched. Stop unrelated simulations
+to reduce host load: the strategy's three-second polling interval uses wall-clock
+time. Each isolated API gets a free localhost port automatically. Evaluation
+runs do not appear in a dashboard attached to the development API.
 
-Use the time-window and metric selectors, hover over a chart for sample values, or export JSON. The HTTP data endpoint is `/api/metrics`. History retains 1,200 samples in memory (about one hour at three seconds); restarting the dashboard clears it. Restarting the strategy leaves dashboard history intact.
+Results go under `experiments/paired-<timestamp>/`:
 
-The dashboard shows trip duration, trip overhead, completed trips, complaints, active cars, and processing timings. Dashboard status describes the monitoring connection, not whether a strategy is running. Check strategy logs for policy errors; dashboard sampling continues independently.
-
-**The challenge scores median individual-trip overhead.** The dashboard's `total_trip_overhead_average` is a running average; taking a median of its snapshots does not reproduce the grading metric. Five paired-seed evaluations still need to collect individual trip events from `crowd-nav-trips` and compare their per-run medians through tick 10,000.
-
-## 5. Edit and commit normally
-
-Work from the **nested `UPISAS/FAS-CC` repository**, on `development` or a feature branch based on it:
-
-```sh
-git pull --ff-only
-git switch -c feature/my-policy
-# Edit files, run checks, then:
-git add UPISAS/strategies/my_strategy.py
-git commit -m "Adjust CrowdNav adaptation policy"
-git push -u origin feature/my-policy
-```
-
-Open a pull request targeting **`development`**. For small shared changes directly on `development`, use `git push origin development` after committing. Git operates on this checkout only; edits to the backbone repositories must be committed there separately. Confirm `git remote -v` points to `gabrielebnc/FAS-CC`, and use `git -C /path/to/UPISAS/FAS-CC ...` if your terminal is elsewhere.
-
-The tracked `.gitignore` excludes virtual environments, Python caches, results, and legacy files left over from the original local checkout. New strategy modules and development files can be added normally; no local Git allowlist or force-add is needed.
-
-Main edit points:
-
-| File | Purpose |
+| File | Contents |
 | --- | --- |
-| `UPISAS/strategies/my_strategy.py` | Analyze observations, choose all nine knobs, execute adaptations |
-| `UPISAS/exemplars/crowdnav.py` | API connection and startup readiness |
-| `run_challenge.py` | Submission loop, exiting at the first observed step at or above 10,000 |
-| `run_crawdnav.py` | Continuous strategy-only development runner |
-| `run_dashboard.py` | Optional read-only dashboard process |
-| `UPISAS/dashboard.py` | Sampling, history, and dashboard HTTP routes |
-| `UPISAS/dashboard.html` | Charts and dashboard UI |
+| `report.md` | Readable paired comparison |
+| `pairs.csv` | Per-seed medians, percentage reductions, and pass/fail |
+| `runs.csv` | Mean, median, p90/p95, trips, complaints, changes, and runtime |
+| `comparison.json` | Results, completion status, and provenance |
+| `metadata.json` | Images, source hashes, seeds, and Python environment |
+| `<seed>-<policy>/trips.jsonl` | Individual trip events |
+| `<seed>-<policy>/result.json` | Final counters and applied configuration history |
+| `<seed>-<policy>/containers.log` | Backbone logs |
+| `<seed>-strategy/strategy.log` | Local strategy output |
 
-Set `STRATEGY`, `ENDPOINT`, and `POLL_INTERVAL` in `run_crawdnav.py`. Set dashboard `ENDPOINT`, `SAMPLE_INTERVAL`, and `DASHBOARD_PORT` in `run_dashboard.py`. Both endpoints read `CROWDNAV_ENDPOINT` from the environment for Docker/local execution. If changing the dashboard port, update `compose.yaml` too.
+Scores use CrowdNav's normal smart-car trip events after its existing 200-tick
+warmup, through tick 10,000 inclusive. Every paired adaptive median must be
+strictly lower. Check that `completed_pairs` equals `requested_pairs`.
+Exit status is `0` when all requested pairs pass, `1` for a failed comparison,
+and `2` for an execution or validation error. Temporary containers are removed
+after each run; source files are frozen before evaluation. The submitted code
+does not import this instrumentation.
 
-After changing strategy code, rebuild/recreate the runner (use `docker compose --profile dashboard up -d --build` when also updating the dashboard):
-
-```sh
-docker compose up -d --build
-```
-
-Restart CrowdNav separately when you need to begin from the bad initial configuration. The development runner continues indefinitely; the submission runner stops at the challenge horizon.
-
-## 6. Run locally and test
-
-For local execution, stop the Docker strategy runner first so only one policy controls CrowdNav. From `UPISAS/FAS-CC`:
-
-```sh
-docker compose stop strategy-runner
-cd ..
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python -m run_challenge
-```
-
-Running `-m run_challenge` from the original UPISAS directory uses the original framework and the linked submission code, stopping at tick 10,000. For a local dashboard, run `../.venv/bin/python run_dashboard.py` from `UPISAS/FAS-CC` in a second terminal, or leave the optional Docker dashboard running. Stop a Docker dashboard before starting a local one on the same port. Open http://localhost:8090/dashboard. Ctrl+C stops each local process independently. For continuous development instead, run `../.venv/bin/python run_crawdnav.py` from the nested repo. Run checks there with `../.venv/bin/python -m unittest UPISAS.tests.upisas.test_integration UPISAS.tests.upisas.test_dashboard -v`.
-
-You can run the dashboard checks with Docker instead of installing local Python dependencies (nested integration/guard tests require host Git and run with the local command above):
+Regenerate exports without Docker, or combine batches with distinct seeds and
+matching source/image/environment snapshots:
 
 ```sh
-docker compose run --rm --no-deps --entrypoint python -v "$PWD:/upisas:ro" strategy-runner \
-  -m unittest UPISAS.tests.upisas.test_dashboard -v
+.venv/bin/python tools/evaluate.py --report-only experiments/paired-<timestamp>
+.venv/bin/python tools/evaluate.py --report-only experiments/paired-<first> \
+  experiments/paired-<second> --output experiments/combined-results
 ```
 
-## 7. Keep the submission to three files
+The five tested seeds passed. Use fresh seeds after tuning to assess whether
+improvements generalize. Keep generated data local; `experiments/` is ignored.
 
-Setup installs standalone Git hooks into this repository's Git metadata. They persist across branches and worktrees, even though main contains no helper files: a main commit or push is rejected unless its tree has exactly the three required paths. Run `python3 tools/integrate.py --hooks-only` to install the guards without linking backbones. They are local safeguards, not server-side branch protection; do not bypass them with `--no-verify`.
+## Edit, test, and commit
 
-Do not merge the complete development branch into `main` for submission. To transfer a tested policy, use a separate clean worktree so development files stay available:
+Edit and run Git from this repository, not from either backbone. Feature branches
+and pull requests should target `development`. New Python strategy code lives in
+`UPISAS/strategies/my_strategy.py`; the exemplar handles API readiness, and
+`run_challenge.py` controls polling and the horizon. Restart Python after edits.
 
 ```sh
-git worktree add ../../FAS-CC-submission main
-git -C ../../FAS-CC-submission restore --source development -- \
-  UPISAS/exemplars/crowdnav.py UPISAS/strategies/my_strategy.py run_challenge.py
-git -C ../../FAS-CC-submission add UPISAS/exemplars/crowdnav.py UPISAS/strategies/my_strategy.py run_challenge.py
-git -C ../../FAS-CC-submission diff --cached
-# If there are intended changes:
-git -C ../../FAS-CC-submission commit -m "Update challenge strategy"
-git -C ../../FAS-CC-submission ls-tree -r --name-only HEAD
-git -C ../../FAS-CC-submission push origin main
+.venv/bin/python -m unittest UPISAS.tests.upisas.test_integration \
+  UPISAS.tests.upisas.test_evaluation UPISAS.tests.upisas.test_dashboard -v
+git add <changed-files>
+git commit -m "Describe the change"
+git push origin development
 ```
 
-The tree listing must contain only the three required paths. That submission is an overlay for the original UPISAS project; the development branch includes the runtime so collaborators can boot it directly.
+Keep main's tree limited to:
 
-## Troubleshooting and shutdown
+```text
+UPISAS/exemplars/crowdnav.py
+UPISAS/strategies/my_strategy.py
+run_challenge.py
+```
 
-- **Network `fas-net` missing:** start the CrowdNav Compose stack first.
-- **Waiting for monitoring:** check the runner's printed URL/error, API logs, and `/monitor/`. `http-server` resolves inside Docker, while local Python needs localhost.
-- **Commands accepted but values never change:** repeat command-topic preparation and restart CrowdNav; confirm all nine knobs were sent.
-- **Execution errors:** verify the API's aiokafka version and inspect `docker logs http-server`.
-- **Runner or port conflict:** stop the previous `crawd-strat` container/local runner; only one service can bind host port 8090.
-- **Challenge script exits immediately:** monitoring may still show the previous run above tick 10,000. Wait for the restarted simulation's fresh snapshots.
+Never merge the complete development branch into main. Inspect `git worktree list`
+and use an existing main worktree, or create one with `git worktree add
+/path/to/submission main`. From that worktree, after committing the tested changes
+on development:
 
-Stop the strategy with `docker compose stop strategy-runner` and the dashboard with `docker compose --profile dashboard stop dashboard` from `UPISAS/FAS-CC/`. Stop CrowdNav with `docker compose stop` from its own folder. To start both again, start CrowdNav first, then the strategy runner.
+```sh
+git restore --source development -- UPISAS/exemplars/crowdnav.py \
+  UPISAS/strategies/my_strategy.py run_challenge.py
+git add UPISAS/exemplars/crowdnav.py UPISAS/strategies/my_strategy.py run_challenge.py
+git diff --cached
+git commit -m "Update challenge strategy"
+git ls-tree -r --name-only HEAD
+git push origin main
+```
+
+Setup installs main commit/push guards in Git metadata so they persist across
+branches and worktrees. These are local safeguards, not server-side protection;
+each developer must run setup. The three-file submission overlays the original
+UPISAS project and requires its framework and dependencies.
 
 ## Upstream code
 
-The included UPISAS runtime files originate from [S2-group/UPISAS](https://github.com/S2-group/UPISAS), upstream revision `63d7b6606fc04c447cfa9957339e07be5c053757`. The upstream Apache 2.0 license is retained in `LICENSE`.
+The included framework runtime is adapted from
+[S2-group/UPISAS](https://github.com/S2-group/UPISAS), revision
+`63d7b6606fc04c447cfa9957339e07be5c053757`. Its Apache 2.0 license is retained in
+`LICENSE`.

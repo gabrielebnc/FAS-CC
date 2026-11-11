@@ -96,7 +96,7 @@ import UPISAS.strategy
 assert pathlib.Path(UPISAS.strategy.__file__).parent == pathlib.Path(sys.argv[1]) / 'UPISAS'
 assert 'UPISAS.dashboard' not in sys.modules
 assert 'tools.integrate' not in sys.modules
-assert issubclass(run_challenge.MyStrategy, UPISAS.strategy.Strategy)
+assert issubclass(run_challenge.ReactiveStrategy, UPISAS.strategy.Strategy)
 """
         subprocess.run([sys.executable, "-I", "-c", code, str(self.backbone)],
                        check=True, capture_output=True, text=True)

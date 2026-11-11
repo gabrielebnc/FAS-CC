@@ -6,7 +6,6 @@ import time
 import requests
 
 from UPISAS.exemplars.crowdnav import CrowdNav
-from UPISAS.strategies.my_strategy import MyStrategy
 from UPISAS.strategies.my_strategy import ReactiveStrategy
 
 
