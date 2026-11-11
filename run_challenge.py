@@ -6,7 +6,7 @@ import time
 import requests
 
 from UPISAS.exemplars.crowdnav import CrowdNav
-from UPISAS.strategies.my_strategy import MyStrategy
+from UPISAS.strategies.my_strategy import ReactiveStrategy
 
 
 ENDPOINT = os.environ.get("CROWDNAV_ENDPOINT", "http://localhost:8080")
@@ -17,7 +17,7 @@ FINAL_STEP = 10_000
 def main():
     exemplar = CrowdNav(ENDPOINT)
     exemplar.start_run()
-    strategy = MyStrategy(exemplar)
+    strategy = ReactiveStrategy(exemplar)
     last_step = None
 
     while True:
