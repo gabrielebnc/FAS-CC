@@ -1,4 +1,4 @@
-"""Run a selectable CrowdNav strategy and measure overhead over 10,000 new ticks."""
+"""Run a selectable CrowdNav strategy until the absolute simulation horizon."""
 
 import argparse
 import os
@@ -6,8 +6,8 @@ import time
 
 import requests
 
-from exemplars.crowdnav import CrowdNav
-from strategies.crowdnav_strategies import (
+from UPISAS.exemplars.crowdnav import CrowdNav
+from UPISAS.strategies.my_strategy import (
     BaselineStrategy,
     FixedStrategy,
     ReactiveStrategy,
@@ -24,7 +24,7 @@ STRATEGIES = {
 }
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--strategy", choices=STRATEGIES, default="reactive",
@@ -32,9 +32,9 @@ def main():
     )
     parser.add_argument(
         "--steps", type=int, default=RUN_STEPS,
-        help=f"Number of new simulation ticks to measure (default: {RUN_STEPS}).",
+        help=f"Absolute final simulation tick (default: {RUN_STEPS}).",
     )
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     if args.steps <= 0:
         parser.error("--steps must be a positive integer")
 
@@ -63,8 +63,7 @@ def main():
                 start_trips = trips
                 start_overhead_total = trips * cumulative_average
                 print(
-                    f"Measuring {args.steps} new ticks, from step {start_step} "
-                    f"to step {start_step + args.steps}.",
+                    f"Observing from step {start_step} through absolute tick {args.steps}.",
                     flush=True,
                 )
                 print(f"At start: {start_trips} completed trips.", flush=True)
@@ -75,7 +74,7 @@ def main():
                     "Restart this script to take a fresh initial snapshot."
                 )
 
-            if step - start_step >= args.steps:
+            if step >= args.steps:
                 interval_trips = trips - start_trips
                 print(f"\nMeasurement finished at step {step} "
                       f"({step - start_step} ticks observed).", flush=True)
@@ -85,7 +84,7 @@ def main():
                     interval_average = (
                         trips * cumulative_average - start_overhead_total
                     ) / interval_trips
-                    print(f"Average trip overhead during window: "
+                    print(f"Mean trip overhead during observed window (not the grading median): "
                           f"{interval_average:.6f}", flush=True)
                 else:
                     print("No trips completed during window; overhead undefined.", flush=True)

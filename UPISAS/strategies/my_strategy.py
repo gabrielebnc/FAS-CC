@@ -126,6 +126,9 @@ class ReactiveStrategy(FixedStrategy):
             self.window_start = self._snapshot(stats)
             return False
 
+        if self.phase == "request_change":
+            # Keep a failed HTTP command retryable before waiting for application.
+            return True
 
         if self.phase == "await_application":
             if (current_reroute == self.target_reroute
@@ -199,6 +202,11 @@ class ReactiveStrategy(FixedStrategy):
 
     def _request_change(self, target):
         self.target_reroute = target
-        self.phase = "await_application"
+        self.phase = "request_change"
         self.knowledge.analysis_data["target_reroute"] = target
         return True
+
+    def execute(self, adaptation=None, endpoint_suffix="execute", with_validation=False):
+        result = super().execute(adaptation, endpoint_suffix, with_validation)
+        self.phase = "await_application"
+        return result
