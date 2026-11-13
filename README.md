@@ -8,10 +8,14 @@ isolated backbone containers and runs the strategy as a local subprocess.
 - `development` adds the required framework runtime, optional dashboard,
   evaluator, integration helper, tests, and this guide.
 
-The submitted strategy is [commit 08cdc84](https://github.com/gabrielebnc/FAS-CC/commit/08cdc84d83cff5072df3f161f785d3a11aecc37f).
-It reduced median trip overhead in all five tested seed pairs by 18.02–22.49%.
+The current submission is [commit 2b5de99](https://github.com/gabrielebnc/FAS-CC/commit/2b5de99).
+Its trial-and-rollback policy passed the latest seed-11 test: median overhead
+2.474374 baseline versus 2.012015 adaptive, an 18.69% reduction over 10,000 ticks.
+The previous policy passed five seed pairs on 2026-11-11; those results do not
+constitute a five-seed evaluation of this updated policy.
 The initial correction sets exploration to `0.0` and rerouting to `60`; the
-reactive policy then adjusts rerouting using recent trip overhead. It sends
+reactive policy waits for application, tests rerouting changes using recent trip
+overhead, and rolls back changes that make the measured window worse. It sends
 all nine knobs and preserves the 750-car workload.
 
 ## Set up the repositories
@@ -98,10 +102,16 @@ docker restart crowdnav
 .venv/bin/python run_challenge.py
 ```
 
-The strategy polls every three seconds and stops at the first observed step
+The strategy polls every second and stops at the first observed step
 at or above 10,000. Monitoring can briefly retain the previous run's snapshot
 after a restart. CrowdNav itself continues after the strategy stops. Ctrl+C
 stops the local strategy; `docker stop crowdnav` stops the simulation.
+
+Select a policy explicitly with `--strategy baseline`, `--strategy fixed`, or
+`--strategy reactive` (the default). `--steps` sets an **absolute final simulation
+tick**, defaulting to 10,000; it does not add another 10,000 ticks after attaching.
+The printed observed-window mean is diagnostic, not the assignment's median.
+Use the evaluator below for the full individual-trip comparison.
 
 For the optional dashboard, use a second terminal in this repository:
 
@@ -148,7 +158,7 @@ different location, or select installed tags with `--crowdnav-image` and
 only inside an existing container do not carry over.
 
 Existing development containers are left untouched. Stop unrelated simulations
-to reduce host load: the strategy's three-second polling interval uses wall-clock
+to reduce host load: the strategy's one-second polling interval uses wall-clock
 time. Each isolated API gets a free localhost port automatically. Evaluation
 runs do not appear in a dashboard attached to the development API.
 
@@ -183,8 +193,9 @@ matching source/image/environment snapshots:
   experiments/paired-<second> --output experiments/combined-results
 ```
 
-The five tested seeds passed. Use fresh seeds after tuning to assess whether
-improvements generalize. Keep generated data local; `experiments/` is ignored.
+The updated policy has passed one seed pair; run all five before claiming the
+assignment objective for this version. Use fresh seeds after tuning to assess
+whether improvements generalize. Keep generated data local; `experiments/` is ignored.
 
 ## Edit, test, and commit
 
@@ -195,7 +206,8 @@ and pull requests should target `development`. New Python strategy code lives in
 
 ```sh
 .venv/bin/python -m unittest UPISAS.tests.upisas.test_integration \
-  UPISAS.tests.upisas.test_evaluation UPISAS.tests.upisas.test_dashboard -v
+  UPISAS.tests.upisas.test_evaluation UPISAS.tests.upisas.test_dashboard \
+  UPISAS.tests.upisas.test_submission -v
 git add <changed-files>
 git commit -m "Describe the change"
 git push origin development
