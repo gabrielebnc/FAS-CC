@@ -1,0 +1,92 @@
+{
+  "services": {
+    "kafka": {
+      "image": "spotify/kafka:latest",
+      "environment": {
+        "ADVERTISED_HOST": "kafka",
+        "ADVERTISED_PORT": "9092"
+      },
+      "healthcheck": {
+        "test": [
+          "CMD-SHELL",
+          "bash -c 'echo > /dev/tcp/localhost/9092'"
+        ],
+        "interval": "2s",
+        "timeout": "2s",
+        "retries": 60
+      }
+    },
+    "http-server": {
+      "image": "crowdnav-sac/api:local",
+      "ports": [
+        "127.0.0.1::8080"
+      ],
+      "depends_on": {
+        "kafka": {
+          "condition": "service_healthy"
+        }
+      },
+      "command": [
+        "uvicorn",
+        "app.main:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8080"
+      ],
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/gbianchi/uni/adapsw/sac/Crowdnav/api/app",
+          "target": "/code/app",
+          "read_only": true
+        },
+        {
+          "type": "bind",
+          "source": "/Users/gbianchi/uni/adapsw/sac/Crowdnav/api/specifications",
+          "target": "/code/specifications",
+          "read_only": true
+        }
+      ]
+    },
+    "crowdnav": {
+      "image": "crowdnav-sac/simulation:local",
+      "depends_on": {
+        "kafka": {
+          "condition": "service_healthy"
+        }
+      },
+      "entrypoint": [
+        "python",
+        "/results/simulation_worker.py"
+      ],
+      "environment": {
+        "SIMULATION_SEED": "534",
+        "SIMULATION_TICKS": "10000",
+        "CROWDNAV_TEST_SCENARIO": "1",
+        "PYTHONHASHSEED": "534",
+        "PYTHONUNBUFFERED": "1"
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/gbianchi/uni/adapsw/sac/Crowdnav/crowdnav",
+          "target": "/app",
+          "read_only": true
+        },
+        {
+          "type": "bind",
+          "source": "/Users/gbianchi/uni/adapsw/sac/experiments/sac-200-scenario-trend/episodes/episode-0034-seed-534/knobs.json",
+          "target": "/app/knobs.json",
+          "read_only": true
+        },
+        {
+          "type": "bind",
+          "source": "/Users/gbianchi/uni/adapsw/sac/experiments/sac-200-scenario-trend/episodes/episode-0034-seed-534",
+          "target": "/results",
+          "read_only": false
+        }
+      ]
+    }
+  }
+}

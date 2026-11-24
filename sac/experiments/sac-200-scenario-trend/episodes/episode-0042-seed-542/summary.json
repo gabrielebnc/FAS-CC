@@ -1,0 +1,154 @@
+{
+  "seed": 542,
+  "final_step": 10000,
+  "trip_count": 2893,
+  "configs": [
+    {
+      "step": 1,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1,
+        "average_edge_duration_factor": 1,
+        "freshness_update_factor": 10,
+        "freshness_cut_off_value": 90,
+        "re_route_every_ticks": 60,
+        "total_car_counter": 750,
+        "edge_average_influence": 140
+      }
+    },
+    {
+      "step": 1860,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1,
+        "average_edge_duration_factor": 1,
+        "freshness_update_factor": 10,
+        "freshness_cut_off_value": 90,
+        "re_route_every_ticks": 57,
+        "total_car_counter": 750,
+        "edge_average_influence": 140
+      }
+    },
+    {
+      "step": 2000,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1,
+        "average_edge_duration_factor": 1,
+        "freshness_update_factor": 10,
+        "freshness_cut_off_value": 90,
+        "re_route_every_ticks": 57,
+        "total_car_counter": 1000,
+        "edge_average_influence": 140
+      }
+    },
+    {
+      "step": 3520,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1,
+        "average_edge_duration_factor": 1,
+        "freshness_update_factor": 10,
+        "freshness_cut_off_value": 90,
+        "re_route_every_ticks": 62,
+        "total_car_counter": 1000,
+        "edge_average_influence": 140
+      }
+    },
+    {
+      "step": 5180,
+      "configuration": {
+        "exploration_percentage": 0.026261293888092042,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1,
+        "average_edge_duration_factor": 1,
+        "freshness_update_factor": 10,
+        "freshness_cut_off_value": 90,
+        "re_route_every_ticks": 71,
+        "total_car_counter": 1000,
+        "edge_average_influence": 140
+      }
+    },
+    {
+      "step": 6840,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1,
+        "average_edge_duration_factor": 1,
+        "freshness_update_factor": 10,
+        "freshness_cut_off_value": 90,
+        "re_route_every_ticks": 54,
+        "total_car_counter": 1000,
+        "edge_average_influence": 140
+      }
+    }
+  ],
+  "warmup_ticks": 200,
+  "smart_car_percentage": 0.2,
+  "map": "./app/map/eichstaedt.net.xml",
+  "sumo_version": [
+    20,
+    "SUMO 1.18.0"
+  ],
+  "published_overhead": 3.520547745477148,
+  "published_duration": 613.3790601243941,
+  "scenario_events": [
+    {
+      "tick": 2000,
+      "event": "population_increased",
+      "target_cars": 1000
+    },
+    {
+      "tick": 3000,
+      "event": "corridor_blocked",
+      "edges": [
+        "2846#5",
+        "-2846#5",
+        "2846#6",
+        "-2846#6"
+      ],
+      "lane_speeds": {
+        "2846#5_0": 0.0,
+        "2846#5_1": 0.0,
+        "-2846#5_0": 0.0,
+        "-2846#5_1": 0.0,
+        "2846#6_0": 0.0,
+        "2846#6_1": 0.0,
+        "-2846#6_0": 0.0,
+        "-2846#6_1": 0.0
+      }
+    },
+    {
+      "tick": 7000,
+      "event": "corridor_reopened",
+      "edges": [
+        "2846#5",
+        "-2846#5",
+        "2846#6",
+        "-2846#6"
+      ],
+      "lane_speeds": {
+        "2846#5_0": 25.0,
+        "2846#5_1": 25.0,
+        "-2846#5_0": 25.0,
+        "-2846#5_1": 25.0,
+        "2846#6_0": 25.0,
+        "2846#6_1": 25.0,
+        "-2846#6_0": 25.0,
+        "-2846#6_1": 25.0
+      }
+    }
+  ],
+  "teleports": 1538,
+  "mean_overhead": 3.521764664849938,
+  "median_overhead": 2.3648054018582214,
+  "p95_overhead": 10.475413592958759,
+  "mean_duration": 613.5910819218803,
+  "p95_duration": 1961.6000000000004,
+  "complaint_rate": 0.23781541652264085
+}

@@ -1,0 +1,33 @@
+{
+  "seed": 11,
+  "horizon": 10000,
+  "metrics": {
+    "Static": {
+      "mean_overhead": 3.1252130143200096,
+      "median_overhead": 2.480960469498876,
+      "p95_overhead": 7.108140492318787,
+      "trips": 2940,
+      "complaints": 708,
+      "complaint_rate": 0.24081632653061225
+    },
+    "Adaptive": {
+      "mean_overhead": 2.3860118150390974,
+      "median_overhead": 2.0385878765152774,
+      "p95_overhead": 4.8278831172166035,
+      "trips": 3847,
+      "complaints": 633,
+      "complaint_rate": 0.16454380036391994
+    }
+  },
+  "reduction_percent": {
+    "mean_overhead": 23.652826091975978,
+    "median_overhead": 17.83069897413369,
+    "p95_overhead": 32.07952034102702
+  },
+  "throughput_increase_percent": 30.850340136054434,
+  "complaint_rate_reduction_percentage_points": 7.627252616669231,
+  "adaptive_lower_mean_windows": 46,
+  "compared_nonempty_windows": 49,
+  "conclusion": "Adaptive performed better on this matched seed pair.",
+  "limits": "One seed pair; comparison includes the initial configuration correction and does not isolate its benefit from subsequent adaptation."
+}

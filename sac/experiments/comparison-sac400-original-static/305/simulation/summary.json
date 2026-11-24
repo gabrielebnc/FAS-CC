@@ -1,0 +1,36 @@
+{
+  "seed": 305,
+  "final_step": 10000,
+  "trip_count": 2581,
+  "configs": [
+    {
+      "step": 1,
+      "configuration": {
+        "exploration_percentage": 0.5,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1,
+        "average_edge_duration_factor": 1,
+        "freshness_update_factor": 10,
+        "freshness_cut_off_value": 90,
+        "re_route_every_ticks": 600,
+        "total_car_counter": 750,
+        "edge_average_influence": 140
+      }
+    }
+  ],
+  "warmup_ticks": 200,
+  "smart_car_percentage": 0.2,
+  "map": "./app/map/eichstaedt.net.xml",
+  "sumo_version": [
+    20,
+    "SUMO 1.18.0"
+  ],
+  "published_overhead": 3.2217982143975963,
+  "published_duration": 546.8342370255618,
+  "mean_overhead": 3.223046489567835,
+  "median_overhead": 2.5061880633051126,
+  "p95_overhead": 7.457310361080712,
+  "mean_duration": 547.0461061604029,
+  "p95_duration": 1379.0,
+  "complaint_rate": 0.2572646261139093
+}

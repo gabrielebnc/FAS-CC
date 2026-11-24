@@ -1,0 +1,17 @@
+{
+  "pid": 14702,
+  "started_utc": "2026-11-24T16:21:59.415723+00:00",
+  "command": [
+    "/usr/bin/caffeinate",
+    "-i",
+    "/Users/gbianchi/uni/adapsw/sac/.venv/bin/python",
+    "-u",
+    "/Users/gbianchi/uni/adapsw/sac/experiments/comparison-scenario-200/evaluate.py"
+  ],
+  "seeds": [
+    601,
+    602,
+    603
+  ],
+  "runs": 9
+}

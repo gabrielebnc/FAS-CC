@@ -1,0 +1,20 @@
+{
+  "images": {
+    "crowdnav": "sha256:fb95ab82babeff993a1965a47bf8609f7bca6a530dc110304b70e7ffd97606db",
+    "api": "sha256:5f575f8dff43842f66b7e04213ebb4c92c7487ba65930177ab488b4bb97d25d4",
+    "strategy": "sha256:299c2181896ebc31d9e820bd70065603909939384646462c3ebf835976d42710"
+  },
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "horizon": 10000,
+  "submission_sha256": {
+    "UPISAS/exemplars/crowdnav.py": "f60dc06e85d4527fd4fe1e89ec588af158d4b7d558f1de0179728112c7fb910a",
+    "UPISAS/strategies/my_strategy.py": "97f341622d85796db6963f00b8ad8d09a4f2caa943cde41ba75a76c8e98ad5e9",
+    "run_challenge.py": "87fbbd807eea467461f3c2fdee3949f44331bb3361d396e8923b03521cdaefa8"
+  }
+}

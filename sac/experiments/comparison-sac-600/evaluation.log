@@ -1,0 +1,38 @@
+Starting development seed 302, sac-200
+Finished development 302 sac-200: mean overhead 2.4532, 3157 trips
+Starting development seed 302, sac-400
+Finished development 302 sac-400: mean overhead 2.3909, 3386 trips
+Starting development seed 302, sac-600
+Finished development 302 sac-600: mean overhead 2.4538, 3179 trips
+Starting development seed 303, sac-200
+Finished development 303 sac-200: mean overhead 2.4373, 3229 trips
+Starting development seed 303, sac-400
+Finished development 303 sac-400: mean overhead 2.3805, 3361 trips
+Starting development seed 303, sac-600
+Finished development 303 sac-600: mean overhead 2.4232, 3344 trips
+Starting development seed 304, sac-200
+Finished development 304 sac-200: mean overhead 2.3588, 3663 trips
+Starting development seed 304, sac-400
+Finished development 304 sac-400: mean overhead 2.4005, 3627 trips
+Starting development seed 304, sac-600
+Finished development 304 sac-600: mean overhead 2.3851, 3643 trips
+Selected SAC-400; starting fresh seeds
+Starting held-out seed 305, sac-400
+Finished held-out 305 sac-400: mean overhead 2.3927, 3368 trips
+Starting held-out seed 305, static
+Finished held-out 305 static: mean overhead 2.3483, 3483 trips
+Starting held-out seed 305, rule-based
+Finished held-out 305 rule-based: mean overhead 2.3901, 3390 trips
+Starting held-out seed 306, sac-400
+Finished held-out 306 sac-400: mean overhead 2.4217, 3279 trips
+Starting held-out seed 306, static
+Finished held-out 306 static: mean overhead 2.3364, 3438 trips
+Starting held-out seed 306, rule-based
+Finished held-out 306 rule-based: mean overhead 2.3884, 3304 trips
+Starting held-out seed 307, sac-400
+Finished held-out 307 sac-400: mean overhead 2.4346, 3053 trips
+Starting held-out seed 307, static
+Finished held-out 307 static: mean overhead 2.3859, 3061 trips
+Starting held-out seed 307, rule-based
+Finished held-out 307 rule-based: mean overhead 2.4234, 3057 trips
+Wrote three 1200-square PNGs, per-seed results and aggregate metrics.

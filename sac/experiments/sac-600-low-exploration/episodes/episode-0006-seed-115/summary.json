@@ -1,0 +1,778 @@
+{
+  "seed": 115,
+  "final_step": 100000,
+  "trip_count": 30455,
+  "configs": [
+    {
+      "step": 1,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1,
+        "average_edge_duration_factor": 1,
+        "freshness_update_factor": 10,
+        "freshness_cut_off_value": 90,
+        "re_route_every_ticks": 60,
+        "total_car_counter": 750,
+        "edge_average_influence": 140
+      }
+    },
+    {
+      "step": 2010,
+      "configuration": {
+        "exploration_percentage": 0.0896233320236206,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 53,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 3820,
+      "configuration": {
+        "exploration_percentage": 0.09311144351959229,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 38,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 5630,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 136,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 7440,
+      "configuration": {
+        "exploration_percentage": 0.015199029445648195,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 41,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 9250,
+      "configuration": {
+        "exploration_percentage": 0.08540425300598145,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 102,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 11060,
+      "configuration": {
+        "exploration_percentage": 0.07901240587234498,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 117,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 12870,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 40,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 14680,
+      "configuration": {
+        "exploration_percentage": 0.046417081356048585,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 46,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 16490,
+      "configuration": {
+        "exploration_percentage": 0.06989712715148926,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 106,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 18300,
+      "configuration": {
+        "exploration_percentage": 0.0030227661132812503,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 136,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 20120,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 40,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 21930,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 33,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 23740,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 44,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 25550,
+      "configuration": {
+        "exploration_percentage": 0.03361082077026367,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 119,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 27360,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 34,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 29170,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 41,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 30980,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 63,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 32790,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 36,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 34600,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 82,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 36420,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 114,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 38230,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 49,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 40040,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 61,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 41850,
+      "configuration": {
+        "exploration_percentage": 0.06168045997619629,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 35,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 43660,
+      "configuration": {
+        "exploration_percentage": 0.07059059143066407,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 37,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 45480,
+      "configuration": {
+        "exploration_percentage": 0.09160678386688233,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 95,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 47290,
+      "configuration": {
+        "exploration_percentage": 0.0898450493812561,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 129,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 49110,
+      "configuration": {
+        "exploration_percentage": 0.024351882934570315,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 48,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 50920,
+      "configuration": {
+        "exploration_percentage": 0.09503707885742188,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 32,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 52730,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 37,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 54550,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 31,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 56360,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 32,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 58170,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 122,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 59980,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 36,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 61790,
+      "configuration": {
+        "exploration_percentage": 0.06692087650299072,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 76,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 63600,
+      "configuration": {
+        "exploration_percentage": 0.020681047439575197,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 44,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 65410,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 44,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 67230,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 115,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 69040,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 31,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 70850,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 33,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 72660,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 54,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 74470,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 40,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 76280,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 119,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 78100,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 34,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 79910,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 35,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 81730,
+      "configuration": {
+        "exploration_percentage": 0.048733878135681155,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 137,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 83550,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 31,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 85360,
+      "configuration": {
+        "exploration_percentage": 0.029560327529907227,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 36,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 87170,
+      "configuration": {
+        "exploration_percentage": 0.06639362573623657,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 58,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 88980,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 54,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 90790,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 58,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 92610,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 57,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 94430,
+      "configuration": {
+        "exploration_percentage": 0.07779065370559693,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 84,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 96240,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 42,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    }
+  ],
+  "warmup_ticks": 200,
+  "smart_car_percentage": 0.2,
+  "map": "./app/map/eichstaedt.net.xml",
+  "sumo_version": [
+    20,
+    "SUMO 1.18.0"
+  ],
+  "published_overhead": 2.38274297926886,
+  "published_duration": 446.8796952981355,
+  "mean_overhead": 2.382821217422822,
+  "median_overhead": 1.988360693505933,
+  "p95_overhead": 4.887612601466036,
+  "mean_duration": 446.89436874076506,
+  "p95_duration": 972.0,
+  "complaint_rate": 0.15334099491052372
+}

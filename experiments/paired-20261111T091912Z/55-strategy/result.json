@@ -1,0 +1,122 @@
+{
+  "seed": 55,
+  "final_step": 10000,
+  "trip_count": 3117,
+  "configs": [
+    {
+      "step": 1,
+      "configs": {
+        "exploration_percentage": 0.5,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1,
+        "average_edge_duration_factor": 1,
+        "freshness_update_factor": 10,
+        "freshness_cut_off_value": 90,
+        "re_route_every_ticks": 600,
+        "total_car_counter": 750,
+        "edge_average_influence": 140
+      }
+    },
+    {
+      "step": 60,
+      "configs": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 60,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 1280,
+      "configs": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 45,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 2520,
+      "configs": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 30,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 4480,
+      "configs": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 45,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 6390,
+      "configs": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 60,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 7670,
+      "configs": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 45,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    },
+    {
+      "step": 8930,
+      "configs": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 30,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    }
+  ],
+  "warmup_ticks": 200,
+  "map": "./app/map/eichstaedt.sumo.cfg",
+  "smart_car_percentage": 0.2
+}

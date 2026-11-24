@@ -1,0 +1,220 @@
+diff --git a/api/app/connectors/KafkaConsumerMonitor.py b/api/app/connectors/KafkaConsumerMonitor.py
+index d61b674..878d947 100644
+--- a/api/app/connectors/KafkaConsumerMonitor.py
++++ b/api/app/connectors/KafkaConsumerMonitor.py
+@@ -1,4 +1,6 @@
+ from aiokafka import AIOKafkaConsumer
++import asyncio
++import logging
+ import json
+ 
+ data_store = {"latest_message": None}
+@@ -6,23 +8,24 @@ data_store = {"latest_message": None}
+ KAFKA_INSTANCE = "kafka:9092"
+ KAFKA_TOPIC = 'crowd-nav-monitored-stats'
+ 
+-consumer = AIOKafkaConsumer( 
+-    KAFKA_TOPIC,
+-    bootstrap_servers=KAFKA_INSTANCE,
+-    value_deserializer=lambda v: json.loads(v.decode('utf-8')),
+-    auto_offset_reset='earliest',
+-    group_id=None)
+-
+ async def connect():
+-    await consumer.start()
+-    try:
+-        print('# KafkaConsumerMonitor Connected!')
+-        # constantly replace with the most up-to-date value
+-        async for message in consumer:
+-            data_store["latest_message"] = message.value   
+-    except Exception as e:
+-        print("Connection to Kafka failed! Error:", e)
+-        raise e
+-    finally:
+-        await consumer.stop()
+-   
+\ No newline at end of file
++    while True:
++        consumer = AIOKafkaConsumer(
++            KAFKA_TOPIC,
++            bootstrap_servers=KAFKA_INSTANCE,
++            value_deserializer=lambda v: json.loads(v.decode('utf-8')),
++            auto_offset_reset='earliest',
++            group_id=None)
++        try:
++            # Kafka may still be starting when the HTTP server becomes ready.
++            await consumer.start()
++            print('# KafkaConsumerMonitor Connected!', flush=True)
++            async for message in consumer:
++                data_store["latest_message"] = message.value
++        except asyncio.CancelledError:
++            raise
++        except Exception:
++            logging.exception('Monitoring consumer disconnected; retrying in 5 seconds')
++        finally:
++            await consumer.stop()
++        await asyncio.sleep(5)
+diff --git a/api/app/routers/execute.py b/api/app/routers/execute.py
+index a94b9bd..9da5da5 100644
+--- a/api/app/routers/execute.py
++++ b/api/app/routers/execute.py
+@@ -2,7 +2,7 @@ import asyncio
+ import logging
+ 
+ from aiokafka import AIOKafkaProducer
+-from kafka.errors import KafkaTimeoutError, KafkaError, KafkaConnectionError
++from aiokafka.errors import KafkaTimeoutError, KafkaError, KafkaConnectionError
+ 
+ from fastapi import APIRouter
+ from pydantic import BaseModel
+@@ -28,7 +28,8 @@ class AdaptationOptions(BaseModel):
+ loop = asyncio.get_event_loop()
+ 
+ KAFKA_INSTANCE = "kafka:9092"
+-kafkaproducer = AIOKafkaProducer(loop=loop, bootstrap_servers=KAFKA_INSTANCE, api_version="0.10.1")
++# Detect the broker version instead of forcing a potentially incompatible format.
++kafkaproducer = AIOKafkaProducer(loop=loop, bootstrap_servers=KAFKA_INSTANCE)
+ 
+ 
+ @router.put("/")
+@@ -36,20 +37,19 @@ async def execute(options: AdaptationOptions):
+ 
+     message = ""
+     status = "error"
+-    await kafkaproducer.start()
+     try:
+-        future = await kafkaproducer.send_and_wait("crowd-nav-commands", json.dumps(options.dict()).encode("ascii"))
+-        # response = await future
++        await kafkaproducer.start()
++        await kafkaproducer.send_and_wait("crowd-nav-commands", json.dumps(options.dict(exclude_none=True)).encode("ascii"))
+         status = "success"
+         message = "The message was successfully sent to the kafka broker, the message is: " + str(options)
+     except KafkaConnectionError:
+-        logging.error("KafkaConnectionError: " + str(KafkaConnectionError))
++        logging.exception("Failed to connect to Kafka")
+         message = "Something went wrong with the connection to Kafka"
+     except KafkaTimeoutError:
+-        logging.error("KafkaTimeoutError: " + str(KafkaTimeoutError))
++        logging.exception("Timed out sending the command to Kafka")
+         message = "While sending the message to the kafka broker a timeout occurred"
+     except KafkaError:
+-        logging.error("KafkaError: " + str(KafkaError))
++        logging.exception("Failed to send the command to Kafka")
+         message = "While sending the message to the kafka broker a KafkaError occurred"
+ 
+     return {"status": status, "message": message}
+diff --git a/api/requirements.txt b/api/requirements.txt
+index b2d8849..513bd49 100644
+--- a/api/requirements.txt
++++ b/api/requirements.txt
+@@ -2,4 +2,5 @@ fastapi==0.104.1
+ uvicorn==0.23.2
+ kafka-python
+ colorama
+-aiokafka
+\ No newline at end of file
++# Keep legacy record-format support for the spotify/kafka 0.10.1.0 broker.
++aiokafka==0.12.0
+diff --git a/crowdnav/app/entity/CarRegistry.py b/crowdnav/app/entity/CarRegistry.py
+index 55bee48..d0b839b 100644
+--- a/crowdnav/app/entity/CarRegistry.py
++++ b/crowdnav/app/entity/CarRegistry.py
+@@ -33,14 +33,14 @@ class CarRegistry(object):
+     # @todo on shortest path possible -> minimal value
+ 
+     @classmethod
+-    def applyCarCounter(cls):
++    def applyCarCounter(cls, tick=0):
+         """ syncs the value of the carCounter to the SUMO simulation """
+         while len(CarRegistry.cars) < cls.totalCarCounter:
+             # to less cars -> add new
+             cls.carIndexCounter += 1
+             c = Car("car-" + str(CarRegistry.carIndexCounter))
+             cls.cars[c.id] = c
+-            c.addToSimulation(0)
++            c.addToSimulation(tick)
+         while len(CarRegistry.cars) > cls.totalCarCounter:
+             # to many cars -> remove cars
+             (k, v) = CarRegistry.cars.popitem()
+diff --git a/crowdnav/app/simulation/Simulation.py b/crowdnav/app/simulation/Simulation.py
+index 8fc3c38..cd21459 100644
+--- a/crowdnav/app/simulation/Simulation.py
++++ b/crowdnav/app/simulation/Simulation.py
+@@ -1,5 +1,6 @@
+ import json
+ import logging
++import os
+ 
+ import traci
+ import traci.constants as tc
+@@ -33,6 +34,42 @@ class Simulation(object):
+     # last tick time
+     lastTick = current_milli_time()
+ 
++    # Optional local stress test. Both directions of the central main road.
++    scenarioEdges = ("2846#5", "-2846#5", "2846#6", "-2846#6")
++    scenarioLaneSpeeds = {}
++    scenarioEvents = []
++
++    @classmethod
++    def applyTestScenario(cls):
++        """Apply events before the named simulation step when explicitly enabled."""
++        if os.environ.get("CROWDNAV_TEST_SCENARIO") != "1":
++            return
++        if cls.tick == 2000:
++            CarRegistry.totalCarCounter = 1000
++            CarRegistry.applyCarCounter(tick=cls.tick)
++            event = dict(tick=cls.tick, event="population_increased", target_cars=1000)
++        elif cls.tick == 3000:
++            cls.scenarioLaneSpeeds = {
++                lane.getID(): traci.lane.getMaxSpeed(lane.getID())
++                for edgeID in cls.scenarioEdges
++                for lane in Network.getEdgeByID(edgeID).getLanes()
++            }
++            for laneID in cls.scenarioLaneSpeeds:
++                traci.lane.setMaxSpeed(laneID, 0.0)
++            event = dict(tick=cls.tick, event="corridor_blocked", edges=cls.scenarioEdges,
++                         lane_speeds={lane: traci.lane.getMaxSpeed(lane)
++                                      for lane in cls.scenarioLaneSpeeds})
++        elif cls.tick == 7000:
++            for laneID, speed in cls.scenarioLaneSpeeds.items():
++                traci.lane.setMaxSpeed(laneID, speed)
++            event = dict(tick=cls.tick, event="corridor_reopened", edges=cls.scenarioEdges,
++                         lane_speeds={lane: traci.lane.getMaxSpeed(lane)
++                                      for lane in cls.scenarioLaneSpeeds})
++        else:
++            return
++        cls.scenarioEvents.append(event)
++        print("Local test scenario " + json.dumps(event), flush=True)
++
+     @classmethod
+     def applyFileConfig(cls):
+         """ reads configs from a json and applies it at realtime to the simulation """
+@@ -67,6 +104,7 @@ class Simulation(object):
+         while 1:
+             # Do one simulation step
+             cls.tick += 1
++            cls.applyTestScenario()
+             traci.simulationStep()
+ 
+             # Log tick duration to kafka
+diff --git a/crowdnav/knobs.json b/crowdnav/knobs.json
+index 71919f7..df8c1bd 100644
+--- a/crowdnav/knobs.json
++++ b/crowdnav/knobs.json
+@@ -2,7 +2,7 @@
+   "routeRandomSigmaDescription": "the randomization sigma of edge weigths, number 0 to 1",
+   "routeRandomSigma": 0.0,
+   "explorationPercentageDescription": "the percentage of routes we want to use for exploration, number 0 to 1",
+-  "explorationPercentage": 0.0,
++  "explorationPercentage": 0.5,
+   "maxSpeedAndLengthFactorDescription": "how much the length/speed influences the routing, number > 0 to inf",
+   "maxSpeedAndLengthFactor": 1,
+   "averageEdgeDurationFactorDescription": "how much the averageEdgeFactor influences the routing, number > 0 to inf",
+@@ -12,5 +12,5 @@
+   "freshnessCutOffValueDescription": "if data is older than this we do not consider it in the algorithm, number 1 to inf",
+   "freshnessCutOffValue": 90,
+   "reRouteEveryTicksDescription": "check for a new route very x times after the car starts, int 1 to inf",
+-  "reRouteEveryTicks": 60
++  "reRouteEveryTicks": 600
+ }

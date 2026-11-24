@@ -1,0 +1,162 @@
+http-server-1  | INFO:     Started server process [1]
+http-server-1  | INFO:     Waiting for application startup.
+http-server-1  | INFO:     Application startup complete.
+http-server-1  | INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+http-server-1  | INFO:     172.19.0.1:58130 - "GET / HTTP/1.1" 200 OK
+http-server-1  | Topic crowd-nav-monitored-stats is not available during auto-create initialization
+http-server-1  | Topic crowd-nav-monitored-stats is not available during auto-create initialization
+http-server-1  | # KafkaConsumerMonitor Connected!
+kafka-1        | /usr/lib/python2.7/dist-packages/supervisor/options.py:296: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
+kafka-1        |   'Supervisord is running as root and it is searching '
+kafka-1        | 2026-11-22 19:30:04,415 CRIT Supervisor running as root (no user in config file)
+kafka-1        | 2026-11-22 19:30:04,417 WARN Included extra file "/etc/supervisor/conf.d/kafka.conf" during parsing
+kafka-1        | 2026-11-22 19:30:04,417 WARN Included extra file "/etc/supervisor/conf.d/zookeeper.conf" during parsing
+kafka-1        | 2026-11-22 19:30:04,426 INFO RPC interface 'supervisor' initialized
+kafka-1        | 2026-11-22 19:30:04,426 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+kafka-1        | 2026-11-22 19:30:04,426 INFO supervisord started with pid 1
+kafka-1        | 2026-11-22 19:30:05,436 INFO spawned: 'zookeeper' with pid 9
+kafka-1        | 2026-11-22 19:30:05,438 INFO spawned: 'kafka' with pid 10
+kafka-1        | 2026-11-22 19:30:06,525 INFO success: zookeeper entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+kafka-1        | 2026-11-22 19:30:06,526 INFO success: kafka entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+crowdnav-1     | [36m#####################################[39m
+crowdnav-1     | [36m#      Starting CrowdNav v0.2       #[39m
+crowdnav-1     | [36m#####################################[39m
+crowdnav-1     | [33m# Configuration:[39m
+crowdnav-1     | [33m# Kafka-Host   -> kafka:9092[39m
+crowdnav-1     | [33m# Kafka-Topic1 -> crowd-nav-trips[39m
+crowdnav-1     | [33m# Kafka-Topic2 -> crowd-nav-performance[39m
+crowdnav-1     | [32m# StreamForword OK![39m
+crowdnav-1     | [32m# KafkaConnector OK![39m
+crowdnav-1     | [32m# KafkaProducerMonitor Connected![39m
+crowdnav-1     | [32m# SUMO-Dependency check OK![39m
+crowdnav-1     | [36m[32m# Map loading OK! [39m[39m
+crowdnav-1     | [36m[36m# Nodes: 426 / Edges: 1131[39m[39m
+crowdnav-1     |  Retrying in 1 seconds
+crowdnav-1     | [32m
+crowdnav-1     | # SUMO-Application started OK![39m
+crowdnav-1     | [35m# Start adding initial cars to the simulation[39m
+crowdnav-1     | 0 -> Step:100 # Driving cars: 745/750 # avgTripDuration: 0(0) # avgTripOverhead: 0 # totalComplaints: 0
+crowdnav-1     | 0 -> Step:200 # Driving cars: 741/750 # avgTripDuration: 0(0) # avgTripOverhead: 0 # totalComplaints: 0
+crowdnav-1     | 0 -> Step:300 # Driving cars: 737/750 # avgTripDuration: 214.52777777777777(35) # avgTripOverhead: 1.8904638638821838 # totalComplaints: 4
+crowdnav-1     | 0 -> Step:400 # Driving cars: 740/750 # avgTripDuration: 239.13333333333333(59) # avgTripOverhead: 2.0326179229353745 # totalComplaints: 9
+crowdnav-1     | 0 -> Step:500 # Driving cars: 739/750 # avgTripDuration: 282.7282608695652(91) # avgTripOverhead: 2.24416055143709 # totalComplaints: 14
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-58' (No connection between edge '-gneE37' and edge 'gneE37'.).
+crowdnav-1     | 0 -> Step:600 # Driving cars: 740/750 # avgTripDuration: 291.27102803738325(106) # avgTripOverhead: 2.1946727827250814 # totalComplaints: 15
+crowdnav-1     | 0 -> Step:700 # Driving cars: 742/750 # avgTripDuration: 345.08391608391605(142) # avgTripOverhead: 2.321265355920911 # totalComplaints: 25
+crowdnav-1     | 0 -> Step:800 # Driving cars: 744/750 # avgTripDuration: 368.64327485380096(170) # avgTripOverhead: 2.382297261975222 # totalComplaints: 29
+crowdnav-1     | 0 -> Step:900 # Driving cars: 743/750 # avgTripDuration: 389.92999999999984(199) # avgTripOverhead: 2.424545500411509 # totalComplaints: 42
+crowdnav-1     | 0 -> Step:1000 # Driving cars: 739/750 # avgTripDuration: 403.35064935064923(230) # avgTripOverhead: 2.4775206865836332 # totalComplaints: 51
+crowdnav-1     | 0 -> Step:1100 # Driving cars: 737/750 # avgTripDuration: 410.6284584980236(252) # avgTripOverhead: 2.5610466461692356 # totalComplaints: 57
+crowdnav-1     | 0 -> Step:1200 # Driving cars: 738/750 # avgTripDuration: 425.80427046263327(280) # avgTripOverhead: 2.6013654974868103 # totalComplaints: 66
+crowdnav-1     | 0 -> Step:1300 # Driving cars: 734/750 # avgTripDuration: 437.4276527331188(310) # avgTripOverhead: 2.633957475730425 # totalComplaints: 75
+crowdnav-1     | 0 -> Step:1400 # Driving cars: 733/750 # avgTripDuration: 449.3508771929823(341) # avgTripOverhead: 2.704107432394203 # totalComplaints: 90
+crowdnav-1     | 0 -> Step:1500 # Driving cars: 740/750 # avgTripDuration: 450.3217158176942(372) # avgTripOverhead: 2.715212905675547 # totalComplaints: 95
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-360' (No connection between edge '-gneE38' and edge 'gneE38'.).
+crowdnav-1     | 0 -> Step:1600 # Driving cars: 736/750 # avgTripDuration: 452.1576354679801(405) # avgTripOverhead: 2.7831319905043626 # totalComplaints: 102
+crowdnav-1     | 0 -> Step:1700 # Driving cars: 738/750 # avgTripDuration: 461.06481481481467(431) # avgTripOverhead: 2.841688254400822 # totalComplaints: 108
+crowdnav-1     | 0 -> Step:1800 # Driving cars: 738/750 # avgTripDuration: 462.9017467248907(457) # avgTripOverhead: 2.8502333436786476 # totalComplaints: 118
+crowdnav-1     | 0 -> Step:1900 # Driving cars: 745/750 # avgTripDuration: 469.21118012422346(482) # avgTripOverhead: 2.858462433685839 # totalComplaints: 125
+crowdnav-1     | 0 -> Step:2000 # Driving cars: 748/750 # avgTripDuration: 473.2447817836811(526) # avgTripOverhead: 2.8748482202305006 # totalComplaints: 131
+crowdnav-1     | 0 -> Step:2100 # Driving cars: 745/750 # avgTripDuration: 481.24640287769785(555) # avgTripOverhead: 2.9182578664227172 # totalComplaints: 142
+crowdnav-1     | 0 -> Step:2200 # Driving cars: 740/750 # avgTripDuration: 483.0017152658662(582) # avgTripOverhead: 2.909095099286518 # totalComplaints: 146
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-394' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:2300 # Driving cars: 745/750 # avgTripDuration: 488.47641509433964(635) # avgTripOverhead: 2.954840069193385 # totalComplaints: 163
+crowdnav-1     | 0 -> Step:2400 # Driving cars: 742/750 # avgTripDuration: 492.155223880597(669) # avgTripOverhead: 2.9797096951235 # totalComplaints: 172
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-360' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1     | 0 -> Step:2500 # Driving cars: 741/750 # avgTripDuration: 494.66284074605454(696) # avgTripOverhead: 2.9850162768907493 # totalComplaints: 180
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-179' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:2600 # Driving cars: 743/750 # avgTripDuration: 495.22131147540983(731) # avgTripOverhead: 2.955189085214053 # totalComplaints: 191
+crowdnav-1     | 0 -> Step:2700 # Driving cars: 749/750 # avgTripDuration: 492.71523178807945(754) # avgTripOverhead: 2.9423308087975544 # totalComplaints: 195
+crowdnav-1     | 0 -> Step:2800 # Driving cars: 745/750 # avgTripDuration: 491.57377049180326(792) # avgTripOverhead: 2.952411091597354 # totalComplaints: 205
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-515' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:2900 # Driving cars: 745/750 # avgTripDuration: 489.316301703163(821) # avgTripOverhead: 2.9375187004364904 # totalComplaints: 209
+crowdnav-1     | 0 -> Step:3000 # Driving cars: 746/750 # avgTripDuration: 489.37456242707117(856) # avgTripOverhead: 2.9425373087662496 # totalComplaints: 217
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-180' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1     | 0 -> Step:3100 # Driving cars: 744/750 # avgTripDuration: 493.2852348993289(893) # avgTripOverhead: 2.954017852712917 # totalComplaints: 226
+crowdnav-1     | 0 -> Step:3200 # Driving cars: 746/750 # avgTripDuration: 492.13419913419915(923) # avgTripOverhead: 2.9378669870873533 # totalComplaints: 231
+crowdnav-1     | 0 -> Step:3300 # Driving cars: 746/750 # avgTripDuration: 490.13912133891216(955) # avgTripOverhead: 2.935082680626799 # totalComplaints: 236
+crowdnav-1     | 0 -> Step:3400 # Driving cars: 747/750 # avgTripDuration: 489.8191056910569(983) # avgTripOverhead: 2.9607493400756386 # totalComplaints: 243
+crowdnav-1     | 0 -> Step:3500 # Driving cars: 744/750 # avgTripDuration: 489.49655172413793(1014) # avgTripOverhead: 2.964749358110099 # totalComplaints: 253
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-200' (No connection between edge 'gneE7' and edge 'gneE6'.).
+crowdnav-1     | 0 -> Step:3600 # Driving cars: 746/750 # avgTripDuration: 488.6956106870229(1047) # avgTripOverhead: 2.95960570044499 # totalComplaints: 260
+crowdnav-1     | 0 -> Step:3700 # Driving cars: 748/750 # avgTripDuration: 488.22467771639043(1085) # avgTripOverhead: 2.9508757038251754 # totalComplaints: 267
+crowdnav-1     | 0 -> Step:3800 # Driving cars: 742/750 # avgTripDuration: 489.22918531781556(1116) # avgTripOverhead: 2.9563948126271447 # totalComplaints: 276
+crowdnav-1     | 0 -> Step:3900 # Driving cars: 746/750 # avgTripDuration: 490.54821894005215(1150) # avgTripOverhead: 2.9507765722159385 # totalComplaints: 281
+crowdnav-1     | 0 -> Step:4000 # Driving cars: 745/750 # avgTripDuration: 488.3450042698548(1170) # avgTripOverhead: 2.9501974482690776 # totalComplaints: 286
+crowdnav-1     | 0 -> Step:4100 # Driving cars: 745/750 # avgTripDuration: 490.2435362802335(1198) # avgTripOverhead: 2.950154145639817 # totalComplaints: 294
+crowdnav-1     | 0 -> Step:4200 # Driving cars: 744/750 # avgTripDuration: 493.81951219512194(1229) # avgTripOverhead: 2.955084819411209 # totalComplaints: 303
+crowdnav-1     | 0 -> Step:4300 # Driving cars: 747/750 # avgTripDuration: 496.55344418052255(1262) # avgTripOverhead: 2.9520379691694942 # totalComplaints: 313
+crowdnav-1     | 0 -> Step:4400 # Driving cars: 745/750 # avgTripDuration: 498.8511627906977(1289) # avgTripOverhead: 2.9604939272987365 # totalComplaints: 321
+crowdnav-1     | 0 -> Step:4500 # Driving cars: 744/750 # avgTripDuration: 499.5257186081694(1321) # avgTripOverhead: 2.961328722166476 # totalComplaints: 329
+crowdnav-1     | 0 -> Step:4600 # Driving cars: 746/750 # avgTripDuration: 498.56005895357407(1356) # avgTripOverhead: 2.967259502295623 # totalComplaints: 339
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-219' (No connection between edge 'gneE101' and edge 'gneE100'.).
+crowdnav-1     | 0 -> Step:4700 # Driving cars: 746/750 # avgTripDuration: 498.55427749820274(1390) # avgTripOverhead: 2.9648486910058587 # totalComplaints: 348
+crowdnav-1     | 0 -> Step:4800 # Driving cars: 746/750 # avgTripDuration: 500.80350877192984(1424) # avgTripOverhead: 2.965639445145791 # totalComplaints: 355
+crowdnav-1     | 0 -> Step:4900 # Driving cars: 745/750 # avgTripDuration: 502.38588074023306(1458) # avgTripOverhead: 2.97033812312991 # totalComplaints: 368
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-350' (No connection between edge 'gneE8' and edge 'gneE9'.).
+crowdnav-1     | 0 -> Step:5000 # Driving cars: 744/750 # avgTripDuration: 503.19451871657753(1495) # avgTripOverhead: 2.9873386099128245 # totalComplaints: 379
+crowdnav-1     | 0 -> Step:5100 # Driving cars: 745/750 # avgTripDuration: 503.211387434555(1527) # avgTripOverhead: 2.984127245001332 # totalComplaints: 385
+crowdnav-1     | 0 -> Step:5200 # Driving cars: 745/750 # avgTripDuration: 501.83664317745036(1560) # avgTripOverhead: 2.9796289950430173 # totalComplaints: 389
+crowdnav-1     | 0 -> Step:5300 # Driving cars: 741/750 # avgTripDuration: 501.2242462311558(1591) # avgTripOverhead: 2.9735730310271373 # totalComplaints: 395
+crowdnav-1     | 0 -> Step:5400 # Driving cars: 739/750 # avgTripDuration: 500.1806411837238(1621) # avgTripOverhead: 2.969519577059636 # totalComplaints: 398
+crowdnav-1     | 0 -> Step:5500 # Driving cars: 746/750 # avgTripDuration: 499.21109770808204(1657) # avgTripOverhead: 2.972103602973151 # totalComplaints: 403
+crowdnav-1     | 0 -> Step:5600 # Driving cars: 746/750 # avgTripDuration: 499.9715471250741(1686) # avgTripOverhead: 2.9829306961008855 # totalComplaints: 409
+crowdnav-1     | 0 -> Step:5700 # Driving cars: 742/750 # avgTripDuration: 499.9913294797688(1729) # avgTripOverhead: 2.989554257451841 # totalComplaints: 421
+crowdnav-1     | 0 -> Step:5800 # Driving cars: 740/750 # avgTripDuration: 497.908574673481(1760) # avgTripOverhead: 2.9816801514612297 # totalComplaints: 426
+crowdnav-1     | 0 -> Step:5900 # Driving cars: 740/750 # avgTripDuration: 499.1405555555556(1799) # avgTripOverhead: 2.9834247832878478 # totalComplaints: 435
+crowdnav-1     | 0 -> Step:6000 # Driving cars: 746/750 # avgTripDuration: 499.4638157894737(1823) # avgTripOverhead: 2.982817284680956 # totalComplaints: 439
+crowdnav-1     | 0 -> Step:6100 # Driving cars: 741/750 # avgTripDuration: 499.74553329723875(1846) # avgTripOverhead: 2.9857658124853677 # totalComplaints: 447
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-362' (No connection between edge 'gneE98' and edge 'gneE99'.).
+crowdnav-1     | 0 -> Step:6200 # Driving cars: 742/750 # avgTripDuration: 499.6251336898396(1869) # avgTripOverhead: 2.9863989579030847 # totalComplaints: 451
+crowdnav-1     | 0 -> Step:6300 # Driving cars: 738/750 # avgTripDuration: 501.19769874476987(1911) # avgTripOverhead: 3.0071438937907446 # totalComplaints: 468
+crowdnav-1     | 0 -> Step:6400 # Driving cars: 742/750 # avgTripDuration: 503.97223650385604(1944) # avgTripOverhead: 3.0086793990555525 # totalComplaints: 476
+crowdnav-1     | 0 -> Step:6500 # Driving cars: 742/750 # avgTripDuration: 503.5065524193548(1983) # avgTripOverhead: 3.007719620917783 # totalComplaints: 484
+crowdnav-1     | 0 -> Step:6600 # Driving cars: 742/750 # avgTripDuration: 502.5329045027214(2020) # avgTripOverhead: 3.003886020352995 # totalComplaints: 492
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-273' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1     | 0 -> Step:6700 # Driving cars: 744/750 # avgTripDuration: 500.73420796890184(2057) # avgTripOverhead: 2.9967600116403554 # totalComplaints: 499
+crowdnav-1     | 0 -> Step:6800 # Driving cars: 741/750 # avgTripDuration: 500.12211538461537(2079) # avgTripOverhead: 2.9951289605365528 # totalComplaints: 506
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-60' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:6900 # Driving cars: 743/750 # avgTripDuration: 499.01092636579574(2104) # avgTripOverhead: 2.9940000978386307 # totalComplaints: 510
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-725' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-737' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:7000 # Driving cars: 740/750 # avgTripDuration: 499.7906542056075(2139) # avgTripOverhead: 2.9996335707174167 # totalComplaints: 520
+crowdnav-1     | 0 -> Step:7100 # Driving cars: 741/750 # avgTripDuration: 500.05768343331795(2166) # avgTripOverhead: 3.003480460792534 # totalComplaints: 524
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-369' (No connection between edge '-gneE37' and edge 'gneE37'.).
+crowdnav-1     | 0 -> Step:7200 # Driving cars: 742/750 # avgTripDuration: 500.8316651501365(2197) # avgTripOverhead: 2.998917473668938 # totalComplaints: 532
+crowdnav-1     | 0 -> Step:7300 # Driving cars: 743/750 # avgTripDuration: 501.4581280788177(2232) # avgTripOverhead: 2.993871697715216 # totalComplaints: 538
+crowdnav-1     | 0 -> Step:7400 # Driving cars: 742/750 # avgTripDuration: 500.81548672566373(2259) # avgTripOverhead: 2.99150993977371 # totalComplaints: 543
+crowdnav-1     | 0 -> Step:7500 # Driving cars: 740/750 # avgTripDuration: 501.6067073170732(2295) # avgTripOverhead: 2.9909984130778153 # totalComplaints: 547
+crowdnav-1     | 0 -> Step:7600 # Driving cars: 746/750 # avgTripDuration: 500.6382428940569(2321) # avgTripOverhead: 2.984792373913596 # totalComplaints: 553
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-285' (No connection between edge 'gneE98' and edge 'gneE99'.).
+crowdnav-1     | 0 -> Step:7700 # Driving cars: 743/750 # avgTripDuration: 500.2519181585678(2345) # avgTripOverhead: 2.979342075687113 # totalComplaints: 559
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-665' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:7800 # Driving cars: 744/750 # avgTripDuration: 501.5704669751788(2376) # avgTripOverhead: 2.990998179789306 # totalComplaints: 565
+crowdnav-1     | 0 -> Step:7900 # Driving cars: 742/750 # avgTripDuration: 502.299173553719(2419) # avgTripOverhead: 2.9975116681381095 # totalComplaints: 572
+crowdnav-1     | 0 -> Step:8000 # Driving cars: 743/750 # avgTripDuration: 502.47810069586575(2442) # avgTripOverhead: 2.9950777913712665 # totalComplaints: 577
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-237' (No connection between edge '-gneE37' and edge 'gneE37'.).
+crowdnav-1     | 0 -> Step:8100 # Driving cars: 743/750 # avgTripDuration: 503.90157321500607(2478) # avgTripOverhead: 2.9963010504132033 # totalComplaints: 586
+crowdnav-1     | 0 -> Step:8200 # Driving cars: 738/750 # avgTripDuration: 502.0432025366627(2522) # avgTripOverhead: 2.9928840730485655 # totalComplaints: 598
+crowdnav-1     | 0 -> Step:8300 # Driving cars: 743/750 # avgTripDuration: 502.2727987421384(2543) # avgTripOverhead: 2.9918994125534044 # totalComplaints: 600
+crowdnav-1     | 0 -> Step:8400 # Driving cars: 742/750 # avgTripDuration: 502.8172964550058(2566) # avgTripOverhead: 2.99838040269144 # totalComplaints: 606
+crowdnav-1     | 0 -> Step:8500 # Driving cars: 741/750 # avgTripDuration: 503.08198614318707(2597) # avgTripOverhead: 2.998681359237426 # totalComplaints: 611
+crowdnav-1     | 0 -> Step:8600 # Driving cars: 738/750 # avgTripDuration: 504.525494672755(2627) # avgTripOverhead: 3.004020794887112 # totalComplaints: 621
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-632' (No connection between edge 'gneE40' and edge '-gneE40'.).
+crowdnav-1     | 0 -> Step:8700 # Driving cars: 737/750 # avgTripDuration: 505.00150943396227(2649) # avgTripOverhead: 3.006912909578631 # totalComplaints: 627
+crowdnav-1     | 0 -> Step:8800 # Driving cars: 735/750 # avgTripDuration: 505.1752423564504(2681) # avgTripOverhead: 3.007950340537419 # totalComplaints: 637
+crowdnav-1     | 0 -> Step:8900 # Driving cars: 735/750 # avgTripDuration: 505.806797192464(2706) # avgTripOverhead: 3.005907784565824 # totalComplaints: 642
+crowdnav-1     | 0 -> Step:9000 # Driving cars: 738/750 # avgTripDuration: 505.25154939846885(2742) # avgTripOverhead: 3.0011182674997983 # totalComplaints: 653
+crowdnav-1     | 0 -> Step:9100 # Driving cars: 743/750 # avgTripDuration: 504.965991316932(2763) # avgTripOverhead: 3.00289978189934 # totalComplaints: 655
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-273' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:9200 # Driving cars: 745/750 # avgTripDuration: 507.0021513087128(2788) # avgTripOverhead: 3.013956306598867 # totalComplaints: 662
+crowdnav-1     | 0 -> Step:9300 # Driving cars: 739/750 # avgTripDuration: 507.9099002849003(2807) # avgTripOverhead: 3.014036296344847 # totalComplaints: 669
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-361' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:9400 # Driving cars: 747/750 # avgTripDuration: 509.55951960438006(2830) # avgTripOverhead: 3.01640548218701 # totalComplaints: 675
+crowdnav-1     | 0 -> Step:9500 # Driving cars: 747/750 # avgTripDuration: 510.6159496327387(2858) # avgTripOverhead: 3.020245344522197 # totalComplaints: 680
+crowdnav-1     | 0 -> Step:9600 # Driving cars: 747/750 # avgTripDuration: 511.3204018011777(2886) # avgTripOverhead: 3.0242179817256094 # totalComplaints: 685
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-590' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:9700 # Driving cars: 749/750 # avgTripDuration: 513.5677530017155(2914) # avgTripOverhead: 3.041355642717013 # totalComplaints: 697
+crowdnav-1     | 0 -> Step:9800 # Driving cars: 746/750 # avgTripDuration: 514.225356900068(2941) # avgTripOverhead: 3.0422620942423535 # totalComplaints: 700
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-59' (No connection between edge 'gneE11' and edge 'gneE10'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-119' (No connection between edge '-gneE34' and edge 'gneE34'.).
+crowdnav-1     | 0 -> Step:9900 # Driving cars: 745/750 # avgTripDuration: 514.2891809909004(2966) # avgTripOverhead: 3.040084685808546 # totalComplaints: 707
+crowdnav-1     | 0 -> Step:10000 # Driving cars: 744/750 # avgTripDuration: 515.6125498007974(3011) # avgTripOverhead: 3.0458425288754403 # totalComplaints: 718

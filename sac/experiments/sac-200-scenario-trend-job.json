@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "phase": "complete",
+  "pid": 38267,
+  "settings": "/Users/gbianchi/uni/adapsw/sac/SAC_SETTINGS_scenario_200.json",
+  "output": "/Users/gbianchi/uni/adapsw/sac/experiments/sac-200-scenario-trend",
+  "elapsed_seconds": 22314.321671083046,
+  "checkpoint": "/Users/gbianchi/uni/adapsw/sac/experiments/sac-200-scenario-trend/checkpoint-000200",
+  "submission": "/Users/gbianchi/uni/adapsw/sac/experiments/sac-200-scenario-trend-submission",
+  "export_parity": {
+    "model_id": "d89305cefe2f924ddf6c01483755a6df253f25945669d59b6c852fda9d810074",
+    "states_checked": 1002,
+    "max_action_error": 2.2846893213412933e-07,
+    "rounded_rerouting_mismatches": 0,
+    "gradient_updates": 672
+  }
+}

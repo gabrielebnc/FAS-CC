@@ -1,0 +1,11 @@
+{
+  "transitions": 200,
+  "gradient_updates": 168,
+  "replay_size": 200,
+  "actor_changed": true,
+  "critics_changed": true,
+  "targets_changed": true,
+  "entropy_changed": true,
+  "wall_seconds": 7308.35392587501,
+  "performance_claim": "requires held-out evaluation"
+}

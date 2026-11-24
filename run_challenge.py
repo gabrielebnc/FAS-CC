@@ -11,6 +11,7 @@ from UPISAS.strategies.my_strategy import (
     BaselineStrategy,
     FixedStrategy,
     ReactiveStrategy,
+    RuleBasedStrategy,
 )
 
 
@@ -21,6 +22,7 @@ STRATEGIES = {
     "baseline": BaselineStrategy,
     "fixed": FixedStrategy,
     "reactive": ReactiveStrategy,
+    "rule-based": RuleBasedStrategy,
 }
 
 
@@ -28,7 +30,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--strategy", choices=STRATEGIES, default="reactive",
-        help="Strategy to run (default: reactive).",
+        help="Strategy to run (default: reactive; rule-based is an opt-in experiment).",
     )
     parser.add_argument(
         "--steps", type=int, default=RUN_STEPS,
@@ -41,6 +43,7 @@ def main(argv=None):
     exemplar = CrowdNav(ENDPOINT)
     exemplar.start_run()
     strategy = STRATEGIES[args.strategy](exemplar)
+    poll_interval = 0.2 if args.strategy == "rule-based" else POLL_INTERVAL
 
     last_step = None
     start_step = None
@@ -102,7 +105,7 @@ def main(argv=None):
                 last_step = step
         except (requests.RequestException, RuntimeError) as exc:
             print(f"Request failed; retrying: {exc}", flush=True)
-        time.sleep(POLL_INTERVAL)
+        time.sleep(poll_interval)
 
 
 if __name__ == "__main__":

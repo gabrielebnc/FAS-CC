@@ -1,0 +1,116 @@
+{
+  "windows": [
+    {
+      "start_step": 2000,
+      "end_step": 2600,
+      "trips": 205,
+      "rate": 0.3416666666666667
+    },
+    {
+      "start_step": 2600,
+      "end_step": 3200,
+      "trips": 192,
+      "rate": 0.32
+    },
+    {
+      "start_step": 3200,
+      "end_step": 3800,
+      "trips": 193,
+      "rate": 0.32166666666666666
+    },
+    {
+      "start_step": 3800,
+      "end_step": 4400,
+      "trips": 173,
+      "rate": 0.28833333333333333
+    },
+    {
+      "start_step": 4400,
+      "end_step": 5000,
+      "trips": 206,
+      "rate": 0.3433333333333333
+    },
+    {
+      "start_step": 5000,
+      "end_step": 5600,
+      "trips": 191,
+      "rate": 0.31833333333333336
+    },
+    {
+      "start_step": 5600,
+      "end_step": 6200,
+      "trips": 183,
+      "rate": 0.305
+    },
+    {
+      "start_step": 6200,
+      "end_step": 6800,
+      "trips": 210,
+      "rate": 0.35
+    },
+    {
+      "start_step": 6800,
+      "end_step": 7400,
+      "trips": 180,
+      "rate": 0.3
+    },
+    {
+      "start_step": 7400,
+      "end_step": 8000,
+      "trips": 183,
+      "rate": 0.305
+    },
+    {
+      "start_step": 8000,
+      "end_step": 8600,
+      "trips": 185,
+      "rate": 0.30833333333333335
+    },
+    {
+      "start_step": 8600,
+      "end_step": 9200,
+      "trips": 161,
+      "rate": 0.2683333333333333
+    },
+    {
+      "start_step": 9200,
+      "end_step": 9800,
+      "trips": 153,
+      "rate": 0.255
+    }
+  ],
+  "quantile_method": "linear, p=0.1",
+  "summary": {
+    "seed": 101,
+    "final_step": 10000,
+    "trip_count": 3011,
+    "configs": [
+      {
+        "step": 1,
+        "configuration": {
+          "exploration_percentage": 0.5,
+          "route_random_sigma": 0.2,
+          "max_speed_and_length_factor": 1,
+          "average_edge_duration_factor": 1,
+          "freshness_update_factor": 10,
+          "freshness_cut_off_value": 90,
+          "re_route_every_ticks": 600,
+          "total_car_counter": 750,
+          "edge_average_influence": 140
+        }
+      }
+    ],
+    "warmup_ticks": 200,
+    "smart_car_percentage": 0.2,
+    "map": "./app/map/eichstaedt.net.xml",
+    "published_overhead": 3.0458425288754403,
+    "published_duration": 515.6125498007974,
+    "mean_overhead": 3.0468541006219962,
+    "median_overhead": 2.374084868071593,
+    "p95_overhead": 6.976043677050586,
+    "mean_duration": 515.7837927598804,
+    "p95_duration": 1294.0,
+    "complaint_rate": 0.23845898372633675
+  },
+  "limitation": "One static hold calibrates scales, not action settlement timing"
+}

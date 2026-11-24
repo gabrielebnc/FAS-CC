@@ -23,8 +23,10 @@ import uuid
 # Also works when loaded as tools.evaluate by the tests.
 try:
     from .evaluation_simulation import BASELINE, HORIZON
+    from .overhead_logs import export_overheads
 except ImportError:
     from evaluation_simulation import BASELINE, HORIZON
+    from overhead_logs import export_overheads
 
 ROOT = Path(__file__).resolve().parents[1]
 SUBMISSION = ("UPISAS/exemplars/crowdnav.py", "UPISAS/strategies/my_strategy.py", "run_challenge.py")
@@ -81,7 +83,7 @@ def compare(seed, baseline, strategy):
 def write_reports(output, batches):
     """Export auditable run statistics and paired scores, including partial batches."""
     output.mkdir(parents=True, exist_ok=True)
-    runs, pairs, expected = [], [], set()
+    runs, pairs, decisions, evolution, expected = [], [], [], [], set()
     provenance = None
     for batch in batches:
         metadata = json.loads((batch / "metadata.json").read_text())
@@ -89,6 +91,7 @@ def write_reports(output, batches):
         signature["simulation_sha256"] = hashlib.sha256((batch / "evaluation_simulation.py").read_bytes()).hexdigest()
         signature["python_version"] = metadata.get("python_version")
         signature["local_packages"] = metadata.get("local_packages")
+        signature["strategy"] = metadata.get("strategy", "reactive")
         if provenance is not None and signature != provenance:
             raise ValueError("Cannot combine batches with different images, horizons or source snapshots")
         provenance = signature
@@ -101,12 +104,19 @@ def write_reports(output, batches):
                 directory = batch / f"{seed}-{policy}"
                 if (directory / "result.json").exists():
                     scores[policy] = summarize(directory)
+                    evolution.extend({"seed": seed, "policy": policy, **row}
+                                     for row in export_overheads(directory, HORIZON))
                     runs.append({"seed": seed, "policy": policy,
                                  **{k: scores[policy][k] for k in (
                                      "final_step", "trip_count", "median_overhead", "mean_overhead",
                                      "p90_overhead", "p95_overhead", "complaints", "complaint_rate",
                                      "configuration_changes", "wall_seconds_including_startup")},
                                  "data_directory": str(directory.resolve())})
+                    log = directory / "strategy.log"
+                    if log.exists():
+                        for line in log.read_text().splitlines():
+                            if line.startswith("[RuleBased] "):
+                                decisions.append({"seed": seed, **json.loads(line[len("[RuleBased] "):])})
             if len(scores) == 2:
                 pairs.append(compare(seed, scores["baseline"], scores["strategy"]))
     runs.sort(key=lambda row: (row["seed"], row["policy"]))
@@ -115,9 +125,11 @@ def write_reports(output, batches):
               "requested_pairs": len(expected), "requested_seeds": sorted(expected),
               "evaluation_complete": len(pairs) == len(expected),
               "all_tested_seeds_pass": bool(pairs) and all(p["passed"] for p in pairs),
-              "batches": [str(b.resolve()) for b in batches], "provenance": provenance}
+              "batches": [str(b.resolve()) for b in batches], "provenance": provenance,
+              "rule_decisions": len(decisions)}
     (output / "comparison.json").write_text(json.dumps(report, indent=2))
-    for filename, rows in (("runs.csv", runs), ("pairs.csv", pairs)):
+    for filename, rows in (("runs.csv", runs), ("pairs.csv", pairs), ("decisions.csv", decisions),
+                           ("overhead_comparison_200ticks.csv", evolution)):
         if rows:
             with (output / filename).open("w", newline="") as stream:
                 writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
@@ -125,6 +137,7 @@ def write_reports(output, batches):
                 writer.writerows(rows)
     lines = ["# CrowdNav evaluation results", "",
              f"Completed pairs: {len(pairs)}/{len(expected)}. Horizon: {HORIZON:,} ticks per run.", "",
+             f"Adaptive strategy: `{provenance['strategy']}`. Static baseline: exploration `0.5`, rerouting `600` ticks, 750 cars.", "",
              "| Seed | Baseline median | Adaptive median | Reduction | Baseline trips | Adaptive trips | Result |",
              "| --- | ---: | ---: | ---: | ---: | ---: | --- |"]
     for pair in pairs:
@@ -136,11 +149,30 @@ def write_reports(output, batches):
     lines += ["", "Lower median overhead is better; ties fail. A positive reduction means improvement.", "",
               "`runs.csv` includes mean, median, p90/p95, trip count, complaints, configuration changes,",
               "and wall time (including startup). `pairs.csv` contains the paired comparison.", "",
+              "Both run directories contain `overhead_by_tick.csv` (one row for every simulation tick) and",
+              "`overhead_200ticks.csv` (nonoverlapping 200-tick intervals). These include exact completed-trip",
+              "mean/median, cumulative mean/median, counts, and confirmed settings. Blank overheads mean no trips",
+              "completed. `overhead_comparison_200ticks.csv` combines both policies with seed and policy labels.", "",
               "Scores use CrowdNav's existing smart-car trip events after its 200-tick warmup,",
               "through tick 10,000 inclusive. Raw events, full configuration history and logs are",
               "in each run's data directory. Strategies run in local Python; only backbones use Docker.", "",
               "These results describe the tested seeds and policy snapshot; they do not guarantee",
               "improvement on unseen seeds. Host load can affect a policy that polls in wall-clock time."]
+    if runs:
+        lines += ["", "| Seed | Run | Mean overhead | p95 overhead | Trips | Complaint rate | Config changes |",
+                  "| --- | --- | ---: | ---: | ---: | ---: | ---: |"]
+        for run in runs:
+            lines.append(f"| {run['seed']} | {run['policy']} | {run['mean_overhead']:.6f} | "
+                         f"{run['p95_overhead']:.6f} | {run['trip_count']} | {run['complaint_rate']:.2%} | "
+                         f"{run['configuration_changes']} |")
+    if decisions:
+        lags = [d["step"] - d["scheduled_step"] for d in decisions]
+        lines += ["", f"Rule reviews recorded: {len(decisions)}. Decisions are scheduled every 200 simulation ticks; "
+                  f"HTTP polling observed boundaries a mean of {statistics.mean(lags):.1f} ticks late "
+                  f"(maximum {max(lags)}). `decisions.csv` records recent overhead, selected rules and settings.", "",
+                  "The startup correction sets exploration to 0% and rerouting to 60 ticks. Subsequent rules use "
+                  "0% / 30 for overhead >= 2.5, 5% / 90 for overhead <= 2.0, and 0% / 60 otherwise. "
+                  "A review with fewer than ten completed trips holds the settings and accumulates more evidence."]
     (output / "report.md").write_text("\n".join(lines) + "\n")
     return report
 
@@ -262,11 +294,11 @@ def snapshot_runtime(output):
     return runtime
 
 
-def start_strategy(runtime, endpoint, log):
+def start_strategy(runtime, endpoint, log, strategy="reactive"):
     environment = os.environ.copy()
     environment.pop("PYTHONPATH", None)
     environment["CROWDNAV_ENDPOINT"] = endpoint
-    return subprocess.Popen([sys.executable, "-u", "-m", "run_challenge"],
+    return subprocess.Popen([sys.executable, "-u", "-m", "run_challenge", "--strategy", strategy],
                             cwd=runtime, env=environment, stdout=log, stderr=subprocess.STDOUT)
 
 
@@ -280,7 +312,7 @@ def stop_strategy(process):
             process.wait()
 
 
-def run_one(images, directory, seed, policy, timeout):
+def run_one(images, directory, seed, policy, timeout, strategy_name="reactive"):
     directory.mkdir()
     knobs = {"explorationPercentage": 0.5, "reRouteEveryTicks": 600,
              "routeRandomSigma": 0.2, "maxSpeedAndLengthFactor": 1,
@@ -302,7 +334,7 @@ def run_one(images, directory, seed, policy, timeout):
             port = int(address.rsplit(":", 1)[1])
             strategy_log = (directory / "strategy.log").open("w")
             strategy = start_strategy(directory.parent / "runtime",
-                                      f"http://127.0.0.1:{port}", strategy_log)
+                                      f"http://127.0.0.1:{port}", strategy_log, strategy_name)
         command(*compose, "up", "-d", "crowdnav", capture=False)
         while not (directory / "result.json").exists():
             progress = directory / "progress.json"
@@ -352,6 +384,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--seeds", type=int, nargs="+", default=[11, 22, 33, 44, 55])
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--strategy", choices=("rule-based", "fixed", "reactive"), default="reactive",
+                        help="Adaptive policy compared with the unmodified static baseline")
     parser.add_argument("--report-only", type=Path, nargs="+",
                         help="Export saved batch results without running Docker; may combine distinct seeds")
     parser.add_argument("--crowdnav-image", help="Use an installed local CrowdNav image")
@@ -383,7 +417,7 @@ def main():
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     output = (args.output or ROOT / "experiments" / ("paired-" + stamp)).resolve()
     output.mkdir(parents=True, exist_ok=False)
-    metadata = {"images": images, "seeds": args.seeds, "horizon": HORIZON,
+    metadata = {"images": images, "seeds": args.seeds, "horizon": HORIZON, "strategy": args.strategy,
         "python_executable": sys.executable, "python_version": sys.version,
         "local_packages": {"requests": requests.__version__, "jsonschema": version("jsonschema")}}
     runtime = snapshot_runtime(output)
@@ -398,7 +432,7 @@ def main():
         order = ("baseline", "strategy") if index % 2 == 0 else ("strategy", "baseline")
         for policy in order:
             print(f"Starting seed={seed} {policy}", flush=True)
-            results[policy] = run_one(images, output / f"{seed}-{policy}", seed, policy, args.timeout)
+            results[policy] = run_one(images, output / f"{seed}-{policy}", seed, policy, args.timeout, args.strategy)
         pair = compare(seed, results["baseline"], results["strategy"])
         pairs.append(pair)
         report = {"pairs": pairs, "all_tested_seeds_pass": all(p["passed"] for p in pairs),

@@ -1,0 +1,14 @@
+{
+  "policy": "sac-600",
+  "seed": 304,
+  "ticks": 10000,
+  "completed_trips": 3643,
+  "mean_overhead": 2.385126082594707,
+  "median_overhead": 2.0048489417066713,
+  "p95_overhead": 5.075618819749794,
+  "complaint_rate": 0.16113093604172385,
+  "configuration_changes": 1,
+  "wall_seconds": 206.33569404200534,
+  "model_id": "de0b9ca6ef1d0888e6b55716f6e2117f0a507583cf58f3b739ddc01563a9e7b5",
+  "stage": "development"
+}

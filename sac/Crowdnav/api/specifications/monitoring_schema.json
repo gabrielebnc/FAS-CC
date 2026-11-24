@@ -1,0 +1,83 @@
+{
+  "type": "object",
+  "properties": {
+    "configs": {
+      "type": "object",
+      "properties": {
+        "re_route_every_ticks": {
+          "type": "integer",
+          "description": "Check for a new route every x times after the car starts"
+        },
+        "max_speed_and_length_factor": {
+          "type": "number",
+          "description": "How much the length/speed influences the routing"
+        },
+        "freshness_cut_off_value": {
+          "type": "number",
+          "description": "If data is older than this, it is not considered in the algorithm"
+        },
+        "freshness_update_factor": {
+          "type": "number",
+          "description": "How much the freshnessUpdateFactor influences the routing"
+        },
+        "total_car_counter": {
+          "type": "integer",
+          "description": "The total amount of cars that should be in the system"
+        },
+        "edge_average_influence": {
+          "type": "integer",
+          "description": "Edge average influence"
+        },
+        "exploration_percentage": {
+          "type": "number",
+          "description": "The percentage of routes we want to use for exploration"
+        },
+        "route_random_sigma": {
+          "type": "number",
+          "description": "The randomization sigma of edge weights"
+        },
+        "average_edge_duration_factor": {
+          "type": "number",
+          "description": "How much the averageEdgeDurationFactor influences the routing"
+        },
+        "total_complaints": {
+          "type": "integer",
+          "description": "The total of all trip complaints"
+        }
+      }
+    },
+    "car_stats": {
+      "type": "object",
+      "properties": {
+        "total_trips": {
+          "type": "integer",
+          "description": "Total number of trips"
+        },
+        "tick_duration": {
+          "type": "integer",
+          "description": "Tick duration"
+        },
+        "routing_duration": {
+          "type": "integer",
+          "description": "The time it takes for routing"
+        },
+        "total_trip_overhead_average": {
+          "type": "number",
+          "description": "Average overhead of total trips"
+        },
+        "step": {
+          "type": "integer",
+          "description": "Current step"
+        },
+        "total_trip_average": {
+          "type": "number",
+          "description": "Average duration of total trips"
+        },
+        "driving_car_counter": {
+          "type": "integer",
+          "description": "Counter for driving cars"
+        }
+      }
+    }
+  }
+}

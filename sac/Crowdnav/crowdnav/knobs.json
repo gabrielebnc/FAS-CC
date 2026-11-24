@@ -1,0 +1,16 @@
+{
+  "routeRandomSigmaDescription": "the randomization sigma of edge weigths, number 0 to 1",
+  "routeRandomSigma": 0.0,
+  "explorationPercentageDescription": "the percentage of routes we want to use for exploration, number 0 to 1",
+  "explorationPercentage": 0.0,
+  "maxSpeedAndLengthFactorDescription": "how much the length/speed influences the routing, number > 0 to inf",
+  "maxSpeedAndLengthFactor": 1,
+  "averageEdgeDurationFactorDescription": "how much the averageEdgeFactor influences the routing, number > 0 to inf",
+  "averageEdgeDurationFactor": 1,
+  "freshnessUpdateFactorDescription": "how much the freshnessUpdateFactor influences the routing, number 1 to inf",
+  "freshnessUpdateFactor": 10,
+  "freshnessCutOffValueDescription": "if data is older than this we do not consider it in the algorithm, number 1 to inf",
+  "freshnessCutOffValue": 90,
+  "reRouteEveryTicksDescription": "check for a new route very x times after the car starts, int 1 to inf",
+  "reRouteEveryTicks": 60
+}

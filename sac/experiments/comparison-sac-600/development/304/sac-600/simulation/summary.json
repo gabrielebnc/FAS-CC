@@ -1,0 +1,50 @@
+{
+  "seed": 304,
+  "final_step": 10000,
+  "trip_count": 3643,
+  "configs": [
+    {
+      "step": 1,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1,
+        "average_edge_duration_factor": 1,
+        "freshness_update_factor": 10,
+        "freshness_cut_off_value": 90,
+        "re_route_every_ticks": 60,
+        "total_car_counter": 750,
+        "edge_average_influence": 140
+      }
+    },
+    {
+      "step": 2010,
+      "configuration": {
+        "exploration_percentage": 0.0,
+        "route_random_sigma": 0.2,
+        "max_speed_and_length_factor": 1.0,
+        "average_edge_duration_factor": 1.0,
+        "freshness_update_factor": 10.0,
+        "freshness_cut_off_value": 90.0,
+        "re_route_every_ticks": 59,
+        "total_car_counter": 750,
+        "edge_average_influence": 140.0
+      }
+    }
+  ],
+  "warmup_ticks": 200,
+  "smart_car_percentage": 0.2,
+  "map": "./app/map/eichstaedt.net.xml",
+  "sumo_version": [
+    20,
+    "SUMO 1.18.0"
+  ],
+  "published_overhead": 2.384471547445818,
+  "published_duration": 413.2269484083421,
+  "mean_overhead": 2.385126082594707,
+  "median_overhead": 2.0048489417066713,
+  "p95_overhead": 5.075618819749794,
+  "mean_duration": 413.3403788086742,
+  "p95_duration": 1008.8999999999996,
+  "complaint_rate": 0.16113093604172385
+}

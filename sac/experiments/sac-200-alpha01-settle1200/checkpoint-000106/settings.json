@@ -1,0 +1,18 @@
+{
+  "settlement_ticks": 1200,
+  "window_ticks": 600,
+  "warmup_ticks": 200,
+  "overhead_scale": 3.0787950597099547,
+  "rate_scale": 0.3096153846153846,
+  "rate_floor": 0.2723333333333333,
+  "population_scale": 750,
+  "trend_ticks": 600,
+  "exploration_max": 0.5,
+  "reroute_min": 30,
+  "reroute_max": 600,
+  "throughput_weight": 1.0,
+  "retry_ticks": 200,
+  "max_attempts": 3,
+  "version": "relative-overhead-v1",
+  "calibration": "baseline-seed-101; normalization only; timing provisional"
+}

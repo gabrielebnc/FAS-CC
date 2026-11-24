@@ -1,0 +1,14 @@
+{
+  "policy": "scenario-sac-200",
+  "seed": 603,
+  "ticks": 10000,
+  "completed_trips": 2727,
+  "mean_overhead": 3.4496612685365724,
+  "median_overhead": 2.337081718568217,
+  "p95_overhead": 9.468518374038972,
+  "complaint_rate": 0.23725705903923724,
+  "configuration_changes": 3,
+  "wall_seconds": 392.5441723340191,
+  "teleports": 1526,
+  "model_id": "d89305cefe2f924ddf6c01483755a6df253f25945669d59b6c852fda9d810074"
+}

@@ -1,0 +1,219 @@
+Waiting for CrowdNav: No monitoring snapshot yet
+Waiting for CrowdNav: No monitoring snapshot yet
+Waiting for CrowdNav: No monitoring snapshot yet
+Waiting for CrowdNav: No monitoring snapshot yet
+Waiting for CrowdNav: No monitoring snapshot yet
+Waiting for CrowdNav: No monitoring snapshot yet
+Waiting for CrowdNav: No monitoring snapshot yet
+Waiting for CrowdNav: No monitoring snapshot yet
+Selected strategy: reactive
+Observing from step 60 through absolute tick 10000.
+At start: 0 completed trips.
+Step 60: exploration=0.5, reroute interval=600
+[Execute] Command accepted: {'route_random_sigma': 0.2, 'exploration_percentage': 0.0, 'max_speed_and_length_factor': 1, 'average_edge_duration_factor': 1, 'freshness_update_factor': 10, 'freshness_cut_off_value': 90, 're_route_every_ticks': 60, 'total_car_counter': 750, 'edge_average_influence': 140}
+Step 119: exploration=0.0, reroute interval=60
+Step 169: exploration=0.0, reroute interval=60
+Step 219: exploration=0.0, reroute interval=60
+Step 269: exploration=0.0, reroute interval=60
+Step 319: exploration=0.0, reroute interval=60
+Step 370: exploration=0.0, reroute interval=60
+Step 423: exploration=0.0, reroute interval=60
+Step 477: exploration=0.0, reroute interval=60
+Step 526: exploration=0.0, reroute interval=60
+Step 574: exploration=0.0, reroute interval=60
+Step 623: exploration=0.0, reroute interval=60
+Step 670: exploration=0.0, reroute interval=60
+Step 726: exploration=0.0, reroute interval=60
+Step 777: exploration=0.0, reroute interval=60
+Step 828: exploration=0.0, reroute interval=60
+Step 875: exploration=0.0, reroute interval=60
+Step 927: exploration=0.0, reroute interval=60
+Step 979: exploration=0.0, reroute interval=60
+Step 1029: exploration=0.0, reroute interval=60
+Step 1079: exploration=0.0, reroute interval=60
+Step 1129: exploration=0.0, reroute interval=60
+Step 1179: exploration=0.0, reroute interval=60
+Step 1229: exploration=0.0, reroute interval=60
+Step 1279: exploration=0.0, reroute interval=60
+Step 1329: exploration=0.0, reroute interval=60
+[Execute] Command accepted: {'route_random_sigma': 0.2, 'exploration_percentage': 0.0, 'max_speed_and_length_factor': 1.0, 'average_edge_duration_factor': 1.0, 'freshness_update_factor': 10.0, 'freshness_cut_off_value': 90.0, 're_route_every_ticks': 45, 'total_car_counter': 750, 'edge_average_influence': 140.0}
+Step 1381: exploration=0.0, reroute interval=45
+Step 1431: exploration=0.0, reroute interval=45
+Step 1485: exploration=0.0, reroute interval=45
+Step 1536: exploration=0.0, reroute interval=45
+Step 1589: exploration=0.0, reroute interval=45
+Step 1639: exploration=0.0, reroute interval=45
+Step 1689: exploration=0.0, reroute interval=45
+Step 1739: exploration=0.0, reroute interval=45
+Step 1790: exploration=0.0, reroute interval=45
+Step 1843: exploration=0.0, reroute interval=45
+Step 1899: exploration=0.0, reroute interval=45
+Step 1949: exploration=0.0, reroute interval=45
+Step 1999: exploration=0.0, reroute interval=45
+Step 2049: exploration=0.0, reroute interval=45
+Step 2102: exploration=0.0, reroute interval=45
+Step 2159: exploration=0.0, reroute interval=45
+Step 2209: exploration=0.0, reroute interval=45
+Step 2260: exploration=0.0, reroute interval=45
+Step 2315: exploration=0.0, reroute interval=45
+Step 2369: exploration=0.0, reroute interval=45
+Step 2419: exploration=0.0, reroute interval=45
+Step 2470: exploration=0.0, reroute interval=45
+Step 2523: exploration=0.0, reroute interval=45
+Step 2573: exploration=0.0, reroute interval=45
+Step 2628: exploration=0.0, reroute interval=45
+Step 2679: exploration=0.0, reroute interval=45
+Step 2729: exploration=0.0, reroute interval=45
+Step 2781: exploration=0.0, reroute interval=45
+Step 2837: exploration=0.0, reroute interval=45
+Step 2889: exploration=0.0, reroute interval=45
+Step 2939: exploration=0.0, reroute interval=45
+Step 2989: exploration=0.0, reroute interval=45
+Step 3042: exploration=0.0, reroute interval=45
+Step 3092: exploration=0.0, reroute interval=45
+Step 3147: exploration=0.0, reroute interval=45
+Step 3197: exploration=0.0, reroute interval=45
+Step 3249: exploration=0.0, reroute interval=45
+[Execute] Command accepted: {'route_random_sigma': 0.2, 'exploration_percentage': 0.0, 'max_speed_and_length_factor': 1.0, 'average_edge_duration_factor': 1.0, 'freshness_update_factor': 10.0, 'freshness_cut_off_value': 90.0, 're_route_every_ticks': 30, 'total_car_counter': 750, 'edge_average_influence': 140.0}
+Step 3295: exploration=0.0, reroute interval=30
+Step 3341: exploration=0.0, reroute interval=30
+Step 3391: exploration=0.0, reroute interval=30
+Step 3439: exploration=0.0, reroute interval=30
+Step 3489: exploration=0.0, reroute interval=30
+Step 3539: exploration=0.0, reroute interval=30
+Step 3589: exploration=0.0, reroute interval=30
+Step 3639: exploration=0.0, reroute interval=30
+Step 3689: exploration=0.0, reroute interval=30
+Step 3734: exploration=0.0, reroute interval=30
+Step 3783: exploration=0.0, reroute interval=30
+Step 3829: exploration=0.0, reroute interval=30
+Step 3880: exploration=0.0, reroute interval=30
+Step 3929: exploration=0.0, reroute interval=30
+Step 3979: exploration=0.0, reroute interval=30
+Step 4029: exploration=0.0, reroute interval=30
+Step 4079: exploration=0.0, reroute interval=30
+Step 4129: exploration=0.0, reroute interval=30
+Step 4179: exploration=0.0, reroute interval=30
+Step 4228: exploration=0.0, reroute interval=30
+Step 4276: exploration=0.0, reroute interval=30
+Step 4322: exploration=0.0, reroute interval=30
+Step 4369: exploration=0.0, reroute interval=30
+Step 4420: exploration=0.0, reroute interval=30
+Step 4469: exploration=0.0, reroute interval=30
+Step 4519: exploration=0.0, reroute interval=30
+Step 4569: exploration=0.0, reroute interval=30
+Step 4619: exploration=0.0, reroute interval=30
+Step 4669: exploration=0.0, reroute interval=30
+Step 4719: exploration=0.0, reroute interval=30
+Step 4769: exploration=0.0, reroute interval=30
+Step 4816: exploration=0.0, reroute interval=30
+Step 4862: exploration=0.0, reroute interval=30
+Step 4909: exploration=0.0, reroute interval=30
+Step 4959: exploration=0.0, reroute interval=30
+Step 5007: exploration=0.0, reroute interval=30
+Step 5053: exploration=0.0, reroute interval=30
+Step 5101: exploration=0.0, reroute interval=30
+Step 5149: exploration=0.0, reroute interval=30
+Step 5199: exploration=0.0, reroute interval=30
+[Execute] Command accepted: {'route_random_sigma': 0.2, 'exploration_percentage': 0.0, 'max_speed_and_length_factor': 1.0, 'average_edge_duration_factor': 1.0, 'freshness_update_factor': 10.0, 'freshness_cut_off_value': 90.0, 're_route_every_ticks': 45, 'total_car_counter': 750, 'edge_average_influence': 140.0}
+Step 5249: exploration=0.0, reroute interval=45
+Step 5299: exploration=0.0, reroute interval=45
+Step 5349: exploration=0.0, reroute interval=45
+Step 5402: exploration=0.0, reroute interval=45
+Step 5454: exploration=0.0, reroute interval=45
+Step 5507: exploration=0.0, reroute interval=45
+Step 5559: exploration=0.0, reroute interval=45
+Step 5609: exploration=0.0, reroute interval=45
+Step 5659: exploration=0.0, reroute interval=45
+Step 5709: exploration=0.0, reroute interval=45
+Step 5762: exploration=0.0, reroute interval=45
+Step 5816: exploration=0.0, reroute interval=45
+Step 5869: exploration=0.0, reroute interval=45
+Step 5919: exploration=0.0, reroute interval=45
+Step 5969: exploration=0.0, reroute interval=45
+Step 6021: exploration=0.0, reroute interval=45
+Step 6073: exploration=0.0, reroute interval=45
+Step 6129: exploration=0.0, reroute interval=45
+Step 6179: exploration=0.0, reroute interval=45
+Step 6230: exploration=0.0, reroute interval=45
+Step 6283: exploration=0.0, reroute interval=45
+Step 6339: exploration=0.0, reroute interval=45
+Step 6389: exploration=0.0, reroute interval=45
+Step 6441: exploration=0.0, reroute interval=45
+Step 6497: exploration=0.0, reroute interval=45
+[Execute] Command accepted: {'route_random_sigma': 0.2, 'exploration_percentage': 0.0, 'max_speed_and_length_factor': 1.0, 'average_edge_duration_factor': 1.0, 'freshness_update_factor': 10.0, 'freshness_cut_off_value': 90.0, 're_route_every_ticks': 60, 'total_car_counter': 750, 'edge_average_influence': 140.0}
+Step 6549: exploration=0.0, reroute interval=60
+Step 6604: exploration=0.0, reroute interval=60
+Step 6659: exploration=0.0, reroute interval=60
+Step 6718: exploration=0.0, reroute interval=60
+Step 6769: exploration=0.0, reroute interval=60
+Step 6820: exploration=0.0, reroute interval=60
+Step 6875: exploration=0.0, reroute interval=60
+Step 6929: exploration=0.0, reroute interval=60
+Step 6979: exploration=0.0, reroute interval=60
+Step 7029: exploration=0.0, reroute interval=60
+Step 7087: exploration=0.0, reroute interval=60
+Step 7139: exploration=0.0, reroute interval=60
+Step 7189: exploration=0.0, reroute interval=60
+Step 7247: exploration=0.0, reroute interval=60
+Step 7299: exploration=0.0, reroute interval=60
+Step 7349: exploration=0.0, reroute interval=60
+Step 7401: exploration=0.0, reroute interval=60
+Step 7459: exploration=0.0, reroute interval=60
+Step 7509: exploration=0.0, reroute interval=60
+Step 7567: exploration=0.0, reroute interval=60
+Step 7619: exploration=0.0, reroute interval=60
+Step 7669: exploration=0.0, reroute interval=60
+Step 7721: exploration=0.0, reroute interval=60
+Step 7779: exploration=0.0, reroute interval=60
+Step 7829: exploration=0.0, reroute interval=60
+[Execute] Command accepted: {'route_random_sigma': 0.2, 'exploration_percentage': 0.0, 'max_speed_and_length_factor': 1.0, 'average_edge_duration_factor': 1.0, 'freshness_update_factor': 10.0, 'freshness_cut_off_value': 90.0, 're_route_every_ticks': 45, 'total_car_counter': 750, 'edge_average_influence': 140.0}
+Step 7879: exploration=0.0, reroute interval=45
+Step 7929: exploration=0.0, reroute interval=45
+Step 7979: exploration=0.0, reroute interval=45
+Step 8032: exploration=0.0, reroute interval=45
+Step 8085: exploration=0.0, reroute interval=45
+Step 8134: exploration=0.0, reroute interval=45
+Step 8185: exploration=0.0, reroute interval=45
+Step 8233: exploration=0.0, reroute interval=45
+Step 8286: exploration=0.0, reroute interval=45
+Step 8339: exploration=0.0, reroute interval=45
+Step 8389: exploration=0.0, reroute interval=45
+Step 8439: exploration=0.0, reroute interval=45
+Step 8491: exploration=0.0, reroute interval=45
+Step 8544: exploration=0.0, reroute interval=45
+Step 8598: exploration=0.0, reroute interval=45
+Step 8649: exploration=0.0, reroute interval=45
+Step 8699: exploration=0.0, reroute interval=45
+Step 8749: exploration=0.0, reroute interval=45
+Step 8804: exploration=0.0, reroute interval=45
+Step 8857: exploration=0.0, reroute interval=45
+Step 8909: exploration=0.0, reroute interval=45
+Step 8957: exploration=0.0, reroute interval=45
+Step 9009: exploration=0.0, reroute interval=45
+Step 9059: exploration=0.0, reroute interval=45
+Step 9109: exploration=0.0, reroute interval=45
+[Execute] Command accepted: {'route_random_sigma': 0.2, 'exploration_percentage': 0.0, 'max_speed_and_length_factor': 1.0, 'average_edge_duration_factor': 1.0, 'freshness_update_factor': 10.0, 'freshness_cut_off_value': 90.0, 're_route_every_ticks': 30, 'total_car_counter': 750, 'edge_average_influence': 140.0}
+Step 9154: exploration=0.0, reroute interval=30
+Step 9201: exploration=0.0, reroute interval=30
+Step 9251: exploration=0.0, reroute interval=30
+Step 9299: exploration=0.0, reroute interval=30
+Step 9349: exploration=0.0, reroute interval=30
+Step 9399: exploration=0.0, reroute interval=30
+Step 9449: exploration=0.0, reroute interval=30
+Step 9499: exploration=0.0, reroute interval=30
+Step 9546: exploration=0.0, reroute interval=30
+Step 9593: exploration=0.0, reroute interval=30
+Step 9643: exploration=0.0, reroute interval=30
+Step 9693: exploration=0.0, reroute interval=30
+Step 9740: exploration=0.0, reroute interval=30
+Step 9790: exploration=0.0, reroute interval=30
+Step 9839: exploration=0.0, reroute interval=30
+Step 9889: exploration=0.0, reroute interval=30
+Step 9939: exploration=0.0, reroute interval=30
+Step 9989: exploration=0.0, reroute interval=30
+
+Measurement finished at step 10000 (9940 ticks observed).
+Strategy: reactive
+Completed trips during window: 3796
+Mean trip overhead during observed window (not the grading median): 2.389162

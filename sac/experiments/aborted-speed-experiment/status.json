@@ -1,0 +1,6 @@
+{
+  "status": "aborted at user request",
+  "used_for_200_sample_training": false,
+  "runtime_restored": true,
+  "notes": "No CPU/RAM/image settings changed. Fast polling, gates, and isolated traffic RNG removed."
+}

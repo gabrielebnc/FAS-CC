@@ -1,0 +1,1489 @@
+kafka-1  | /usr/lib/python2.7/dist-packages/supervisor/options.py:296: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
+kafka-1  |   'Supervisord is running as root and it is searching '
+kafka-1  | 2026-11-23 23:44:19,226 CRIT Supervisor running as root (no user in config file)
+kafka-1  | 2026-11-23 23:44:19,227 WARN Included extra file "/etc/supervisor/conf.d/kafka.conf" during parsing
+kafka-1  | 2026-11-23 23:44:19,227 WARN Included extra file "/etc/supervisor/conf.d/zookeeper.conf" during parsing
+kafka-1  | 2026-11-23 23:44:19,231 INFO RPC interface 'supervisor' initialized
+kafka-1  | 2026-11-23 23:44:19,231 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+kafka-1  | 2026-11-23 23:44:19,231 INFO supervisord started with pid 1
+kafka-1  | 2026-11-23 23:44:20,243 INFO spawned: 'zookeeper' with pid 9
+kafka-1  | 2026-11-23 23:44:20,245 INFO spawned: 'kafka' with pid 10
+kafka-1  | 2026-11-23 23:44:21,331 INFO success: zookeeper entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+kafka-1  | 2026-11-23 23:44:21,331 INFO success: kafka entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+crowdnav-1  | [36m#####################################[39m
+crowdnav-1  | [36m#      Starting CrowdNav v0.2       #[39m
+crowdnav-1  | [36m#####################################[39m
+crowdnav-1  | [33m# Configuration:[39m
+crowdnav-1  | [33m# Kafka-Host   -> kafka:9092[39m
+crowdnav-1  | [33m# Kafka-Topic1 -> crowd-nav-trips[39m
+crowdnav-1  | [33m# Kafka-Topic2 -> crowd-nav-performance[39m
+crowdnav-1  | [32m# StreamForword OK![39m
+crowdnav-1  | [32m# KafkaConnector OK![39m
+crowdnav-1  | [32m# KafkaProducerMonitor Connected![39m
+crowdnav-1  | [32m# SUMO-Dependency check OK![39m
+crowdnav-1  | [36m[32m# Map loading OK! [39m[39m
+crowdnav-1  | [36m[36m# Nodes: 426 / Edges: 1131[39m[39m
+crowdnav-1  |  Retrying in 1 seconds
+crowdnav-1  | [32m
+crowdnav-1  | # SUMO-Application started OK![39m
+crowdnav-1  | [35m# Start adding initial cars to the simulation[39m
+crowdnav-1  | 0 -> Step:100 # Driving cars: 747/750 # avgTripDuration: 0(0) # avgTripOverhead: 0 # totalComplaints: 0
+crowdnav-1  | 0 -> Step:200 # Driving cars: 739/750 # avgTripDuration: 0(0) # avgTripOverhead: 0 # totalComplaints: 0
+crowdnav-1  | 0 -> Step:300 # Driving cars: 733/750 # avgTripDuration: 203.64864864864862(36) # avgTripOverhead: 1.8923660589026383 # totalComplaints: 2
+crowdnav-1  | 0 -> Step:400 # Driving cars: 736/750 # avgTripDuration: 245.22368421052633(75) # avgTripOverhead: 2.151056203145216 # totalComplaints: 5
+crowdnav-1  | 0 -> Step:500 # Driving cars: 740/750 # avgTripDuration: 268.65486725663726(112) # avgTripOverhead: 2.1585300433151793 # totalComplaints: 10
+crowdnav-1  | 0 -> Step:600 # Driving cars: 738/750 # avgTripDuration: 290.1944444444445(143) # avgTripOverhead: 2.2965721773749572 # totalComplaints: 17
+crowdnav-1  | 0 -> Step:700 # Driving cars: 737/750 # avgTripDuration: 306.4652406417111(186) # avgTripOverhead: 2.319898156369726 # totalComplaints: 23
+crowdnav-1  | 0 -> Step:800 # Driving cars: 742/750 # avgTripDuration: 310.6711711711709(221) # avgTripOverhead: 2.360619711559162 # totalComplaints: 29
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-179' (No connection between edge 'gneE45' and edge '-gneE45'.).
+crowdnav-1  | 0 -> Step:900 # Driving cars: 741/750 # avgTripDuration: 312.3359683794464(252) # avgTripOverhead: 2.3583153219825634 # totalComplaints: 35
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-179' (No connection between edge 'gneE41' and edge '-gneE41'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-303' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | 0 -> Step:1000 # Driving cars: 743/750 # avgTripDuration: 327.3454545454543(274) # avgTripOverhead: 2.3926430549239064 # totalComplaints: 40
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-741' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 30
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-303' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-741' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-741' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-211' (No connection between edge '-gneE43' and edge 'gneE43'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-637' (No connection between edge 'gneE44' and edge '-gneE44'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-599' (No connection between edge 'gneE44' and edge '-gneE44'.).
+crowdnav-1  | 0 -> Step:1100 # Driving cars: 742/750 # avgTripDuration: 344.1590909090907(307) # avgTripOverhead: 2.4137926843879827 # totalComplaints: 49
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-211' (No connection between edge 'gneE44' and edge '-gneE44'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-637' (No connection between edge 'gneE44' and edge '-gneE44'.).
+crowdnav-1  | 0 -> Step:1200 # Driving cars: 741/750 # avgTripDuration: 355.8262108262106(350) # avgTripOverhead: 2.3984511013232552 # totalComplaints: 58
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 60
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | 0 -> Step:1300 # Driving cars: 739/750 # avgTripDuration: 372.9869791666667(383) # avgTripOverhead: 2.4367207915026845 # totalComplaints: 70
+crowdnav-1  | 0 -> Step:1400 # Driving cars: 740/750 # avgTripDuration: 371.4722891566265(414) # avgTripOverhead: 2.490111424660148 # totalComplaints: 74
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 30
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-618' (No connection between edge '-gneE40' and edge 'gneE40'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-371' (No connection between edge '-gneE40' and edge 'gneE40'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-87' (No connection between edge 'gneE44' and edge '-gneE44'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-87' (No connection between edge 'gneE44' and edge '-gneE44'.).
+crowdnav-1  | 0 -> Step:1500 # Driving cars: 740/750 # avgTripDuration: 372.56347438752783(448) # avgTripOverhead: 2.4647388303760236 # totalComplaints: 77
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-87' (No connection between edge 'gneE44' and edge '-gneE44'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-11' (No connection between edge '-gneE43' and edge 'gneE43'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-11' (No connection between edge '-gneE43' and edge 'gneE43'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-87' (No connection between edge 'gneE46' and edge '-gneE46'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-11' (No connection between edge '-gneE43' and edge 'gneE43'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-658' (No connection between edge '-gneE95' and edge 'gneE95'.).
+crowdnav-1  | 0 -> Step:1600 # Driving cars: 736/750 # avgTripDuration: 371.49060542797497(478) # avgTripOverhead: 2.445821419322131 # totalComplaints: 82
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 60
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | 0 -> Step:1700 # Driving cars: 738/750 # avgTripDuration: 381.083984375(511) # avgTripOverhead: 2.4743032819454203 # totalComplaints: 90
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-87' (No connection between edge '-gneE41' and edge 'gneE41'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-254' (No connection between edge 'gneE46' and edge '-gneE46'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-56' (No connection between edge 'gneE37' and edge '-gneE37'.).
+crowdnav-1  | 0 -> Step:1800 # Driving cars: 741/750 # avgTripDuration: 383.66423357664246(547) # avgTripOverhead: 2.510967162893787 # totalComplaints: 100
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 30
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-129' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-443' (No connection between edge '-gneE40' and edge 'gneE40'.).
+crowdnav-1  | 0 -> Step:1900 # Driving cars: 743/750 # avgTripDuration: 382.92268041237134(581) # avgTripOverhead: 2.525503419049523 # totalComplaints: 107
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-667' (No connection between edge 'gneE8' and edge 'gneE9'.).
+crowdnav-1  | 0 -> Step:2000 # Driving cars: 738/750 # avgTripDuration: 388.354575163399(611) # avgTripOverhead: 2.526298805505579 # totalComplaints: 112
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-630' (No connection between edge '-gneE40' and edge 'gneE40'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-179' (No connection between edge 'gneE37' and edge '-gneE37'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-15' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | 0 -> Step:2100 # Driving cars: 737/750 # avgTripDuration: 389.8861538461542(649) # avgTripOverhead: 2.511791736812273 # totalComplaints: 115
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-259' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-259' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-15' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-259' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | 0 -> Step:2200 # Driving cars: 738/750 # avgTripDuration: 393.9702380952384(671) # avgTripOverhead: 2.507166743451672 # totalComplaints: 117
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-76' (No connection between edge 'gneE41' and edge '-gneE41'.).
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 60
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-366' (No connection between edge 'gneE99' and edge 'gneE98'.).
+crowdnav-1  | 0 -> Step:2300 # Driving cars: 739/750 # avgTripDuration: 397.1014285714289(699) # avgTripOverhead: 2.49916654255159 # totalComplaints: 120
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-259' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-471' (No connection between edge 'gneE98' and edge 'gneE99'.).
+crowdnav-1  | 0 -> Step:2400 # Driving cars: 739/750 # avgTripDuration: 403.84069611780484(746) # avgTripOverhead: 2.5089208544677697 # totalComplaints: 132
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 30
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-259' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | 0 -> Step:2500 # Driving cars: 741/750 # avgTripDuration: 405.78015075376914(795) # avgTripOverhead: 2.4909930336183246 # totalComplaints: 138
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-159' (No connection between edge 'gneE98' and edge 'gneE99'.).
+crowdnav-1  | 0 -> Step:2600 # Driving cars: 741/750 # avgTripDuration: 409.55301204819307(829) # avgTripOverhead: 2.503452694988904 # totalComplaints: 145
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 60
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | 0 -> Step:2700 # Driving cars: 742/750 # avgTripDuration: 408.3958333333336(863) # avgTripOverhead: 2.487342597871643 # totalComplaints: 148
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-618' (No connection between edge 'gneE101' and edge 'gneE100'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-617' (No connection between edge 'gneE38' and edge '-gneE38'.).
+crowdnav-1  | 0 -> Step:2800 # Driving cars: 738/750 # avgTripDuration: 409.94327030033395(898) # avgTripOverhead: 2.47393064755505 # totalComplaints: 154
+crowdnav-1  | 0 -> Step:2900 # Driving cars: 741/750 # avgTripDuration: 407.93884120171697(931) # avgTripOverhead: 2.4646925314898405 # totalComplaints: 158
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-498' (No connection between edge 'gneE98' and edge 'gneE99'.).
+crowdnav-1  | 0 -> Step:3000 # Driving cars: 737/750 # avgTripDuration: 405.923719958203(956) # avgTripOverhead: 2.473627639758133 # totalComplaints: 161
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-555' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | 0 -> Step:3100 # Driving cars: 736/750 # avgTripDuration: 406.4650698602797(1001) # avgTripOverhead: 2.464131218531543 # totalComplaints: 170
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-75' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-140' (No connection between edge 'gneE38' and edge '-gneE38'.).
+crowdnav-1  | 0 -> Step:3200 # Driving cars: 741/750 # avgTripDuration: 407.4521739130437(1034) # avgTripOverhead: 2.453097044688194 # totalComplaints: 175
+crowdnav-1  | 0 -> Step:3300 # Driving cars: 733/750 # avgTripDuration: 410.8783658310122(1076) # avgTripOverhead: 2.458140994725406 # totalComplaints: 184
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-390' (No connection between edge '-gneE95' and edge 'gneE95'.).
+crowdnav-1  | 0 -> Step:3400 # Driving cars: 732/750 # avgTripDuration: 408.1225402504474(1117) # avgTripOverhead: 2.4430853552371308 # totalComplaints: 188
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-390' (No connection between edge '-gneE94' and edge 'gneE94'.).
+crowdnav-1  | 0 -> Step:3500 # Driving cars: 733/750 # avgTripDuration: 407.97480451781075(1150) # avgTripOverhead: 2.4351906882412995 # totalComplaints: 191
+crowdnav-1  | 0 -> Step:3600 # Driving cars: 732/750 # avgTripDuration: 406.144060657119(1186) # avgTripOverhead: 2.4250115693292487 # totalComplaints: 196
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-214' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1  | 0 -> Step:3700 # Driving cars: 730/750 # avgTripDuration: 406.24735557363726(1228) # avgTripOverhead: 2.4163710500008952 # totalComplaints: 201
+crowdnav-1  | 0 -> Step:3800 # Driving cars: 721/750 # avgTripDuration: 405.99051383399217(1264) # avgTripOverhead: 2.4108468785660135 # totalComplaints: 210
+crowdnav-1  | 0 -> Step:3900 # Driving cars: 720/750 # avgTripDuration: 404.37978560490075(1305) # avgTripOverhead: 2.403409400446621 # totalComplaints: 213
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-599' (No connection between edge 'gneE7' and edge 'gneE6'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-124' (No connection between edge 'gneE99' and edge 'gneE98'.).
+crowdnav-1  | 0 -> Step:4000 # Driving cars: 726/750 # avgTripDuration: 404.39387144992554(1337) # avgTripOverhead: 2.396416188461623 # totalComplaints: 220
+crowdnav-1  | 0 -> Step:4100 # Driving cars: 723/750 # avgTripDuration: 403.120639534884(1375) # avgTripOverhead: 2.383422187346327 # totalComplaints: 225
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-450' (No connection between edge 'gneE37' and edge '-gneE37'.).
+crowdnav-1  | 0 -> Step:4200 # Driving cars: 722/750 # avgTripDuration: 403.7995750708218(1411) # avgTripOverhead: 2.389756190418845 # totalComplaints: 230
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-184' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1  | 0 -> Step:4300 # Driving cars: 721/750 # avgTripDuration: 401.26708074534184(1448) # avgTripOverhead: 2.3782066767978636 # totalComplaints: 238
+crowdnav-1  | 0 -> Step:4400 # Driving cars: 717/750 # avgTripDuration: 401.61994609164447(1483) # avgTripOverhead: 2.3833011308617165 # totalComplaints: 245
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-271' (No connection between edge '-gneE44' and edge 'gneE44'.).
+crowdnav-1  | 0 -> Step:4500 # Driving cars: 714/750 # avgTripDuration: 400.58715596330296(1525) # avgTripOverhead: 2.378315193942684 # totalComplaints: 248
+crowdnav-1  | 0 -> Step:4600 # Driving cars: 720/750 # avgTripDuration: 400.12267180475294(1556) # avgTripOverhead: 2.3724367247044844 # totalComplaints: 251
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-573' (No connection between edge 'gneE37' and edge '-gneE37'.).
+crowdnav-1  | 0 -> Step:4700 # Driving cars: 713/750 # avgTripDuration: 398.61958568738254(1592) # avgTripOverhead: 2.3699701758890153 # totalComplaints: 258
+crowdnav-1  | 0 -> Step:4800 # Driving cars: 720/750 # avgTripDuration: 398.19691358024716(1619) # avgTripOverhead: 2.3702936835997073 # totalComplaints: 261
+crowdnav-1  | 0 -> Step:4900 # Driving cars: 715/750 # avgTripDuration: 398.65333333333353(1649) # avgTripOverhead: 2.3695511828868145 # totalComplaints: 266
+crowdnav-1  | 0 -> Step:5000 # Driving cars: 714/750 # avgTripDuration: 400.3111243307557(1680) # avgTripOverhead: 2.3728422139382594 # totalComplaints: 271
+crowdnav-1  | 0 -> Step:5100 # Driving cars: 707/750 # avgTripDuration: 402.0116550116552(1715) # avgTripOverhead: 2.379746021519013 # totalComplaints: 276
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-92' (No connection between edge '-gneE37' and edge 'gneE37'.).
+crowdnav-1  | 0 -> Step:5200 # Driving cars: 713/750 # avgTripDuration: 403.0636833046474(1742) # avgTripOverhead: 2.381458407085557 # totalComplaints: 279
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 30
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-185' (No connection between edge '-gneE97' and edge 'gneE97'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-185' (No connection between edge '-gneE94' and edge 'gneE94'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-185' (No connection between edge '-gneE94' and edge 'gneE94'.).
+crowdnav-1  | 0 -> Step:5300 # Driving cars: 717/750 # avgTripDuration: 402.9988764044946(1779) # avgTripOverhead: 2.3813513076962245 # totalComplaints: 285
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-691' (No connection between edge 'gneE98' and edge 'gneE99'.).
+crowdnav-1  | 0 -> Step:5400 # Driving cars: 722/750 # avgTripDuration: 402.5861309851405(1816) # avgTripOverhead: 2.3816495201238097 # totalComplaints: 290
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 60
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-617' (No connection between edge 'gneE43' and edge '-gneE43'.).
+crowdnav-1  | 0 -> Step:5500 # Driving cars: 717/750 # avgTripDuration: 403.37971952535077(1853) # avgTripOverhead: 2.3801374811096694 # totalComplaints: 294
+crowdnav-1  | 0 -> Step:5600 # Driving cars: 720/750 # avgTripDuration: 405.77619047619066(1889) # avgTripOverhead: 2.3899021051843468 # totalComplaints: 300
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 30
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-414' (No connection between edge 'gneE98' and edge 'gneE99'.).
+crowdnav-1  | 0 -> Step:5700 # Driving cars: 712/750 # avgTripDuration: 405.8723293381972(1918) # avgTripOverhead: 2.3847876328192394 # totalComplaints: 302
+crowdnav-1  | 0 -> Step:5800 # Driving cars: 713/750 # avgTripDuration: 405.9293394777267(1952) # avgTripOverhead: 2.388837766958074 # totalComplaints: 305
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 60
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | 0 -> Step:5900 # Driving cars: 713/750 # avgTripDuration: 408.0216843166921(1982) # avgTripOverhead: 2.394629129289004 # totalComplaints: 310
+crowdnav-1  | 0 -> Step:6000 # Driving cars: 710/750 # avgTripDuration: 409.14002968827333(2020) # avgTripOverhead: 2.3964094106761102 # totalComplaints: 314
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 30
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-626' (No connection between edge 'gneE99' and edge 'gneE98'.).
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-140' (No connection between edge 'gneE98' and edge 'gneE99'.).
+crowdnav-1  | 0 -> Step:6100 # Driving cars: 711/750 # avgTripDuration: 409.42382812500017(2047) # avgTripOverhead: 2.398020465991686 # totalComplaints: 318
+crowdnav-1  | 0 -> Step:6200 # Driving cars: 711/750 # avgTripDuration: 408.9822200864971(2080) # avgTripOverhead: 2.395813766615899 # totalComplaints: 325
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 60
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-658' (No connection between edge 'gneE18' and edge 'gneE17'.).
+crowdnav-1  | 0 -> Step:6300 # Driving cars: 715/750 # avgTripDuration: 409.2947567312236(2116) # avgTripOverhead: 2.3918536529601857 # totalComplaints: 330
+crowdnav-1  | 0 -> Step:6400 # Driving cars: 709/750 # avgTripDuration: 408.4233441408059(2158) # avgTripOverhead: 2.385854673847118 # totalComplaints: 333
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-667' (No connection between edge 'gneE9' and edge 'gneE8'.).
+crowdnav-1  | 0 -> Step:6500 # Driving cars: 718/750 # avgTripDuration: 408.94106898127(2188) # avgTripOverhead: 2.385316239753082 # totalComplaints: 337
+crowdnav-1  | 0 -> Step:6600 # Driving cars: 721/750 # avgTripDuration: 409.01581563488475(2212) # avgTripOverhead: 2.3876239153592307 # totalComplaints: 341
+crowdnav-1  | 0 -> Step:6700 # Driving cars: 720/750 # avgTripDuration: 410.5700892857143(2239) # avgTripOverhead: 2.3977069487024902 # totalComplaints: 347
+crowdnav-1  | 0 -> Step:6800 # Driving cars: 724/750 # avgTripDuration: 411.3231653404067(2261) # avgTripOverhead: 2.403757004362647 # totalComplaints: 350
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 30
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-241' (No connection between edge 'gneE45' and edge '-gneE45'.).
+crowdnav-1  | 0 -> Step:6900 # Driving cars: 725/750 # avgTripDuration: 411.8851528384278(2289) # avgTripOverhead: 2.4065833537693195 # totalComplaints: 356
+crowdnav-1  | 0 -> Step:7000 # Driving cars: 719/750 # avgTripDuration: 414.053602058319(2331) # avgTripOverhead: 2.4070156981478306 # totalComplaints: 360
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 60
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | 0 -> Step:7100 # Driving cars: 724/750 # avgTripDuration: 414.672297297297(2367) # avgTripOverhead: 2.4078493823612397 # totalComplaints: 364
+crowdnav-1  | 0 -> Step:7200 # Driving cars: 726/750 # avgTripDuration: 416.24709784411255(2411) # avgTripOverhead: 2.4191192363927003 # totalComplaints: 368
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 30
+crowdnav-1  | setting totalCarCounter: 750
+crowdnav-1  | setting edgeAverageInfluence: 140.0
+crowdnav-1  | 0 -> Step:7300 # Driving cars: 728/750 # avgTripDuration: 416.4133986928102(2447) # avgTripOverhead: 2.4229939489122936 # totalComplaints: 377
+crowdnav-1  | 0 -> Step:7400 # Driving cars: 725/750 # avgTripDuration: 415.9564691656588(2480) # avgTripOverhead: 2.417354711405689 # totalComplaints: 381
+crowdnav-1  | setting victimsPercentage: 0.0
+crowdnav-1  | setting routeRandomSigma: 0.2
+crowdnav-1  | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1  | setting averageEdgeDurationFactor: 1.0
+crowdnav-1  | setting freshnessUpdateFactor: 10.0
+crowdnav-1  | setting freshnessCutOffValue: 90.0
+crowdnav-1  | setting reRouteEveryTicks: 60
+crowdnav-1  | setting totalCarCounter: 750
+http-server-1  | INFO:     Started server process [1]
+crowdnav-1     | setting edgeAverageInfluence: 140.0
+crowdnav-1     | 0 -> Step:7500 # Driving cars: 723/750 # avgTripDuration: 415.6363636363633(2518) # avgTripOverhead: 2.414457618150047 # totalComplaints: 386
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-576' (No connection between edge '-gneE45' and edge 'gneE45'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-66' (No connection between edge 'gneE99' and edge 'gneE98'.).
+crowdnav-1     | 0 -> Step:7600 # Driving cars: 728/750 # avgTripDuration: 414.7377881985147(2558) # avgTripOverhead: 2.408042602024724 # totalComplaints: 390
+crowdnav-1     | 0 -> Step:7700 # Driving cars: 728/750 # avgTripDuration: 415.8739398612178(2593) # avgTripOverhead: 2.409101390725869 # totalComplaints: 399
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-623' (No connection between edge '-gneE97' and edge 'gneE97'.).
+crowdnav-1     | 0 -> Step:7800 # Driving cars: 725/750 # avgTripDuration: 414.6096541239069(2630) # avgTripOverhead: 2.400767870834499 # totalComplaints: 401
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-256' (No connection between edge '-gneE45' and edge 'gneE45'.).
+crowdnav-1     | 0 -> Step:7900 # Driving cars: 724/750 # avgTripDuration: 414.7815789473681(2659) # avgTripOverhead: 2.3993907534088277 # totalComplaints: 405
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-275' (No connection between edge '-gneE46' and edge 'gneE46'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-525' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1     | 0 -> Step:8000 # Driving cars: 726/750 # avgTripDuration: 414.33927907840916(2690) # avgTripOverhead: 2.400565679341309 # totalComplaints: 412
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-525' (No connection between edge 'gneE6' and edge 'gneE7'.).
+http-server-1  | INFO:     Waiting for application startup.
+http-server-1  | INFO:     Application startup complete.
+http-server-1  | INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+http-server-1  | INFO:     172.19.0.1:60874 - "GET / HTTP/1.1" 200 OK
+http-server-1  | Topic crowd-nav-monitored-stats is not available during auto-create initialization
+http-server-1  | Topic crowd-nav-monitored-stats is not available during auto-create initialization
+http-server-1  | # KafkaConsumerMonitor Connected!
+http-server-1  | INFO:     172.19.0.1:62078 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62086 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62098 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62106 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62114 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62118 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62130 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62138 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62148 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62162 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62178 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62192 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62208 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62214 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62226 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62236 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62240 - "GET /monitor/ HTTP/1.1" 200 OK
+crowdnav-1     | 0 -> Step:8100 # Driving cars: 724/750 # avgTripDuration: 414.6406307297393(2726) # avgTripOverhead: 2.4023674426977175 # totalComplaints: 422
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-525' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-749' (No connection between edge 'gneE38' and edge '-gneE38'.).
+crowdnav-1     | 0 -> Step:8200 # Driving cars: 724/750 # avgTripDuration: 414.46864806089127(2758) # avgTripOverhead: 2.399856942049729 # totalComplaints: 425
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-573' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-15' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-598' (No connection between edge '-gneE95' and edge 'gneE95'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-223' (No connection between edge '-gneE41' and edge 'gneE41'.).
+crowdnav-1     | 0 -> Step:8300 # Driving cars: 720/750 # avgTripDuration: 414.821633237822(2791) # avgTripOverhead: 2.3996834705067194 # totalComplaints: 428
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-194' (No connection between edge '-gneE37' and edge 'gneE37'.).
+crowdnav-1     | 0 -> Step:8400 # Driving cars: 724/750 # avgTripDuration: 414.64472753007755(2825) # avgTripOverhead: 2.400858746041829 # totalComplaints: 435
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-64' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:8500 # Driving cars: 726/750 # avgTripDuration: 415.15853658536554(2869) # avgTripOverhead: 2.40819506125314 # totalComplaints: 447
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-324' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-246' (No connection between edge '-gneE45' and edge 'gneE45'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-324' (No connection between edge '-gneE35' and edge 'gneE35'.).
+http-server-1  | INFO:     172.19.0.1:62250 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62264 - "GET /monitor/ HTTP/1.1" 200 OK
+crowdnav-1     | 0 -> Step:8600 # Driving cars: 720/750 # avgTripDuration: 416.3176510989008(2911) # avgTripOverhead: 2.4145079011213424 # totalComplaints: 454
+crowdnav-1     | setting victimsPercentage: 0.0
+crowdnav-1     | setting routeRandomSigma: 0.2
+crowdnav-1     | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1     | setting averageEdgeDurationFactor: 1.0
+crowdnav-1     | setting freshnessUpdateFactor: 10.0
+crowdnav-1     | setting freshnessCutOffValue: 90.0
+http-server-1  | INFO:     172.19.0.1:62270 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62282 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62296 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62312 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62320 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62330 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62332 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62886 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62894 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62906 - "GET /monitor/ HTTP/1.1" 200 OK
+crowdnav-1     | setting reRouteEveryTicks: 30
+crowdnav-1     | setting totalCarCounter: 750
+crowdnav-1     | setting edgeAverageInfluence: 140.0
+crowdnav-1     | 0 -> Step:8700 # Driving cars: 719/750 # avgTripDuration: 415.42891075670144(2946) # avgTripOverhead: 2.408439886035309 # totalComplaints: 461
+http-server-1  | INFO:     172.19.0.1:62920 - "GET /monitor/ HTTP/1.1" 200 OK
+crowdnav-1     | 0 -> Step:8800 # Driving cars: 720/750 # avgTripDuration: 415.5401875418617(2985) # avgTripOverhead: 2.4056875753168403 # totalComplaints: 466
+crowdnav-1     | setting victimsPercentage: 0.0
+crowdnav-1     | setting routeRandomSigma: 0.2
+crowdnav-1     | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1     | setting averageEdgeDurationFactor: 1.0
+crowdnav-1     | setting freshnessUpdateFactor: 10.0
+crowdnav-1     | setting freshnessCutOffValue: 90.0
+crowdnav-1     | setting reRouteEveryTicks: 60
+crowdnav-1     | setting totalCarCounter: 750
+crowdnav-1     | setting edgeAverageInfluence: 140.0
+crowdnav-1     | 0 -> Step:8900 # Driving cars: 724/750 # avgTripDuration: 414.6273148148145(3023) # avgTripOverhead: 2.401370192895579 # totalComplaints: 471
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-283' (No connection between edge '-gneE41' and edge 'gneE41'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-498' (No connection between edge '-gneE40' and edge 'gneE40'.).
+crowdnav-1     | 0 -> Step:9000 # Driving cars: 724/750 # avgTripDuration: 413.95815626021545(3058) # avgTripOverhead: 2.3994826772959357 # totalComplaints: 476
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-283' (No connection between edge 'gneE98' and edge 'gneE99'.).
+crowdnav-1     | 0 -> Step:9100 # Driving cars: 723/750 # avgTripDuration: 413.9005184705117(3085) # avgTripOverhead: 2.3997860049126034 # totalComplaints: 478
+crowdnav-1     | 0 -> Step:9200 # Driving cars: 721/750 # avgTripDuration: 414.7639512508015(3117) # avgTripOverhead: 2.405473925516583 # totalComplaints: 485
+crowdnav-1     | setting victimsPercentage: 0.0
+crowdnav-1     | setting routeRandomSigma: 0.2
+crowdnav-1     | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1     | setting averageEdgeDurationFactor: 1.0
+crowdnav-1     | setting freshnessUpdateFactor: 10.0
+crowdnav-1     | setting freshnessCutOffValue: 90.0
+crowdnav-1     | setting reRouteEveryTicks: 30
+crowdnav-1     | setting totalCarCounter: 750
+crowdnav-1     | setting edgeAverageInfluence: 140.0
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-573' (No connection between edge 'gneE37' and edge '-gneE37'.).
+crowdnav-1     | 0 -> Step:9300 # Driving cars: 721/750 # avgTripDuration: 414.3857369255148(3154) # avgTripOverhead: 2.4014857693179894 # totalComplaints: 490
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-211' (No connection between edge 'gneE8' and edge 'gneE9'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-88' (No connection between edge '-gneE44' and edge 'gneE44'.).
+crowdnav-1     | 0 -> Step:9400 # Driving cars: 719/750 # avgTripDuration: 414.02822201316997(3188) # avgTripOverhead: 2.3982740435223766 # totalComplaints: 492
+crowdnav-1     | setting victimsPercentage: 0.0
+crowdnav-1     | setting routeRandomSigma: 0.2
+crowdnav-1     | setting maxSpeedAndLengthFactor: 1.0
+crowdnav-1     | setting averageEdgeDurationFactor: 1.0
+crowdnav-1     | setting freshnessUpdateFactor: 10.0
+crowdnav-1     | setting freshnessCutOffValue: 90.0
+crowdnav-1     | setting reRouteEveryTicks: 60
+crowdnav-1     | setting totalCarCounter: 750
+http-server-1  | INFO:     172.19.0.1:62924 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62936 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62942 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62956 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62968 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62982 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62990 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62992 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63004 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63014 - "GET /monitor/ HTTP/1.1" 200 OK
+crowdnav-1     | setting edgeAverageInfluence: 140.0
+http-server-1  | INFO:     172.19.0.1:63016 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63030 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63038 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63042 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63056 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63058 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63062 - "GET /monitor/ HTTP/1.1" 200 OK
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-19' (No connection between edge 'gneE38' and edge '-gneE38'.).
+crowdnav-1     | 0 -> Step:9500 # Driving cars: 723/750 # avgTripDuration: 413.9468944099376(3219) # avgTripOverhead: 2.395371509181155 # totalComplaints: 498
+http-server-1  | INFO:     172.19.0.1:63078 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63088 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63092 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63102 - "GET /monitor/ HTTP/1.1" 200 OK
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-19' (No connection between edge 'gneE98' and edge 'gneE99'.).
+crowdnav-1     | 0 -> Step:9600 # Driving cars: 724/750 # avgTripDuration: 415.0208781086887(3256) # avgTripOverhead: 2.3964624949631173 # totalComplaints: 506
+crowdnav-1     | 0 -> Step:9700 # Driving cars: 721/750 # avgTripDuration: 415.06858877086466(3294) # avgTripOverhead: 2.3933444818649816 # totalComplaints: 511
+crowdnav-1     | 0 -> Step:9800 # Driving cars: 720/750 # avgTripDuration: 415.07405177603823(3321) # avgTripOverhead: 2.3916819816223476 # totalComplaints: 516
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-681' (No connection between edge '-gneE44' and edge 'gneE44'.).
+http-server-1  | INFO:     172.19.0.1:63104 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63112 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63126 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63136 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63146 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63148 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63150 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63156 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63172 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63178 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63180 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63194 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63204 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63210 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63224 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63232 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63242 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63258 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63264 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63266 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63270 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63272 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63286 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62408 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62418 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62424 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62428 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62442 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62452 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62454 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62458 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62462 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62472 - "GET /monitor/ HTTP/1.1" 200 OK
+crowdnav-1     | 0 -> Step:9900 # Driving cars: 722/750 # avgTripDuration: 414.33492252681737(3355) # avgTripOverhead: 2.3892800051351806 # totalComplaints: 520
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-687' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-447' (No connection between edge 'gneE98' and edge 'gneE99'.).
+crowdnav-1     | 0 -> Step:10000 # Driving cars: 722/750 # avgTripDuration: 414.0551459746385(3390) # avgTripOverhead: 2.3894356799227814 # totalComplaints: 527
+http-server-1  | INFO:     172.19.0.1:62488 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62496 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62498 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62512 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62524 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62526 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62538 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62548 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62554 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62558 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62570 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62584 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62594 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62608 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62614 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62624 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62626 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62638 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62642 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62658 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62668 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62670 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62678 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62680 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62696 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62710 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62726 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62728 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62742 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62750 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62762 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62766 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62768 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62774 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62778 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62782 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62796 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62806 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62812 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62828 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56408 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56416 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56420 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56432 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56444 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56446 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56456 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56460 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56472 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56476 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56480 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56490 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56492 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56498 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56506 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56520 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56524 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56528 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56530 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56538 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56540 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56542 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56548 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56552 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56566 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56578 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56592 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56606 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56616 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56632 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56634 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56646 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56658 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56668 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56682 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56692 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56708 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56724 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56730 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56738 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56742 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56748 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56754 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56756 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56760 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56768 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56774 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56778 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56784 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56796 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64422 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64432 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64442 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64452 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64464 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64468 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64480 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64482 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64496 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64502 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64518 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64524 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64536 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64550 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64554 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64566 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64582 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64596 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64600 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64606 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64616 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64618 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64626 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64642 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64648 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64656 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64668 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64678 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64690 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64694 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64704 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64710 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64716 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64724 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64740 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64748 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64764 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64780 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64790 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64806 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64818 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64826 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64830 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64832 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64844 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64848 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64862 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64864 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64874 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56030 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56040 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56042 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56054 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56068 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56076 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56080 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56086 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56090 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56104 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56114 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56126 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56138 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56148 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56154 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56166 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56170 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56178 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56184 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56186 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56194 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56202 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56214 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56218 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56228 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56236 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56238 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56248 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56258 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56272 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56286 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56290 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56296 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56308 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56310 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56316 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56320 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56328 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56334 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56340 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56348 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56360 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56370 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56376 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56388 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56396 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56402 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56412 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56414 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56430 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58412 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58424 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58432 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58444 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58446 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58452 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58460 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58464 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58466 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58476 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58478 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58482 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58490 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58506 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58514 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58526 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58532 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58542 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58556 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58566 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58568 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58578 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58592 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58598 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58602 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58618 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58632 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58638 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58640 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58656 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58670 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58674 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58678 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58692 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58704 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58708 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58716 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58722 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58724 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58738 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58740 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58756 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58760 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58764 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58772 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58784 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58796 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60606 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60608 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60622 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60626 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60638 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60644 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60654 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60664 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60668 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60682 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60696 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60702 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60716 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60724 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60728 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60742 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60746 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60762 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60774 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60778 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60792 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60802 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60808 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60818 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60820 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60832 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60846 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60856 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60872 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60884 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60888 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60900 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60910 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60920 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60926 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60928 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60930 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60938 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60944 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60948 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60964 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60978 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60982 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60990 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61006 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61022 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57934 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57944 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57946 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57960 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57972 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57982 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57994 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57998 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58010 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58014 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58026 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58036 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58046 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58060 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58066 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58080 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58092 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58108 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58120 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58128 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58138 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58150 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58164 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58178 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58184 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58198 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58212 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58228 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58244 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58246 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58262 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58272 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58284 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58294 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58308 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58312 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58322 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58324 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58338 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58352 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58366 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58376 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58390 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58404 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58414 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58426 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58436 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58448 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63806 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63810 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63816 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63818 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63824 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63830 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63844 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63850 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63854 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63870 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63886 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63896 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63898 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63906 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63916 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63932 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63944 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63950 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63954 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63956 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63966 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63968 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63980 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63988 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:63998 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64006 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64016 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64026 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64028 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64044 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64046 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64054 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64064 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64076 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64086 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64102 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64106 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64122 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64126 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64138 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64142 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64158 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64168 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64182 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64198 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64208 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64214 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56122 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56128 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56134 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56140 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56144 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56150 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56158 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56164 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56172 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56180 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56188 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56200 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56204 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56208 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56212 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56222 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56226 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56230 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56240 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56252 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56268 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56280 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56294 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56298 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56312 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56314 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56326 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56342 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56346 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56350 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56352 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56368 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56378 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56390 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56404 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56418 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56432 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56440 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56454 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56458 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56468 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56480 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56496 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56512 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56524 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56528 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:56542 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57170 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57186 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57200 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57212 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57228 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57238 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57254 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57264 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57272 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57276 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57290 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57298 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57306 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57314 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57328 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57338 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57354 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57366 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57372 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57384 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57386 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57394 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57396 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57398 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57400 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57408 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57414 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57416 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57430 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57432 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57434 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57442 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57456 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57460 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57462 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57476 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57484 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57492 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57494 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57500 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57508 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57516 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57524 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57538 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57546 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57548 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57550 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59614 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59616 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59632 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59638 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59652 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59662 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59666 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59670 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59682 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59698 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59708 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59712 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59718 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59728 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59732 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59748 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59764 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59766 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59772 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59786 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59796 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59800 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59810 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59812 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59820 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59824 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59826 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59836 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59848 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59858 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59874 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59880 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59888 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59904 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59916 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59918 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59934 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59946 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59956 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59958 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59966 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59968 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59970 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59976 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59992 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61302 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61304 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61312 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61326 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61328 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61338 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61346 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61362 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61366 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61372 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61382 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61396 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61400 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61410 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61418 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61426 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61438 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61440 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61446 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61460 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61470 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61482 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61490 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61504 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61514 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61516 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61532 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61542 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61554 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61566 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61574 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61584 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61592 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61606 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61610 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61614 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61616 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61626 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61642 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61654 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61664 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61672 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61682 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61694 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61696 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:61708 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64008 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64010 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64024 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64032 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64048 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64056 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64066 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64080 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64090 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64092 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64100 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64116 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64130 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64134 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64144 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64146 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64162 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64172 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64186 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64188 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64190 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64206 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64210 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64212 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64220 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64228 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64240 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64244 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64252 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64262 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64270 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64276 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64286 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64302 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64316 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64318 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64330 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64346 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64356 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64370 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64380 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62570 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62586 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62596 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62612 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62628 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62630 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62634 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62648 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62656 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62658 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62664 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62670 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62674 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62686 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62694 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62706 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62714 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62724 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62726 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62738 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62752 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62762 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62766 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62774 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62790 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62802 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62818 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62824 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62838 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62850 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62858 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62868 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62878 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62894 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62896 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62898 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62906 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62908 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62924 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62932 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62936 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62950 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62966 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62978 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62992 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:62994 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57926 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57938 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57944 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57956 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57960 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57970 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57978 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:57994 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58000 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58004 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58012 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58024 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58032 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58048 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58054 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58062 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58076 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58084 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58098 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58104 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58106 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58108 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58116 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58132 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58148 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58158 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58170 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58172 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58182 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58186 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58200 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58210 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58212 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58216 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58224 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58236 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58248 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58256 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58262 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58272 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58284 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58286 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58290 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58292 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58300 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55038 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55046 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55050 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55056 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55062 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55066 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55078 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55082 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55094 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55098 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55102 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55108 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55114 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55128 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55130 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55138 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55154 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55170 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55180 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55182 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55198 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55214 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55216 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55224 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55234 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55248 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55252 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55266 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55268 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55272 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55286 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55302 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55318 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55326 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55334 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55342 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55352 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55356 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55360 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55362 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55368 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55376 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55388 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64018 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64026 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64028 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64030 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64038 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64050 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64064 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64082 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64084 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64094 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64102 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64108 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64112 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64118 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64132 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64148 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64156 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64166 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64170 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64184 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64192 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64194 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64202 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64216 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64218 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64226 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64236 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64254 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64264 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64272 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64278 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64288 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64298 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64310 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64312 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64320 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64322 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64334 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64348 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64352 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64360 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64364 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64382 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64384 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:64400 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55008 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55016 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55022 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55036 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55052 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55058 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55064 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55074 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55088 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55104 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55112 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55124 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55132 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55140 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55148 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55156 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55160 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55168 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55184 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55190 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55206 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55208 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55212 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55226 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55240 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55254 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55270 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55284 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55300 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55308 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55316 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55328 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55340 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55358 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55364 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55370 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55386 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55396 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55404 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55412 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55424 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55430 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55442 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55454 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55470 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:55482 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58866 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58876 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58878 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58880 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58890 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58902 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58906 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58912 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58916 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58932 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58934 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58948 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58962 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58972 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58982 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:58988 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59002 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59016 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59028 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59042 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59046 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59052 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59062 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59078 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59090 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59100 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59108 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59110 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59126 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59134 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59144 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59148 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59160 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59162 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59166 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59174 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59178 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59186 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59198 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59210 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59216 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59228 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59244 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59250 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60520 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60536 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60538 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60544 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60552 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60554 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60566 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60576 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60580 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60586 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60594 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60610 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60614 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60624 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60638 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60646 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60662 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60672 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60686 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60696 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60700 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60710 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60722 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60730 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60732 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60746 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60758 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60770 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60778 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60792 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60802 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60806 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60808 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60822 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60832 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60844 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60848 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60858 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60860 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60874 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60878 - "PUT /execute/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60886 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60888 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60896 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60900 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60914 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59814 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59822 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59834 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59836 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59840 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59844 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59860 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59868 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59884 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59898 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59904 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59916 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59918 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59934 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59944 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59948 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59960 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59968 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59970 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59978 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59980 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59984 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59990 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60000 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60012 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60022 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60030 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60034 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60044 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60056 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60068 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60082 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60088 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60100 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60106 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60110 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60114 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60122 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60136 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60138 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60148 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60158 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60174 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:60178 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59766 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59770 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59778 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59792 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59806 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59824 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59838 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59842 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59852 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59864 - "GET /monitor/ HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.19.0.1:59878 - "GET /monitor/ HTTP/1.1" 200 OK

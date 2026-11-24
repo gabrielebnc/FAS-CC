@@ -1,0 +1,49 @@
+{
+  "transitions": 4,
+  "windows_checked": 5,
+  "maximum_mean_error": 3.9968028886505635e-14,
+  "carryover_windows": [
+    {
+      "decision_step": 1853,
+      "confirmed_step": 1870,
+      "window_start": 2920,
+      "window_end": 3521,
+      "routing_changed": true,
+      "completed_trips": 164,
+      "departed_before_confirmation": 9,
+      "fraction": 0.054878048780487805
+    },
+    {
+      "decision_step": 3521,
+      "confirmed_step": 3530,
+      "window_start": 4580,
+      "window_end": 5180,
+      "routing_changed": true,
+      "completed_trips": 106,
+      "departed_before_confirmation": 27,
+      "fraction": 0.25471698113207547
+    },
+    {
+      "decision_step": 5180,
+      "confirmed_step": 5190,
+      "window_start": 6241,
+      "window_end": 6842,
+      "routing_changed": true,
+      "completed_trips": 100,
+      "departed_before_confirmation": 13,
+      "fraction": 0.13
+    },
+    {
+      "decision_step": 6842,
+      "confirmed_step": 6851,
+      "window_start": 7901,
+      "window_end": 8502,
+      "routing_changed": true,
+      "completed_trips": 186,
+      "departed_before_confirmation": 17,
+      "fraction": 0.0913978494623656
+    }
+  ],
+  "changed_routing_carryover_fraction": 0.11870503597122302,
+  "changed_routing_windows_over_eight_percent": 3
+}

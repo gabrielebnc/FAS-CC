@@ -1,0 +1,291 @@
+{
+  "purpose": "Complete documented settings for the 200-transition SAC attempt; training and deployment",
+  "training": {
+    "transitions": 200,
+    "workers": 1,
+    "max_episode_ticks": 100000,
+    "first_simulator_seed": 110,
+    "simulator_seed_stride": 1,
+    "learner_seed": 0,
+    "fresh_model": true,
+    "checkpoint_selection": "final checkpoint at transition 200; no selection using evaluation results",
+    "checkpoint_cadence": "after each completed episode; resume starts a fresh next seed",
+    "final_wave_horizon": "all training episodes use max_episode_ticks; hold final configuration through any unused tail",
+    "replay_insertion_order": "serial collection order on the main thread",
+    "gradient_updates_per_collected_transition": 1,
+    "torch_threads": 1,
+    "output_directory": "experiments/sac-200-native",
+    "command": ".venv/bin/python -u training.py train --config SAC_SETTINGS.json --output experiments/sac-200-native"
+  },
+  "learner": {
+    "learning_rate": 0.0003,
+    "buffer_size": 50000,
+    "learning_starts": 32,
+    "batch_size": 32,
+    "gamma": 0.95,
+    "tau": 0.005,
+    "train_freq": 1,
+    "gradient_steps": 1,
+    "ent_coef": "auto_1.0",
+    "target_entropy": -2.0,
+    "target_update_interval": 1,
+    "use_sde": false,
+    "optimize_memory_usage": false,
+    "device": "cpu",
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          32,
+          32
+        ],
+        "qf": [
+          64,
+          64
+        ]
+      },
+      "n_critics": 2,
+      "share_features_extractor": false,
+      "optimizer_kwargs": {
+        "eps": 1e-08,
+        "weight_decay": 0,
+        "betas": [
+          0.9,
+          0.999
+        ]
+      }
+    },
+    "replay_buffer_kwargs": {
+      "handle_timeout_termination": true
+    }
+  },
+  "learner_details": {
+    "library": "stable-baselines3==2.9.2",
+    "algorithm": "SAC; twin Q critics, target Q copies, automatic entropy temperature",
+    "policy": "MlpPolicy",
+    "hidden_activation": "ReLU",
+    "critic_output": "linear",
+    "actor_training": "Gaussian sample followed by tanh; squashed log-probability correction handled by SB3",
+    "actor_log_std_bounds": [
+      -20,
+      2
+    ],
+    "optimizer": "Adam",
+    "discount_unit": "one complete adaptation transition",
+    "learning_rate_schedule": "constant",
+    "gradient_clipping": null,
+    "replay_sampling": "uniform",
+    "first_gradient_update_transition": 33,
+    "expected_gradient_updates": 168,
+    "reward_scaling_or_clipping": null,
+    "observation_normalization": "fixed scales; no VecNormalize",
+    "neural_feature_extractor": "FlattenExtractor; no additional learned shared extractor"
+  },
+  "environment": {
+    "settlement_ticks": 1800,
+    "window_ticks": 600,
+    "warmup_ticks": 200,
+    "overhead_scale": 3.0787950597099547,
+    "rate_scale": 0.3096153846153846,
+    "rate_floor": 0.2723333333333333,
+    "population_scale": 750,
+    "trend_ticks": 600,
+    "exploration_max": 0.5,
+    "reroute_min": 30,
+    "reroute_max": 600,
+    "throughput_weight": 1.0,
+    "retry_ticks": 200,
+    "max_attempts": 3,
+    "version": "relative-overhead-v1",
+    "calibration": "baseline-seed-101; normalization only; timing provisional"
+  },
+  "state": {
+    "feature_order": [
+      "overhead",
+      "completion_rate",
+      "population",
+      "population_trend",
+      "exploration",
+      "rerouting"
+    ],
+    "formulas": [
+      "recent mean overhead / overhead_scale",
+      "recent smart-car completions per tick / rate_scale",
+      "actual active cars / population_scale",
+      "(active_end-active_start)/window_ticks_actual * trend_ticks/population_scale",
+      "2*exploration/exploration_max-1",
+      "2*log(reroute/reroute_min)/log(reroute_max/reroute_min)-1"
+    ],
+    "clipping": null,
+    "performance_levels": "nonnegative, no upper clipping",
+    "actual_population_source": "car_stats.driving_car_counter",
+    "trend_source": "same settled window as overhead",
+    "cumulative_sum_reconstruction": "(total_trips+1)*published_average; difference of boundary sums",
+    "calibration_source": "experiments/calibration-smoke-101/settings.json; training seed only"
+  },
+  "actions": {
+    "normalized_space": {
+      "low": [
+        -1,
+        -1
+      ],
+      "high": [
+        1,
+        1
+      ]
+    },
+    "order": [
+      "exploration_percentage",
+      "re_route_every_ticks"
+    ],
+    "exploration_mapping": "exploration_max*(u0+1)/2",
+    "rerouting_mapping": "round(exp(log(reroute_min)+(u1+1)/2*log(reroute_max/reroute_min)))",
+    "integer_rounding": "Python nearest integer, ties to even; clamp to bounds",
+    "replay_action": "original normalized action, before rounding",
+    "preserved_controls": "the other seven knobs; workload fixed at 750"
+  },
+  "reward": {
+    "formula": "(H_before-H_after)/max(H_before,1e-6) - throughput_weight*max(0,1-q_after/rate_floor)",
+    "epsilon": 1e-06,
+    "minimum_trips_for_high_confidence": 30,
+    "low_confidence_windows": "retain actual measured mean",
+    "no_after_completions_reward": -2,
+    "no_after_completions_state_overhead": 30,
+    "no_after_completions_measured_overhead": null,
+    "no_before_mean": "only negative throughput penalty; no measured improvement",
+    "complaint_penalty": 0,
+    "computation_penalty": 0,
+    "switching_penalty": 0,
+    "outcome_level_penalty_beta": 0,
+    "calibration_rate_floor_percentile": 10,
+    "calibration_percentile_method": "linear",
+    "initial_acquisition": "hold initial configuration until warmup + settlement, then one measurement window",
+    "before_window": "reuse previous settled after-window",
+    "settlement_outcomes": "excluded from reward, included in whole-run scores",
+    "zero_change_action": "same full settlement and window as a changed action",
+    "timing_validation": "provisional duration-based timing; not a guarantee of clean post-action trip cohorts"
+  },
+  "initial_configuration": {
+    "route_random_sigma": 0.2,
+    "exploration_percentage": 0.5,
+    "max_speed_and_length_factor": 1,
+    "average_edge_duration_factor": 1,
+    "freshness_update_factor": 10,
+    "freshness_cut_off_value": 90,
+    "re_route_every_ticks": 600,
+    "total_car_counter": 750,
+    "edge_average_influence": 140
+  },
+  "runtime": {
+    "crowdnav_image": "crowdnav-sac/simulation:local",
+    "api_image": "crowdnav-sac/api:local",
+    "kafka_image": "spotify/kafka:latest",
+    "fast_command_poll": false,
+    "controller_gate": false,
+    "command_check_interval_ticks": 10,
+    "training_http_poll_seconds": 0.03,
+    "http_timeout_seconds": 5,
+    "monitoring_stall_timeout_seconds": 120,
+    "application_reserve_ticks": 600,
+    "container_cpu_limit": null,
+    "container_memory_limit": null,
+    "docker_vm_cpus": 12,
+    "docker_vm_memory_bytes": 8319238144,
+    "images_architecture": {
+      "crowdnav": "arm64",
+      "api": "arm64",
+      "kafka": "amd64, emulated"
+    },
+    "performance_change": "none; all speed experiments aborted at user request",
+    "traffic_reset": "fresh unique Docker stack and Kafka state per episode; Python and SUMO seeded",
+    "resource_policy": "one serial rollout, existing uncapped Docker resources; no global Docker settings changed",
+    "traffic_rng": "original shared Python random module, as in the previously tested runtime",
+    "command_consumer_timeout_ms": 100,
+    "image_ids": {
+      "crowdnav": "sha256:fe0635e97f54d083a7e1001f243bcaae922ee300234fa52122ca9b23f17464cd",
+      "api": "sha256:68fd799f1db0b595b8031d714992654f1ec51cb220c241fa1c30150ab44ba639",
+      "kafka": "sha256:cf8f8f760b48a07fb99df24fab8201ec8b647634751e842b67103a25a388981b"
+    },
+    "episode_completion_timeout": "max(300 seconds, horizon_ticks*0.05 seconds)",
+    "reproducibility_note": "Original global traffic RNG and Kafka timing behavior retained as requested; matched seeds do not imply identical trajectories after policy changes."
+  },
+  "deployment": {
+    "deterministic": true,
+    "action_rule": "tanh(actor mean); no Gaussian sampling or network updates",
+    "checkpoint_format": "JSON actor weights, feature order, frozen environment settings, model ID and update count",
+    "required_files": [
+      "UPISAS/exemplars/crowdnav.py",
+      "UPISAS/strategies/my_strategy.py",
+      "run_challenge.py",
+      "requirements.txt",
+      "checkpoint.json"
+    ],
+    "default_endpoint": "http://localhost:8080",
+    "endpoint_environment_variable": "CROWDNAV_ENDPOINT",
+    "checkpoint_default": "checkpoint.json next to run_challenge.py",
+    "horizon_ticks": 10000,
+    "http_poll_seconds": 0.05,
+    "http_timeout_seconds": 5,
+    "monitoring_stall_timeout_seconds": 120,
+    "application_reserve_ticks": 600,
+    "application_confirmation": "all nine monitored values match request within 1e-9",
+    "command_retry_ticks": 200,
+    "maximum_command_attempts": 3,
+    "training_tools_required": false,
+    "torch_or_numpy_required": false,
+    "export_validation_states": 1002,
+    "export_max_action_error": 1e-05,
+    "rounded_rerouting_mismatches_allowed": 0,
+    "output_directory": "experiments/sac-200-native-submission"
+  },
+  "comparison": {
+    "seed": 301,
+    "ticks": 10000,
+    "cars": 750,
+    "policies": [
+      "static",
+      "rule-based",
+      "SAC"
+    ],
+    "SAC_checkpoint": "final checkpoint after 200 transitions",
+    "static": {
+      "exploration_percentage": 0.5,
+      "re_route_every_ticks": 600,
+      "runtime_changes": false
+    },
+    "rule_based": {
+      "source": "/Users/gbianchi/uni/adapsw/UPISAS/UPISAS/strategies/my_strategy.py",
+      "source_sha256": "01c756b8b8d9cd8ffea90f13c48931ff3029f879724f9b80f7820cb5d5d7e962",
+      "startup_exploration": 0,
+      "startup_reroute": 60,
+      "review_ticks": 200,
+      "minimum_completed_trips": 10,
+      "high_overhead": {
+        "at_least": 2.5,
+        "exploration": 0,
+        "reroute": 30
+      },
+      "low_overhead": {
+        "at_most": 2.0,
+        "exploration": 0.05,
+        "reroute": 90
+      },
+      "otherwise": {
+        "exploration": 0,
+        "reroute": 60
+      }
+    },
+    "shared_runtime": "original images and runtime for all three policies; ordinary HTTP polling, no simulation speed modifications",
+    "primary_metric": "whole-run mean individual-trip overhead",
+    "other_metrics": [
+      "median overhead",
+      "p95 overhead",
+      "completed trips",
+      "complaint rate",
+      "wall-clock time"
+    ],
+    "scoring_window": "all original smart-car trip events after tick 200 through tick 10000",
+    "interpretation": "one matched seed is a preliminary comparison, not generalization evidence",
+    "output_directory": "experiments/comparison-sac-200-seed301",
+    "command": ".venv/bin/python -u compare_policies.py --checkpoint experiments/sac-200-native/checkpoint-000200 --output experiments/comparison-sac-200-seed301 --seed 301"
+  }
+}

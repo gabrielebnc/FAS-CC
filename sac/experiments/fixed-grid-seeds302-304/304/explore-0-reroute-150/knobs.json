@@ -1,0 +1,9 @@
+{
+  "explorationPercentage": 0.0,
+  "reRouteEveryTicks": 150,
+  "routeRandomSigma": 0.2,
+  "maxSpeedAndLengthFactor": 1,
+  "averageEdgeDurationFactor": 1,
+  "freshnessUpdateFactor": 10,
+  "freshnessCutOffValue": 90
+}

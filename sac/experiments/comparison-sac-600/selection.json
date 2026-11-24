@@ -1,0 +1,14 @@
+{
+  "development_seeds": [
+    302,
+    303,
+    304
+  ],
+  "scored_by": "lowest equal-seed mean overhead; ties prefer the earlier checkpoint",
+  "scores": {
+    "200": 2.4164233982609993,
+    "400": 2.3906471145960606,
+    "600": 2.4207092303316133
+  },
+  "selected": 400
+}

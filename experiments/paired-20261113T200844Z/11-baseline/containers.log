@@ -1,0 +1,45 @@
+crowdnav-1     | [36m#####################################[39m
+crowdnav-1     | [36m#      Starting CrowdNav v0.2       #[39m
+crowdnav-1     | [36m#####################################[39m
+crowdnav-1     | [33m# Configuration:[39m
+crowdnav-1     | [33m# Kafka-Host   -> kafka:9092[39m
+crowdnav-1     | [33m# Kafka-Topic1 -> crowd-nav-trips[39m
+crowdnav-1     | [33m# Kafka-Topic2 -> crowd-nav-performance[39m
+crowdnav-1     | [32m# StreamForword OK![39m
+crowdnav-1     | [32m# KafkaConnector OK![39m
+crowdnav-1     | [32m# KafkaProducerMonitor Connected![39m
+crowdnav-1     | [32m# SUMO-Dependency check OK![39m
+crowdnav-1     | [36m[32m# Map loading OK! [39m[39m
+crowdnav-1     | [36m[36m# Nodes: 426 / Edges: 1131[39m[39m
+crowdnav-1     |  Retrying in 1 seconds
+crowdnav-1     | [32m
+crowdnav-1     | # SUMO-Application started OK![39m
+crowdnav-1     | [35m# Start adding initial cars to the simulation[39m
+crowdnav-1     | 0 -> Step:100 # Driving cars: 740/750 # avgTripDuration: 0(0) # avgTripOverhead: 0 # totalComplaints: 0
+crowdnav-1     | 0 -> Step:200 # Driving cars: 737/750 # avgTripDuration: 0(0) # avgTripOverhead: 0 # totalComplaints: 0
+kafka-1        | /usr/lib/python2.7/dist-packages/supervisor/options.py:296: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
+kafka-1        |   'Supervisord is running as root and it is searching '
+kafka-1        | 2026-11-13 20:08:45,224 CRIT Supervisor running as root (no user in config file)
+kafka-1        | 2026-11-13 20:08:45,225 WARN Included extra file "/etc/supervisor/conf.d/kafka.conf" during parsing
+kafka-1        | 2026-11-13 20:08:45,225 WARN Included extra file "/etc/supervisor/conf.d/zookeeper.conf" during parsing
+kafka-1        | 2026-11-13 20:08:45,231 INFO RPC interface 'supervisor' initialized
+kafka-1        | 2026-11-13 20:08:45,231 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+kafka-1        | 2026-11-13 20:08:45,231 INFO supervisord started with pid 1
+kafka-1        | 2026-11-13 20:08:46,241 INFO spawned: 'zookeeper' with pid 9
+kafka-1        | 2026-11-13 20:08:46,243 INFO spawned: 'kafka' with pid 10
+kafka-1        | 2026-11-13 20:08:47,332 INFO success: zookeeper entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+kafka-1        | 2026-11-13 20:08:47,332 INFO success: kafka entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+http-server-1  | INFO:     Started server process [1]
+http-server-1  | INFO:     Waiting for application startup.
+http-server-1  | INFO:     Application startup complete.
+http-server-1  | INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+http-server-1  | Topic crowd-nav-monitored-stats is not available during auto-create initialization
+http-server-1  | Topic crowd-nav-monitored-stats is not available during auto-create initialization
+http-server-1  | # KafkaConsumerMonitor Connected!
+http-server-1  | INFO:     127.0.0.1:42082 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:42084 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.20.0.4:46690 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:42096 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:42110 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:42114 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:60220 - "GET / HTTP/1.1" 200 OK

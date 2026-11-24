@@ -1,0 +1,2 @@
+seed,baseline_median,strategy_median,baseline_trips,strategy_trips,reduction_percent,passed
+11,2.480960469498876,2.0385878765152774,2940,3847,17.83069897413369,True

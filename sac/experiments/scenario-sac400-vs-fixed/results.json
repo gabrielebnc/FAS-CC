@@ -1,0 +1,42 @@
+{
+  "summary": [
+    {
+      "policy": "static",
+      "seeds": 3,
+      "mean_overhead": 3.4459388331913074,
+      "median_overhead": 2.3358803770895356,
+      "p95_overhead": 9.859387595626083,
+      "completed_trips": 2976,
+      "complaint_rate": 0.2282986090879395,
+      "teleports": 1481.3333333333333
+    },
+    {
+      "policy": "SAC",
+      "seeds": 3,
+      "mean_overhead": 3.4488865906020276,
+      "median_overhead": 2.3146172798244242,
+      "p95_overhead": 9.816862356141105,
+      "completed_trips": 2928.6666666666665,
+      "complaint_rate": 0.22811472326956408,
+      "teleports": 1513.6666666666667
+    }
+  ],
+  "paired": [
+    {
+      "seed": 401,
+      "mean_overhead_reduction_percent": -4.1138761522662355,
+      "extra_completed_trips": -39
+    },
+    {
+      "seed": 402,
+      "mean_overhead_reduction_percent": 4.006268349183244,
+      "extra_completed_trips": 53
+    },
+    {
+      "seed": 403,
+      "mean_overhead_reduction_percent": -0.22758708966714744,
+      "extra_completed_trips": -156
+    }
+  ],
+  "interpretation": "Three matched seeds, one stochastic execution per policy and seed. Completed smart-car trips only."
+}

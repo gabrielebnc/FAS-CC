@@ -1,0 +1,85 @@
+{
+  "services": {
+    "kafka": {
+      "image": "spotify/kafka",
+      "environment": {
+        "ADVERTISED_HOST": "kafka",
+        "ADVERTISED_PORT": "9092"
+      },
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "python",
+          "-c",
+          "import socket; socket.create_connection((\"localhost\",9092),2).close()"
+        ],
+        "interval": "2s",
+        "timeout": "3s",
+        "retries": 90
+      }
+    },
+    "http-server": {
+      "image": "sha256:5f575f8dff43842f66b7e04213ebb4c92c7487ba65930177ab488b4bb97d25d4",
+      "depends_on": {
+        "kafka": {
+          "condition": "service_healthy"
+        }
+      },
+      "entrypoint": [
+        "python",
+        "-c",
+        "import aiokafka; assert aiokafka.__version__ == \"0.12.0\", \"Pin aiokafka==0.12.0 and rebuild the API image\"; import uvicorn; uvicorn.run(\"app.main:app\",host=\"0.0.0.0\",port=8080)"
+      ],
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen(\"http://localhost:8080/\",timeout=2)"
+        ],
+        "interval": "2s",
+        "timeout": "3s",
+        "retries": 60
+      }
+    },
+    "crowdnav": {
+      "image": "sha256:fb95ab82babeff993a1965a47bf8609f7bca6a530dc110304b70e7ffd97606db",
+      "init": true,
+      "depends_on": {
+        "http-server": {
+          "condition": "service_healthy"
+        }
+      },
+      "working_dir": "/app",
+      "entrypoint": [
+        "python",
+        "/evaluation_simulation.py"
+      ],
+      "environment": {
+        "EVALUATION_SEED": "11",
+        "PYTHONHASHSEED": "11",
+        "PYTHONUNBUFFERED": "1"
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261111T085122Z/evaluation_simulation.py",
+          "target": "/evaluation_simulation.py",
+          "read_only": true
+        },
+        {
+          "type": "bind",
+          "source": "/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261111T085122Z/11-baseline",
+          "target": "/results",
+          "read_only": false
+        },
+        {
+          "type": "bind",
+          "source": "/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261111T085122Z/11-baseline/knobs.json",
+          "target": "/app/knobs.json",
+          "read_only": true
+        }
+      ]
+    }
+  }
+}

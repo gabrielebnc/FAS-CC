@@ -1,0 +1,32 @@
+[
+  {
+    "episode": "episode-0001-seed-110",
+    "transitions": 40,
+    "windows_checked": 41,
+    "maximum_mean_error": 6.474820679613913e-13
+  },
+  {
+    "episode": "episode-0002-seed-111",
+    "transitions": 40,
+    "windows_checked": 41,
+    "maximum_mean_error": 7.052136652418994e-13
+  },
+  {
+    "episode": "episode-0003-seed-112",
+    "transitions": 40,
+    "windows_checked": 41,
+    "maximum_mean_error": 8.193445921733655e-13
+  },
+  {
+    "episode": "episode-0004-seed-113",
+    "transitions": 40,
+    "windows_checked": 41,
+    "maximum_mean_error": 7.540634783254063e-13
+  },
+  {
+    "episode": "episode-0005-seed-114",
+    "transitions": 40,
+    "windows_checked": 41,
+    "maximum_mean_error": 4.951594689828198e-13
+  }
+]

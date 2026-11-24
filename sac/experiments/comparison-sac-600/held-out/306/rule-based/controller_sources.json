@@ -1,0 +1,11 @@
+{
+  "run_challenge.py": "908ea76e6c14ec2806fe5555a1a9dadc9262130cd1be611b0efd4552cf5bf2da",
+  "UPISAS/__init__.py": "5f400d4c8351e03f9db5b62a858a2ca1f99f0c76ef0b54215b6180a394c3320e",
+  "UPISAS/strategy.py": "e383e2e7fa852495a7ad156b520f0d9e0f577346c6983444cdeb3f919ec5a447",
+  "UPISAS/exceptions.py": "38bed3670e9166a0dcf3ef5a4d7ecfd89464aa56392cc5d5e6c52661051bc2a1",
+  "UPISAS/knowledge.py": "4e4f7a3b04b039a145a895f2524f711d395b10a8a132123c5d9a26c344df5fb5",
+  "UPISAS/strategies/my_strategy.py": "01c756b8b8d9cd8ffea90f13c48931ff3029f879724f9b80f7820cb5d5d7e962",
+  "UPISAS/strategies/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "UPISAS/exemplars/crowdnav.py": "f60dc06e85d4527fd4fe1e89ec588af158d4b7d558f1de0179728112c7fb910a",
+  "UPISAS/exemplars/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

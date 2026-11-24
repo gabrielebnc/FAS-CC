@@ -1,0 +1,79 @@
+{
+  "pairs": [
+    {
+      "seed": 11,
+      "baseline_median": 2.480960469498876,
+      "strategy_median": 2.0385878765152774,
+      "baseline_trips": 2940,
+      "strategy_trips": 3847,
+      "reduction_percent": 17.83069897413369,
+      "passed": true
+    }
+  ],
+  "runs": [
+    {
+      "seed": 11,
+      "policy": "baseline",
+      "final_step": 10000,
+      "trip_count": 2940,
+      "median_overhead": 2.480960469498876,
+      "mean_overhead": 3.1252130143200096,
+      "p90_overhead": 5.515541516433455,
+      "p95_overhead": 7.108140492318795,
+      "complaints": 708,
+      "complaint_rate": 0.24081632653061225,
+      "configuration_changes": 0,
+      "wall_seconds_including_startup": 202.7573745250702,
+      "data_directory": "/Users/gbianchi/uni/adapsw/UPISAS/experiments/rules-200ticks-seed11/11-baseline"
+    },
+    {
+      "seed": 11,
+      "policy": "strategy",
+      "final_step": 10000,
+      "trip_count": 3847,
+      "median_overhead": 2.0385878765152774,
+      "mean_overhead": 2.3860118150390974,
+      "p90_overhead": 3.9065571792752656,
+      "p95_overhead": 4.827883117216606,
+      "complaints": 633,
+      "complaint_rate": 0.16454380036391994,
+      "configuration_changes": 16,
+      "wall_seconds_including_startup": 216.8529942035675,
+      "data_directory": "/Users/gbianchi/uni/adapsw/UPISAS/experiments/rules-200ticks-seed11/11-strategy"
+    }
+  ],
+  "completed_pairs": 1,
+  "requested_pairs": 1,
+  "requested_seeds": [
+    11
+  ],
+  "evaluation_complete": true,
+  "all_tested_seeds_pass": true,
+  "batches": [
+    "/Users/gbianchi/uni/adapsw/UPISAS/experiments/rules-200ticks-seed11"
+  ],
+  "provenance": {
+    "images": {
+      "crowdnav": "fas-evaluation/crowdnav:fe0635e97f54d083a7e1001f243bcaae922ee300234fa52122ca9b23f17464cd",
+      "api": "fas-evaluation/api:68fd799f1db0b595b8031d714992654f1ec51cb220c241fa1c30150ab44ba639"
+    },
+    "horizon": 10000,
+    "source_sha256": {
+      "UPISAS/__init__.py": "dd85dc118e531d6052ba42dcfb67af1bdeb3490b4474cbedd37c2547d461860e",
+      "UPISAS/strategy.py": "fbbc88dabbb04413309975f70e7def1963465a3785f40333dec135b945a3db1a",
+      "UPISAS/knowledge.py": "4e4f7a3b04b039a145a895f2524f711d395b10a8a132123c5d9a26c344df5fb5",
+      "UPISAS/exceptions.py": "08104f5ffb8de4af27c3950894cb8e3368be719befbd5fc81e10a4e517ccffad",
+      "UPISAS/exemplars/crowdnav.py": "f60dc06e85d4527fd4fe1e89ec588af158d4b7d558f1de0179728112c7fb910a",
+      "UPISAS/strategies/my_strategy.py": "edfd92b08502213452a1c567487a3b61750ba898abde78e18ebe882ae311c6ce",
+      "run_challenge.py": "a9ba1410f4f06a9115eb20ef714e0815864324a9c70f8a4dae49ad33c02aa69a"
+    },
+    "simulation_sha256": "608c680a703f546e82c4e25c4df2b840a0b9a9e8b23a7d70ea1d12dc4765b69f",
+    "python_version": "3.12.7 (v3.12.7:0b05ead877f, Sep 30 2024, 23:18:00) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "local_packages": {
+      "requests": "2.31.0",
+      "jsonschema": "4.19.2"
+    },
+    "strategy": "rule-based"
+  },
+  "rule_decisions": 49
+}

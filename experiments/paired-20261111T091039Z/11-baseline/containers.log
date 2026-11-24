@@ -1,0 +1,47 @@
+kafka-1        | /usr/lib/python2.7/dist-packages/supervisor/options.py:296: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
+kafka-1        |   'Supervisord is running as root and it is searching '
+kafka-1        | 2026-11-11 09:10:40,115 CRIT Supervisor running as root (no user in config file)
+kafka-1        | 2026-11-11 09:10:40,116 WARN Included extra file "/etc/supervisor/conf.d/kafka.conf" during parsing
+kafka-1        | 2026-11-11 09:10:40,116 WARN Included extra file "/etc/supervisor/conf.d/zookeeper.conf" during parsing
+kafka-1        | 2026-11-11 09:10:40,126 INFO RPC interface 'supervisor' initialized
+kafka-1        | 2026-11-11 09:10:40,126 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+kafka-1        | 2026-11-11 09:10:40,126 INFO supervisord started with pid 1
+http-server-1  | INFO:     Started server process [1]
+http-server-1  | INFO:     Waiting for application startup.
+http-server-1  | INFO:     Application startup complete.
+http-server-1  | INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+http-server-1  | Topic crowd-nav-monitored-stats is not available during auto-create initialization
+http-server-1  | Topic crowd-nav-monitored-stats is not available during auto-create initialization
+kafka-1        | 2026-11-11 09:10:41,129 INFO spawned: 'zookeeper' with pid 9
+kafka-1        | 2026-11-11 09:10:41,130 INFO spawned: 'kafka' with pid 10
+kafka-1        | 2026-11-11 09:10:42,196 INFO success: zookeeper entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+kafka-1        | 2026-11-11 09:10:42,196 INFO success: kafka entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+http-server-1  | # KafkaConsumerMonitor Connected!
+http-server-1  | INFO:     127.0.0.1:58868 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:58876 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:35446 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:35450 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:35458 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:35474 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:35476 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:57512 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:57524 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:57532 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:57544 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:57560 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:58588 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:58596 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:58606 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:58612 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:58622 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:56568 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:56580 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:56596 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:56602 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:56604 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:55298 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:55304 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:55308 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:55318 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:55334 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:52112 - "GET / HTTP/1.1" 200 OK

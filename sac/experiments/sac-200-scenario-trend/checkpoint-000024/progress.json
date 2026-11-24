@@ -1,0 +1,14 @@
+{
+  "transitions": 24,
+  "gradient_updates": 0,
+  "next_simulator_seed": 507,
+  "learner_seed": 0,
+  "boundary": "fresh_episode",
+  "packages": {
+    "stable-baselines3": "2.9.2",
+    "torch": "2.15.0",
+    "gymnasium": "1.4.0",
+    "numpy": "2.5.5",
+    "requests": "2.34.2"
+  }
+}

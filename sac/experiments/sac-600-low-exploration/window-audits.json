@@ -1,0 +1,74 @@
+[
+  {
+    "episode": "episode-0001-seed-110",
+    "transitions": 53,
+    "windows_checked": 54,
+    "maximum_mean_error": 9.42801392511683e-13
+  },
+  {
+    "episode": "episode-0002-seed-111",
+    "transitions": 53,
+    "windows_checked": 54,
+    "maximum_mean_error": 5.209166431541234e-13
+  },
+  {
+    "episode": "episode-0003-seed-112",
+    "transitions": 53,
+    "windows_checked": 54,
+    "maximum_mean_error": 7.420730696594546e-13
+  },
+  {
+    "episode": "episode-0004-seed-113",
+    "transitions": 53,
+    "windows_checked": 54,
+    "maximum_mean_error": 6.150635556423367e-13
+  },
+  {
+    "episode": "episode-0005-seed-114",
+    "transitions": 53,
+    "windows_checked": 54,
+    "maximum_mean_error": 7.158718062783009e-13
+  },
+  {
+    "episode": "episode-0006-seed-115",
+    "transitions": 53,
+    "windows_checked": 54,
+    "maximum_mean_error": 7.025491299827991e-13
+  },
+  {
+    "episode": "episode-0007-seed-116",
+    "transitions": 53,
+    "windows_checked": 54,
+    "maximum_mean_error": 8.22453216642316e-13
+  },
+  {
+    "episode": "episode-0008-seed-117",
+    "transitions": 53,
+    "windows_checked": 54,
+    "maximum_mean_error": 4.560796185160143e-13
+  },
+  {
+    "episode": "episode-0009-seed-118",
+    "transitions": 53,
+    "windows_checked": 54,
+    "maximum_mean_error": 9.245937349078304e-13
+  },
+  {
+    "episode": "episode-0010-seed-119",
+    "transitions": 53,
+    "windows_checked": 54,
+    "maximum_mean_error": 6.45261621912141e-13
+  },
+  {
+    "episode": "episode-0011-seed-120",
+    "transitions": 53,
+    "windows_checked": 54,
+    "maximum_mean_error": 8.140155216551648e-13
+  },
+  {
+    "episode": "episode-0012-seed-121",
+    "transitions": 17,
+    "windows_checked": 18,
+    "maximum_mean_error": 3.148592497836944e-13
+  }
+]

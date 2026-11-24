@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "completed_runs": 9,
+  "total_runs": 9,
+  "started_utc": "2026-11-24T16:21:59.917919+00:00",
+  "current_seed": 603,
+  "current_policy": "scenario-sac-200",
+  "phase": "complete",
+  "finished_utc": "2026-11-24T17:15:10.662175+00:00"
+}

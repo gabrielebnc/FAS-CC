@@ -1,0 +1,11 @@
+{
+  "transitions": 2,
+  "gradient_updates": 1,
+  "replay_size": 2,
+  "actor_changed": true,
+  "critics_changed": true,
+  "targets_changed": true,
+  "entropy_changed": true,
+  "wall_seconds": 209.6118767500011,
+  "performance_claim": "none; integration smoke"
+}

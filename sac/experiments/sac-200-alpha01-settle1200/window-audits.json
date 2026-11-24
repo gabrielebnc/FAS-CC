@@ -1,0 +1,30 @@
+[
+  {
+    "transitions": 53,
+    "windows_checked": 54,
+    "maximum_mean_error": 8.5131901528257e-13,
+    "episode": "episode-0001-seed-110",
+    "ticks": 100000
+  },
+  {
+    "transitions": 53,
+    "windows_checked": 54,
+    "maximum_mean_error": 6.80788758700146e-13,
+    "episode": "episode-0002-seed-111",
+    "ticks": 100000
+  },
+  {
+    "transitions": 53,
+    "windows_checked": 54,
+    "maximum_mean_error": 5.17808018685173e-13,
+    "episode": "episode-0003-seed-112",
+    "ticks": 100000
+  },
+  {
+    "transitions": 41,
+    "windows_checked": 42,
+    "maximum_mean_error": 5.191402863147232e-13,
+    "episode": "episode-0004-seed-113",
+    "ticks": 100000
+  }
+]

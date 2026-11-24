@@ -1,0 +1,15 @@
+.idea/**
+.DS_Store
+**.pyc
+SUMOS.iml
+app/network/cologne/**
+data/*
+*.lprof
+build/*
+dist/*
+SUMOS.egg-info/*
+*/.idea/*
+*/target/*
+spark/project/*
+*.iml
+.venv

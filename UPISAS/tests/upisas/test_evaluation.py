@@ -1,6 +1,7 @@
 """Validate scoring and isolation without requiring Docker or SUMO."""
 
 import copy
+import csv
 import json
 from pathlib import Path
 import tempfile
@@ -13,6 +14,7 @@ from tools.evaluate import (BASELINE, HORIZON, SUBMISSION, FRAMEWORK, compare,
                             configuration, summarize, snapshot_runtime, start_strategy, stop_strategy,
                             local_image_tag, backbone_image, find_backbone)
 from tools.evaluate import write_reports
+from tools.overhead_logs import export_overheads
 
 
 class TestEvaluation(unittest.TestCase):
@@ -185,6 +187,37 @@ class TestEvaluation(unittest.TestCase):
             self.addCleanup(stop_strategy, process)
             stop_strategy(process)
         self.assertIsNotNone(process.poll())
+
+
+class TestOverheadLogs(unittest.TestCase):
+    def test_retains_empty_ticks_exact_interval_scores_and_applied_settings(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            (directory / "result.json").write_text(json.dumps({
+                "final_step": 400, "trip_count": 2,
+                "configs": [{"step": 1, "configs": BASELINE},
+                            {"step": 300, "configs": {**BASELINE, "exploration_percentage": 0,
+                                                     "re_route_every_ticks": 60}}],
+            }))
+            events = [{"tick": 201, "overhead": 2}, {"tick": 400, "overhead": 4}]
+            (directory / "trips.jsonl").write_text("\n".join(json.dumps(e) for e in events))
+            intervals = export_overheads(directory, horizon=400, interval=200)
+            with (directory / "overhead_by_tick.csv").open() as stream:
+                ticks = list(csv.DictReader(stream))
+            self.assertEqual(len(ticks), 400)
+            self.assertEqual(ticks[199]["cumulative_mean_overhead"], "")
+            self.assertEqual(ticks[200]["cumulative_mean_overhead"], "2.0")
+            self.assertEqual(ticks[399]["cumulative_mean_overhead"], "3.0")
+            self.assertEqual(ticks[399]["cumulative_median_overhead"], "3.0")
+            self.assertEqual(ticks[201]["mean_overhead_at_tick"], "")
+            self.assertEqual(ticks[298]["re_route_every_ticks"], "600")
+            self.assertEqual(ticks[299]["re_route_every_ticks"], "60")
+            self.assertEqual(len(intervals), 2)
+            self.assertIsNone(intervals[0]["mean_overhead"])
+            self.assertEqual(intervals[1]["mean_overhead"], 3)
+            self.assertEqual(intervals[1]["median_overhead"], 3)
+            self.assertEqual(intervals[1]["trips_completed"], 2)
+            self.assertEqual(intervals[1]["total_trips"], 2)
 
 
 if __name__ == "__main__":

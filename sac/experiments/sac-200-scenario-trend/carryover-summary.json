@@ -1,0 +1,8 @@
+{
+  "changed_routing_windows": 198,
+  "measured_completions": 33952,
+  "departed_before_confirmation": 3862,
+  "fraction": 0.113748821866164,
+  "windows_over_eight_percent": 140,
+  "interpretation": "Departure-based diagnostic of original reward windows. All measured trips contribute to the reward."
+}

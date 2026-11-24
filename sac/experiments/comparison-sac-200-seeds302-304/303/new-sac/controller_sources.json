@@ -1,0 +1,13 @@
+{
+  "checkpoint.json": "902a34bf884f08bb439dbe930f273b829df4f7b3ad4e5b580db57bce7329225e",
+  "requirements.txt": "965e75aaa304c31c83b76cd44709336bd65d32fbaeec98e6a0b91987042cfc2f",
+  "run_challenge.py": "c40023fc771f217f2db38613d29b6ca130916c7bf9972bb9be9434dbe4af71da",
+  "UPISAS/__init__.py": "5f400d4c8351e03f9db5b62a858a2ca1f99f0c76ef0b54215b6180a394c3320e",
+  "UPISAS/strategy.py": "e383e2e7fa852495a7ad156b520f0d9e0f577346c6983444cdeb3f919ec5a447",
+  "UPISAS/exceptions.py": "38bed3670e9166a0dcf3ef5a4d7ecfd89464aa56392cc5d5e6c52661051bc2a1",
+  "UPISAS/knowledge.py": "4e4f7a3b04b039a145a895f2524f711d395b10a8a132123c5d9a26c344df5fb5",
+  "UPISAS/strategies/my_strategy.py": "947fbabdde2018f44109ed78f7736f23fddd98aeff52cd713c8add71e0a8920c",
+  "UPISAS/strategies/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "UPISAS/exemplars/crowdnav.py": "3b6409a1facfb59e1b7bde2ea55234a24161bb7198287255b86b4848d2bb6ecf",
+  "UPISAS/exemplars/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

@@ -5,7 +5,6 @@ __pycache__/
 .idea/
 .vscode/
 .DS_Store
-experiments/
 *.log
 
 # Extra files from the original local UPISAS checkout, outside this dev runtime.
@@ -28,3 +27,7 @@ UPISAS/strategies/crawdnav_strategy.py
 UPISAS/tests/swim/
 UPISAS/tests/upisas/test_exemplar.py
 UPISAS/tests/upisas/test_strategy.py
+
+# Preserve experiment logs alongside the recorded measurements.
+!/experiments/**/*.log
+!/sac/experiments/**/*.log

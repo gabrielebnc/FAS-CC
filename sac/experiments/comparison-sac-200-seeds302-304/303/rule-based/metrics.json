@@ -1,0 +1,12 @@
+{
+  "policy": "rule-based",
+  "seed": 303,
+  "ticks": 10000,
+  "completed_trips": 3206,
+  "mean_overhead": 2.507178025902037,
+  "median_overhead": 2.0266658311994066,
+  "p95_overhead": 5.135757487694946,
+  "complaint_rate": 0.16281971303805365,
+  "configuration_changes": 26,
+  "wall_seconds": 205.9916380000068
+}

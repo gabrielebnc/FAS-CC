@@ -1,0 +1,7 @@
+seed,policy,mean_reduction_vs_fixed_percent,extra_completed_trips
+601,previous-sac-400,0.913712682615574,-302
+601,scenario-sac-200,-2.284144789330183,96
+602,previous-sac-400,1.0017388041064528,-165
+602,scenario-sac-200,-1.1091293624322431,15
+603,previous-sac-400,-6.2254499948956,93
+603,scenario-sac-200,-1.8707926195162181,54

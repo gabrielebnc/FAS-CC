@@ -1,0 +1,16 @@
+{
+  "original": {
+    "wall_seconds": 76.20066741699702,
+    "trip_count": 767,
+    "trip_events_sha256": "faf2d2490d2a2abd6deefc79553ec42e78c4b81886d3ae3e2eabee1582c7e55d",
+    "fast_command_poll": false
+  },
+  "optimized": {
+    "wall_seconds": 45.71742649999214,
+    "trip_count": 778,
+    "trip_events_sha256": "167d4682bbfe7c4fadd98d6d40d60ccd980e5bac1a3df49b7e8420dd58506fc3",
+    "fast_command_poll": true
+  },
+  "speedup": 1.6667750844857838,
+  "identical_trip_events": false
+}

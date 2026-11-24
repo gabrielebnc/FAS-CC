@@ -1,0 +1,10 @@
+{
+  "verified_runs": 12,
+  "ticks_each": 10000,
+  "cars": 750,
+  "seeds": [
+    302,
+    303,
+    304
+  ]
+}

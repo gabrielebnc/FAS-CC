@@ -1,0 +1,54 @@
+{
+  "training_transitions": 200,
+  "training_episodes": 5,
+  "training_window_audits": [
+    {
+      "episode": "episode-0001-seed-110",
+      "transitions": 40,
+      "windows_checked": 41,
+      "maximum_mean_error": 6.474820679613913e-13
+    },
+    {
+      "episode": "episode-0002-seed-111",
+      "transitions": 40,
+      "windows_checked": 41,
+      "maximum_mean_error": 7.052136652418994e-13
+    },
+    {
+      "episode": "episode-0003-seed-112",
+      "transitions": 40,
+      "windows_checked": 41,
+      "maximum_mean_error": 8.193445921733655e-13
+    },
+    {
+      "episode": "episode-0004-seed-113",
+      "transitions": 40,
+      "windows_checked": 41,
+      "maximum_mean_error": 7.540634783254063e-13
+    },
+    {
+      "episode": "episode-0005-seed-114",
+      "transitions": 40,
+      "windows_checked": 41,
+      "maximum_mean_error": 4.951594689828198e-13
+    }
+  ],
+  "evaluation_SAC_window_audit": {
+    "transitions": 2,
+    "windows_checked": 3,
+    "maximum_mean_error": 7.993605777301127e-15
+  },
+  "shared_seed": 301,
+  "shared_ticks": 10000,
+  "shared_target_cars": 750,
+  "images_match": true,
+  "uncontrolled_knobs_preserved": true,
+  "original_rule_based_source_matches": true,
+  "comparisons_recomputed_from_raw_trips": true,
+  "summary": {
+    "SAC_mean_reduction_vs_static_percent": 10.586787823861329,
+    "SAC_mean_increase_vs_rules_percent": 20.7695505745607,
+    "SAC_trip_increase_vs_static_percent": 9.769026883756153,
+    "SAC_trip_decrease_vs_rules_percent": 15.677719604421176
+  }
+}

@@ -1,0 +1,3146 @@
+{
+  "branch": "experiment/sac-crowdnav-20261124",
+  "base_revision": "2c870b0",
+  "crowdnav_base_revision": "9d376aa",
+  "upisas_framework_revision": "63d7b66",
+  "full_checkpoints": [
+    {
+      "path": "sac/experiments/sac-200-alpha01-settle1200/checkpoint-000053",
+      "model_sha256": "bfe7b368918427e02046cd086b2269562b58cccefb00141cc159c503f7c656cb",
+      "model_bytes": 213617,
+      "progress": {
+        "transitions": 53,
+        "gradient_updates": 21,
+        "next_simulator_seed": 111,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "bfe7b368918427e02046cd086b2269562b58cccefb00141cc159c503f7c656cb",
+          "bytes": 213617
+        },
+        "progress.json": {
+          "sha256": "9533090e7c54d0fd62cf56d3eb4e72b917ea937c2e073ae01ae02d695a76d23a",
+          "bytes": 283
+        },
+        "replay.pkl": {
+          "sha256": "076b454d1f8b74916fb0d359eed0decb18e346c98b3dee5f43a372a7630246c7",
+          "bytes": 3401565
+        },
+        "rng.pt": {
+          "sha256": "ba1d8689103bb321698178249bb6a2ea0b2f5419690c410dd150a3fc17e1ecd1",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "a388c5bd525dd6b33363b61ce56e1d950b3e409d3e5c9c1044092743711e349a",
+          "bytes": 493
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-alpha01-settle1200/checkpoint-000106",
+      "model_sha256": "52a014179bd340dce8df10768b71cd12f65277cf8bcf0c9ff0de179abcc43d35",
+      "model_bytes": 213647,
+      "progress": {
+        "transitions": 106,
+        "gradient_updates": 74,
+        "next_simulator_seed": 112,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "52a014179bd340dce8df10768b71cd12f65277cf8bcf0c9ff0de179abcc43d35",
+          "bytes": 213647
+        },
+        "progress.json": {
+          "sha256": "19e3f233419afc179bdd0ed925b3e7dd1f5d370093490cf1f5bb16342f853cc6",
+          "bytes": 284
+        },
+        "replay.pkl": {
+          "sha256": "e98b340c40f41cd9ed80020d1ab180d196296ca388329cade7458fcaf8f47408",
+          "bytes": 3401565
+        },
+        "rng.pt": {
+          "sha256": "fed89d6b1224839338ee5b052c94876e545bb12f6d4e0a339508645b7b070f68",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "a388c5bd525dd6b33363b61ce56e1d950b3e409d3e5c9c1044092743711e349a",
+          "bytes": 493
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-alpha01-settle1200/checkpoint-000159",
+      "model_sha256": "0fa9b29713e08c1fa4e0082aa5e316ee4aa93d4cc6928cb2d6cbbb63a0a287d9",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 159,
+        "gradient_updates": 127,
+        "next_simulator_seed": 113,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "0fa9b29713e08c1fa4e0082aa5e316ee4aa93d4cc6928cb2d6cbbb63a0a287d9",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "4ed39504beb5337f95aef253c7337d6fa821ab05ac5b5f229848ac1961322b37",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "31f19a0421cd0f8304253f44bfc8ef984366c940dd0b55872aa49b9e4b7e37bb",
+          "bytes": 3401565
+        },
+        "rng.pt": {
+          "sha256": "2fca433ab8cc05caf50f66170885f3326be11f1d395fdc3b771815479b10d993",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "a388c5bd525dd6b33363b61ce56e1d950b3e409d3e5c9c1044092743711e349a",
+          "bytes": 493
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-alpha01-settle1200/checkpoint-000200",
+      "model_sha256": "1bb8bb46fab4a5c8c1430e51a2f94a97427f5c2098aefc236655d8e5dccccaee",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 200,
+        "gradient_updates": 168,
+        "next_simulator_seed": 114,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "1bb8bb46fab4a5c8c1430e51a2f94a97427f5c2098aefc236655d8e5dccccaee",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "b1c90ba397b2c2548dc6c8f9b4f6e79f8cce3d7090521a41f556727647ed8dd0",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "3dca248c3aed50cd8e070058edb2ff59b8efd6f43b377b36a3809adbad1a7ede",
+          "bytes": 3401565
+        },
+        "rng.pt": {
+          "sha256": "a63a4acf28a5931a65e8b3d235965a338651d8c1817ce21da3c9425c8015c292",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "a388c5bd525dd6b33363b61ce56e1d950b3e409d3e5c9c1044092743711e349a",
+          "bytes": 493
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-native/checkpoint-000040",
+      "model_sha256": "6cad647f69fab5371c197a9a0b6d7a9f122c8d567afd8ad21a8706e09bb8e445",
+      "model_bytes": 213616,
+      "progress": {
+        "transitions": 40,
+        "gradient_updates": 8,
+        "next_simulator_seed": 111,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "6cad647f69fab5371c197a9a0b6d7a9f122c8d567afd8ad21a8706e09bb8e445",
+          "bytes": 213616
+        },
+        "progress.json": {
+          "sha256": "9d819e4da0455cd3fed937161939134ff41ae43ac2779c35cb6684b5bf7e6a56",
+          "bytes": 282
+        },
+        "replay.pkl": {
+          "sha256": "0eb62a037835a729e5bec9c735901987b9c031cc58ba538d2d6cd2f2edad234f",
+          "bytes": 3401565
+        },
+        "rng.pt": {
+          "sha256": "eacb6562ded0ad432d6ddfc605f7491ffc6e37603e3a3b171d812ca31def25f8",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "0508a176203d8217cbcab0964fb8c113ca082745cc6e282ce521262a0457797b",
+          "bytes": 493
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-native/checkpoint-000080",
+      "model_sha256": "f08b512433a4971d6b2e930b0fabb42af5f99caada41aa124eb1a90714a1b2a5",
+      "model_bytes": 213646,
+      "progress": {
+        "transitions": 80,
+        "gradient_updates": 48,
+        "next_simulator_seed": 112,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "f08b512433a4971d6b2e930b0fabb42af5f99caada41aa124eb1a90714a1b2a5",
+          "bytes": 213646
+        },
+        "progress.json": {
+          "sha256": "ca8080d0b9a8aadcbd1898f1527afeada5ce7eda9006b16ce1902d8e4904d09a",
+          "bytes": 283
+        },
+        "replay.pkl": {
+          "sha256": "03f3081088ca070793561009d2a12770c88e0d3a25c5191c19414bd80ac13b6c",
+          "bytes": 3401565
+        },
+        "rng.pt": {
+          "sha256": "f5a71185ce120a59176a96d9ff278712dcf4fc169d29764b2b1f9deffc2f6ef1",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "0508a176203d8217cbcab0964fb8c113ca082745cc6e282ce521262a0457797b",
+          "bytes": 493
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-native/checkpoint-000120",
+      "model_sha256": "91f35aa3af54c7a09c79f51172f6c1419ba5a47335408d5d7d7300a4611b5c60",
+      "model_bytes": 213647,
+      "progress": {
+        "transitions": 120,
+        "gradient_updates": 88,
+        "next_simulator_seed": 113,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "91f35aa3af54c7a09c79f51172f6c1419ba5a47335408d5d7d7300a4611b5c60",
+          "bytes": 213647
+        },
+        "progress.json": {
+          "sha256": "5f7ab69f58d726965c1d180e1f36765da61ddae78509565157b247a46f509dfe",
+          "bytes": 284
+        },
+        "replay.pkl": {
+          "sha256": "8dcfe31bb0d006effcf72a06b207f816e1327166c38fa1faba57f9243ac79cb4",
+          "bytes": 3401565
+        },
+        "rng.pt": {
+          "sha256": "796a5a0e80103572b0f5b98204471b3dd0efbfc8626c17c2b5732fc14936d665",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "0508a176203d8217cbcab0964fb8c113ca082745cc6e282ce521262a0457797b",
+          "bytes": 493
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-native/checkpoint-000160",
+      "model_sha256": "33e7fde853834643bf052f1cb3782a0230ed3b2a10566d3b35676cb5ebc84171",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 160,
+        "gradient_updates": 128,
+        "next_simulator_seed": 114,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "33e7fde853834643bf052f1cb3782a0230ed3b2a10566d3b35676cb5ebc84171",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "ab25f37e42259613fe70d3a110ab3a68946c389be330807f4fcb0e68a4a6de27",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "78ef45af08e20c2c7204775a8aefaddc1b8435e8882cce7ddafd2193832bf85e",
+          "bytes": 3401565
+        },
+        "rng.pt": {
+          "sha256": "d77c83bd1b33f4e1b7558daa649214e38147d821f979452ec9b507f144dcdafb",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "0508a176203d8217cbcab0964fb8c113ca082745cc6e282ce521262a0457797b",
+          "bytes": 493
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-native/checkpoint-000200",
+      "model_sha256": "2894fd85f1fc48b644562c84574b42a365f24e54dabca462f95bf2d92b8a9c37",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 200,
+        "gradient_updates": 168,
+        "next_simulator_seed": 115,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "2894fd85f1fc48b644562c84574b42a365f24e54dabca462f95bf2d92b8a9c37",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "ebdfa21ef0faaa5912d07336c81dd967e52e624566f89db7447e45f7312b64ff",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "a0bc55a012b25ea9658fdb58704738c866696874e0a46ba66dbfce4587b02ae8",
+          "bytes": 3401565
+        },
+        "rng.pt": {
+          "sha256": "a63a4acf28a5931a65e8b3d235965a338651d8c1817ce21da3c9425c8015c292",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "0508a176203d8217cbcab0964fb8c113ca082745cc6e282ce521262a0457797b",
+          "bytes": 493
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000004",
+      "model_sha256": "132f2a7068869a8d6650b3fdaf3821e8ef7ad31427acf8f912b29391a7c56d29",
+      "model_bytes": 109438,
+      "progress": {
+        "transitions": 4,
+        "gradient_updates": 0,
+        "next_simulator_seed": 502,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "132f2a7068869a8d6650b3fdaf3821e8ef7ad31427acf8f912b29391a7c56d29",
+          "bytes": 109438
+        },
+        "progress.json": {
+          "sha256": "076cedfda6ae65ce63befb7b615c1a5fa3e0bf7f580ddaae5741204d6bdd7295",
+          "bytes": 281
+        },
+        "replay.pkl": {
+          "sha256": "b4d7110ba086e69a9202d048fd35099705a9629de4e6b2d2f229af05dbbcaa50",
+          "bytes": 3801576
+        },
+        "rng.pt": {
+          "sha256": "4bafb12e97b9acb7d112df4ce337b8f52b2f4703a0e1c5a82c2092507ba3b2ec",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000008",
+      "model_sha256": "23936ff24d821ad84776428a91b3e13df9172ea3a114ae7e675e86a26a18d65f",
+      "model_bytes": 109467,
+      "progress": {
+        "transitions": 8,
+        "gradient_updates": 0,
+        "next_simulator_seed": 503,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "23936ff24d821ad84776428a91b3e13df9172ea3a114ae7e675e86a26a18d65f",
+          "bytes": 109467
+        },
+        "progress.json": {
+          "sha256": "50ce517a5151b66824e86ccb7a53ebd2d48dc727a3f5a93d08024a3ba59f3e46",
+          "bytes": 281
+        },
+        "replay.pkl": {
+          "sha256": "3343f0385fd0376b61bfd0503264b582549f0f37cadbd75dfc1c5de21e659205",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "2e9b2e1a2b7acd122e41729940fc8ccc3b7b2d0c72562e6fcbfca0b2a3c46d11",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000012",
+      "model_sha256": "3a60c3d9b600da836e900820f884d98dd3c444285dd0628bbf2e25f38b884e38",
+      "model_bytes": 109468,
+      "progress": {
+        "transitions": 12,
+        "gradient_updates": 0,
+        "next_simulator_seed": 504,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "3a60c3d9b600da836e900820f884d98dd3c444285dd0628bbf2e25f38b884e38",
+          "bytes": 109468
+        },
+        "progress.json": {
+          "sha256": "a5fb9002b6f5d8dd5062cb356d57602609bfdcba2c81078cff3d6884fc418006",
+          "bytes": 282
+        },
+        "replay.pkl": {
+          "sha256": "280dd88801df3b47f71ad2e56cec9b47299276cb6086c637cf343eeeec267cae",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "b43f9b57dc594f822a1f5bca22f9603ebcec690e14ee1ab2303a556fc9d7cb04",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000016",
+      "model_sha256": "04628009fd1dd7b312ee9a45e92ec9451da6d607fe8a50e6fd005d5a369ab221",
+      "model_bytes": 109468,
+      "progress": {
+        "transitions": 16,
+        "gradient_updates": 0,
+        "next_simulator_seed": 505,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "04628009fd1dd7b312ee9a45e92ec9451da6d607fe8a50e6fd005d5a369ab221",
+          "bytes": 109468
+        },
+        "progress.json": {
+          "sha256": "c406f6e725609df8a86b7883951ac93e7a0a98a38840a378a089016c98ed80ca",
+          "bytes": 282
+        },
+        "replay.pkl": {
+          "sha256": "76ac0a3ecf596e0aacc3291703fdf898878f0de0a4f429e1fa802a0203ed161f",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "2ba6f9ad76f994c626a91fd24d6aab80c86ae128e00f25b3e102504c4a58e125",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000020",
+      "model_sha256": "5e064db7e07a3a63303457230a67162ba9027f8386ef6adcdbfc3f6fb5f7b90b",
+      "model_bytes": 109468,
+      "progress": {
+        "transitions": 20,
+        "gradient_updates": 0,
+        "next_simulator_seed": 506,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "5e064db7e07a3a63303457230a67162ba9027f8386ef6adcdbfc3f6fb5f7b90b",
+          "bytes": 109468
+        },
+        "progress.json": {
+          "sha256": "c85859f15bef9abc457f04e99fc3f0455a08464858c6ee6fa36c7c85e71c559c",
+          "bytes": 282
+        },
+        "replay.pkl": {
+          "sha256": "d586292a76fba6bf0c422f3acaac78ee6cd5203219bf1ba35ed5de4e0f018a49",
+          "bytes": 3801576
+        },
+        "rng.pt": {
+          "sha256": "8752d861077240f4d398b3c7c1fee7c9e4323348d9deb004fe5807883d42faae",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000024",
+      "model_sha256": "e70eb8e48ade8015679754696feb773a193b837bdccde89cf5d48b87a8b04b88",
+      "model_bytes": 109468,
+      "progress": {
+        "transitions": 24,
+        "gradient_updates": 0,
+        "next_simulator_seed": 507,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "e70eb8e48ade8015679754696feb773a193b837bdccde89cf5d48b87a8b04b88",
+          "bytes": 109468
+        },
+        "progress.json": {
+          "sha256": "1a46da457941389b1f6f466cca4353b5a4ea515bd6edf938874a9439cfd8eb06",
+          "bytes": 282
+        },
+        "replay.pkl": {
+          "sha256": "c3bbec535a80531ff984a6d9c59191b00b82ebc388573b1ff181926e7d0fc839",
+          "bytes": 3801576
+        },
+        "rng.pt": {
+          "sha256": "bd9edc801bfa43e20129415bc130e491940a7c24db4caa18ef1d4d627c83dfb5",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000028",
+      "model_sha256": "839e17ede63af0bf6cacf51a93e834379aff63dc286dc03c957ea65b5b9d2fde",
+      "model_bytes": 109468,
+      "progress": {
+        "transitions": 28,
+        "gradient_updates": 0,
+        "next_simulator_seed": 508,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "839e17ede63af0bf6cacf51a93e834379aff63dc286dc03c957ea65b5b9d2fde",
+          "bytes": 109468
+        },
+        "progress.json": {
+          "sha256": "4dc0f80f465063caf58ce9e95a9bdb89bf45e0c2d9e51aefe88ef24176b4c518",
+          "bytes": 282
+        },
+        "replay.pkl": {
+          "sha256": "427f895fb05dfefcc539a2d731616ff9bf230254dbd33fdc8d0e2ce18dd8d951",
+          "bytes": 3801576
+        },
+        "rng.pt": {
+          "sha256": "b16245e2e26d40eaf70f9f3bb6955409de63a9416b2f15afe1ca4b5e025a2a2d",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000032",
+      "model_sha256": "f30e86ab9b72ea3211b6c8a9aab33a339155d174ce20dd2e393d31b312dcd325",
+      "model_bytes": 109468,
+      "progress": {
+        "transitions": 32,
+        "gradient_updates": 0,
+        "next_simulator_seed": 509,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "f30e86ab9b72ea3211b6c8a9aab33a339155d174ce20dd2e393d31b312dcd325",
+          "bytes": 109468
+        },
+        "progress.json": {
+          "sha256": "12bdfbd6204312b4e89f485a99b9c26f50e45aa27fe3bf9cd6f83b419849157f",
+          "bytes": 282
+        },
+        "replay.pkl": {
+          "sha256": "0d9349321e984f7f6bbfc7a16570b117b3f7adda5ab5daaf450c916fa207fdd3",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "69795afabd4828a7ff78334634dc1b810337d407243f9b861d6231e6729129d5",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000036",
+      "model_sha256": "4ef173b045bd1f303c8818db8bd7847e66f2037cc96a6508297b3f53aa6106d4",
+      "model_bytes": 213705,
+      "progress": {
+        "transitions": 36,
+        "gradient_updates": 16,
+        "next_simulator_seed": 510,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "4ef173b045bd1f303c8818db8bd7847e66f2037cc96a6508297b3f53aa6106d4",
+          "bytes": 213705
+        },
+        "progress.json": {
+          "sha256": "975cbbc5a4cd82b5a240a55fa0ac8ea72ed967c89d777bcfba7f0290d5271666",
+          "bytes": 283
+        },
+        "replay.pkl": {
+          "sha256": "f5d133f0c2200b9398d660b9721ea590043bb5a886aef4636f968849207ac9cf",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "8d9e11adcd2658a5a6e96b48331c2af9cacacb1a3263bea692addb878ca31bae",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000040",
+      "model_sha256": "d435fd90274030d763b4df4cb12ec3a841769cee8bb9ef72cce2674518239fcf",
+      "model_bytes": 213705,
+      "progress": {
+        "transitions": 40,
+        "gradient_updates": 32,
+        "next_simulator_seed": 511,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "d435fd90274030d763b4df4cb12ec3a841769cee8bb9ef72cce2674518239fcf",
+          "bytes": 213705
+        },
+        "progress.json": {
+          "sha256": "a5bff03a817e79f81af175fc0eb52c734adf01e21a926b333e7fed2e44cfbf21",
+          "bytes": 283
+        },
+        "replay.pkl": {
+          "sha256": "41c47c5a4e92e4a8627868719a44ff48d27580d2835420e624ef7fc009ec7822",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "05199358119defd62b31ab6482ca4a7f6ad1b6b3e59b4e682896c51765f0dd5e",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000044",
+      "model_sha256": "2af2ad5942be998ba9a9f6633d0aada0a4cca5c6ab0debd6521dbcd920a9afe2",
+      "model_bytes": 213705,
+      "progress": {
+        "transitions": 44,
+        "gradient_updates": 48,
+        "next_simulator_seed": 512,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "2af2ad5942be998ba9a9f6633d0aada0a4cca5c6ab0debd6521dbcd920a9afe2",
+          "bytes": 213705
+        },
+        "progress.json": {
+          "sha256": "0388b3d0869b2cb06ffb6c9ab3a4c9a3d9a4c861dd42356e7ec120cdbf73881c",
+          "bytes": 283
+        },
+        "replay.pkl": {
+          "sha256": "f137ad4e9d5d901b3f1cba86ccfb1dc38a827e54da4b7c9bea43459c88669192",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "7664c30c862979e81122e703d241948950f18a8b5e0501c387cca084c0dd7de1",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000048",
+      "model_sha256": "f87ded4b4a21685124e2a49c0b331ae00c082bc75ab30295e9f34ed093be3cc7",
+      "model_bytes": 213705,
+      "progress": {
+        "transitions": 48,
+        "gradient_updates": 64,
+        "next_simulator_seed": 513,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "f87ded4b4a21685124e2a49c0b331ae00c082bc75ab30295e9f34ed093be3cc7",
+          "bytes": 213705
+        },
+        "progress.json": {
+          "sha256": "93ff2092f4067447f523b7113484089a6843bbc061b79c450121dfea58f3f219",
+          "bytes": 283
+        },
+        "replay.pkl": {
+          "sha256": "74d97d13c13cd2004963288c8cd917f0966fe4a45a8017bc8c5f148d489a4055",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "74e8a84c32553cfd0d457f5545baea9476bc23d29cb4485249bd59d34604c446",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000052",
+      "model_sha256": "be20005ce5394f4c6d887b9b33e0de5323c17ee95599ac945e1fb94f28eac211",
+      "model_bytes": 213705,
+      "progress": {
+        "transitions": 52,
+        "gradient_updates": 80,
+        "next_simulator_seed": 514,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "be20005ce5394f4c6d887b9b33e0de5323c17ee95599ac945e1fb94f28eac211",
+          "bytes": 213705
+        },
+        "progress.json": {
+          "sha256": "7661ddfe65724af6d31eff091c8deadad7d4e8cb34e35577fc19fcc22be39ab0",
+          "bytes": 283
+        },
+        "replay.pkl": {
+          "sha256": "f06b42ded4e33826a9ec6d7cc2a903937d3e5974f8144ebbf6f309e94035f938",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "0068629266c4af69957888e58206ed864ceb9aa92a4bd8902edd78c71841e065",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000056",
+      "model_sha256": "e186d5b2530e49426db2faf7a63e101e1adc86a1876da811b5f0626cd91f161f",
+      "model_bytes": 213705,
+      "progress": {
+        "transitions": 56,
+        "gradient_updates": 96,
+        "next_simulator_seed": 515,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "e186d5b2530e49426db2faf7a63e101e1adc86a1876da811b5f0626cd91f161f",
+          "bytes": 213705
+        },
+        "progress.json": {
+          "sha256": "50cde8197d39e76e6f52332115a5cbe7066a59d83088444929f4048e8a085455",
+          "bytes": 283
+        },
+        "replay.pkl": {
+          "sha256": "8c827faee204e3cec4f22b963573c4ed0790febfafe99c1695d2f733edb02167",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "855db1a0c7857e27884b2e06a0a6077376b0cf1cdf4c854db2365254e79cd916",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000060",
+      "model_sha256": "67d82405838b150cb9383d8824cb7406d5950c0bf3140456f9b2067cfbc5f154",
+      "model_bytes": 213706,
+      "progress": {
+        "transitions": 60,
+        "gradient_updates": 112,
+        "next_simulator_seed": 516,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "67d82405838b150cb9383d8824cb7406d5950c0bf3140456f9b2067cfbc5f154",
+          "bytes": 213706
+        },
+        "progress.json": {
+          "sha256": "173e02793384f5f7559e84ce377e561c33bb9fc926768cfe3af46f65c9e92a89",
+          "bytes": 284
+        },
+        "replay.pkl": {
+          "sha256": "a30e87a51eb02a4aeda4cca695da2e8449293ec88d7472bdc48e190c2cbeee80",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "1b0a345b8814d579ba3e6ecbdd0c38b3e92e7f1a9286a15e3322db6bec133af8",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000064",
+      "model_sha256": "ee80be19212d6ec9e5c1103ad74bb2772895ee567e87570a089fbc2b553e0f64",
+      "model_bytes": 213706,
+      "progress": {
+        "transitions": 64,
+        "gradient_updates": 128,
+        "next_simulator_seed": 517,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "ee80be19212d6ec9e5c1103ad74bb2772895ee567e87570a089fbc2b553e0f64",
+          "bytes": 213706
+        },
+        "progress.json": {
+          "sha256": "08c29808ca57fbb6974da849c27cbffd3ba1231d16e47923c309f86eefa9032f",
+          "bytes": 284
+        },
+        "replay.pkl": {
+          "sha256": "61d7fbb2cc2399e8d8d16c438975c620334864f0e5cf6722f0fde3b1850de138",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "99d3130b09144e4b0e5317fe38cc095c9abff02f5945edf51b54b272da6ca6a0",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000068",
+      "model_sha256": "833cd617f7bdaa36cdfe8ff6f34f7334590610e5152f1a289b81b1bbd3053427",
+      "model_bytes": 213706,
+      "progress": {
+        "transitions": 68,
+        "gradient_updates": 144,
+        "next_simulator_seed": 518,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "833cd617f7bdaa36cdfe8ff6f34f7334590610e5152f1a289b81b1bbd3053427",
+          "bytes": 213706
+        },
+        "progress.json": {
+          "sha256": "701558580df20bbf14f31e8d325dd1b03e1265bfb4016a51c544d27dd6fa5a61",
+          "bytes": 284
+        },
+        "replay.pkl": {
+          "sha256": "d5b9b54154e4ec1d7b928a06a099e9e305958cc0344fcdd6ef6c59aa63fefe9e",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "efc83ecc3c97a9db2f13bdfae2836be609499dee3290d16436f7e0cec14a3960",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000072",
+      "model_sha256": "86d1ebf8e94aca48037a1d9f6bfa1c783f112cea27a88c9d32c247958214b617",
+      "model_bytes": 213706,
+      "progress": {
+        "transitions": 72,
+        "gradient_updates": 160,
+        "next_simulator_seed": 519,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "86d1ebf8e94aca48037a1d9f6bfa1c783f112cea27a88c9d32c247958214b617",
+          "bytes": 213706
+        },
+        "progress.json": {
+          "sha256": "f28a47b3b419fbfd68d943d61f949f2af53890d2244934acb40de106d6496dac",
+          "bytes": 284
+        },
+        "replay.pkl": {
+          "sha256": "b519d43b58fdf3b4766eaadba35bc70f5bf3827ac7120358d4e6c9d43dd8d4bf",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "18bed16d730d0323747424a83d5a4f49e7dc5212ab5d233805110956a7c28146",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000076",
+      "model_sha256": "92f1febfbc373deba292b03a06d30da20f7de96407c4d1d3f46943f4e1fa4631",
+      "model_bytes": 213706,
+      "progress": {
+        "transitions": 76,
+        "gradient_updates": 176,
+        "next_simulator_seed": 520,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "92f1febfbc373deba292b03a06d30da20f7de96407c4d1d3f46943f4e1fa4631",
+          "bytes": 213706
+        },
+        "progress.json": {
+          "sha256": "ce6fe6638b6efc76e9ed14c83cd1da1903099ad4e592ac57d244cd4dcb535d5a",
+          "bytes": 284
+        },
+        "replay.pkl": {
+          "sha256": "a3e5367d4f8d01be51091bac4235e14acf0acfb3b83f0438f1eab65cbaa8fc6d",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "4b62a9582e08d6b1db33233e2eca7a79c18d6fb67dd431b1b43d1eba1ce94ef1",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000080",
+      "model_sha256": "b733b21f7e112e49234c17ee12f25cb273c4512dddb02eeb80b4dffb29032767",
+      "model_bytes": 213706,
+      "progress": {
+        "transitions": 80,
+        "gradient_updates": 192,
+        "next_simulator_seed": 521,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "b733b21f7e112e49234c17ee12f25cb273c4512dddb02eeb80b4dffb29032767",
+          "bytes": 213706
+        },
+        "progress.json": {
+          "sha256": "6763d637d886065c38ff581b4470f109dbdabbf33ab8eae6f44d20599135fc83",
+          "bytes": 284
+        },
+        "replay.pkl": {
+          "sha256": "2265deba1db51212b2f205ddedcf39e22de71657a45a0c1eb902a93fb37a1104",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "97f472626c12566df16ee6c5a04eed5de8187b95b9a02e17f35d6b0b7d4a3f2d",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000084",
+      "model_sha256": "a58bbd5c8d76f761916c7a466e20ebbc29028c6cb387eb4a517a7efb06f085b7",
+      "model_bytes": 213706,
+      "progress": {
+        "transitions": 84,
+        "gradient_updates": 208,
+        "next_simulator_seed": 522,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "a58bbd5c8d76f761916c7a466e20ebbc29028c6cb387eb4a517a7efb06f085b7",
+          "bytes": 213706
+        },
+        "progress.json": {
+          "sha256": "b3fb9252723279b9aa7bcf3d6057977229a265381f07e53a6d35a18fc92aa61e",
+          "bytes": 284
+        },
+        "replay.pkl": {
+          "sha256": "9c46225b291e618ca21615c513aebf431ea74955d2ab318617c81c45c562d297",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "64c0a871200f0f2236b8ff03dcd497e023f2262c4828ea8e72987411960cb1f7",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000088",
+      "model_sha256": "b8cb9449a4ec96c4814eff67c17c20a5aa38942e259462aca734a2d7a34359a5",
+      "model_bytes": 213706,
+      "progress": {
+        "transitions": 88,
+        "gradient_updates": 224,
+        "next_simulator_seed": 523,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "b8cb9449a4ec96c4814eff67c17c20a5aa38942e259462aca734a2d7a34359a5",
+          "bytes": 213706
+        },
+        "progress.json": {
+          "sha256": "debce58fa5c79810516557e00f64b5f125d32cf290c3ef238a91f17c5441ae91",
+          "bytes": 284
+        },
+        "replay.pkl": {
+          "sha256": "e18b06f4329a23e8cf9fccf3fd2c5134c960e1d05c5f69703d676250cfb9de58",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "258911fd4878b0b26eeb8eb13336ee5b201abfa002152d95d37a59bf198270fa",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000092",
+      "model_sha256": "31c0e74fad22d8fa3c89525ce929e7e8b7e44d937a84f8fcf2d65e623d5a06ef",
+      "model_bytes": 213706,
+      "progress": {
+        "transitions": 92,
+        "gradient_updates": 240,
+        "next_simulator_seed": 524,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "31c0e74fad22d8fa3c89525ce929e7e8b7e44d937a84f8fcf2d65e623d5a06ef",
+          "bytes": 213706
+        },
+        "progress.json": {
+          "sha256": "e3b43379ca12af58ea861544ce14ece4215b2a880825d539806cadab44394487",
+          "bytes": 284
+        },
+        "replay.pkl": {
+          "sha256": "27ccdeda64beb98fb0795c433578efb28a7e1af751df5d8b8da64161b61b39c6",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "3d664ddc3878c47535b36d3422bb2684a944fe67673dc3cbb572fbcbb66f0fae",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000096",
+      "model_sha256": "99b1420078b48f9d050c45c68eacb7704a910fee1dced45a90fd6e7c381dfeb8",
+      "model_bytes": 213706,
+      "progress": {
+        "transitions": 96,
+        "gradient_updates": 256,
+        "next_simulator_seed": 525,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "99b1420078b48f9d050c45c68eacb7704a910fee1dced45a90fd6e7c381dfeb8",
+          "bytes": 213706
+        },
+        "progress.json": {
+          "sha256": "73f265e51ce6988cc75b5c2c38b00e1ff4212385c1099ae6ede7517ef7fa1f5d",
+          "bytes": 284
+        },
+        "replay.pkl": {
+          "sha256": "50b678d2ad455ecdfae4d9809ad897467ca90eed3b73891f4aa0842181e41fdb",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "dfe92e6e7b03a138de7bb673faa3fc14ac7fc33d1243f186b4fc25ddd5192c00",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000100",
+      "model_sha256": "0c8dbf220b4817b3b0a8ad0760b20d780bd2a6aec4f186cb739333b0b3ceb294",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 100,
+        "gradient_updates": 272,
+        "next_simulator_seed": 526,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "0c8dbf220b4817b3b0a8ad0760b20d780bd2a6aec4f186cb739333b0b3ceb294",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "c1480f3053387cc1b47d58c8fbb654bbd73013bdc51b4dff32275c135d19415f",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "d89af6059713a2ff348c6328067f3095b0213f32d3de4c0edd3d87cb85b19d33",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "4edb0e93e1b52d9fe7f64f6dd188f25791847a6106bb69c9dc708516528240cb",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000104",
+      "model_sha256": "9de39f56f7a6aa4ab6cef4a244cb379922807a89b6acb8ef51a3ecb73baae44e",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 104,
+        "gradient_updates": 288,
+        "next_simulator_seed": 527,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "9de39f56f7a6aa4ab6cef4a244cb379922807a89b6acb8ef51a3ecb73baae44e",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "9c064140be8a06d08dda62aac0b95c22a1f11290c61c9f32105840bea28947cd",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "690474e0cef3c2cd19d60bd5e29df85b919dedacbb2975a307883202542aee6c",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "d396ae38c711da091d0bd396b447f1fc948734b6979382cfeee95039410f808c",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000108",
+      "model_sha256": "e164557b024a7f6727e96447f5ca404e7e6f6f8ad1b77011d77ee9390bc2532b",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 108,
+        "gradient_updates": 304,
+        "next_simulator_seed": 528,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "e164557b024a7f6727e96447f5ca404e7e6f6f8ad1b77011d77ee9390bc2532b",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "28576d74d5aa43eb4f3c59469e4a399029573af8fb51ad4c7d6a4fb116877151",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "aa8378400151452255d45bce6a72f4f3f8fe53cab0f89bd470a3e0afd5515533",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "ab3d783f50ad4ca359318f5dc305cf2cd75390e71e9e62163bc16b5520b2bd31",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000112",
+      "model_sha256": "ab2264fd0fb47a7b5e0c05abce2424507d7939122eb4301a836f912faea3117c",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 112,
+        "gradient_updates": 320,
+        "next_simulator_seed": 529,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "ab2264fd0fb47a7b5e0c05abce2424507d7939122eb4301a836f912faea3117c",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "64c4a57958a4db255bcec7a4b8b87a25b037442523158c32e922cb9770c8e36d",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "3e1f4516bdad0f5b76e0e8e23216036e9a1626277ab9287b8b095094b958f545",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "f51f1f8a8158e82753fb1de31d1bd432bf09381556f98f44e9f1bf9c915a4ba0",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000116",
+      "model_sha256": "aee4970ab2d4d542f7491aeaff52492c7bcbdb8e21e290f05637e0b6c5592b08",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 116,
+        "gradient_updates": 336,
+        "next_simulator_seed": 530,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "aee4970ab2d4d542f7491aeaff52492c7bcbdb8e21e290f05637e0b6c5592b08",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "1fde64620aa534026905779abcacc272ccd1fe534f49e8282172d60cfa3a3120",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "8a8bbc70a7a424cd04fcaf751757dc6d96b2131b371ae5e64fda5ab36c49f571",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "cb4876bb6ff8c1817e90ad883a0ff7b699950ddc426c5d5adda86dd963b001fb",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000120",
+      "model_sha256": "79cad057e5735bf174631ae1ec04c68db09ccc8944804fb6358596864c39653d",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 120,
+        "gradient_updates": 352,
+        "next_simulator_seed": 531,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "79cad057e5735bf174631ae1ec04c68db09ccc8944804fb6358596864c39653d",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "77a3b4bfb06c16992e5a10fa06f5e9dea753db1539ea5468b8be501ae115fc6f",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "e97339f89417d887945e596721a72171e3ebf0b3b530fca74c7ddf56adc50911",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "c8ae94c6c95cec81218b00e9c2e1f1771ffb7fd877c0b4230e15760518a80c72",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000124",
+      "model_sha256": "3128c0af5132a026aa811875c1353ee370d08742c35c0759d16944bb195e01b9",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 124,
+        "gradient_updates": 368,
+        "next_simulator_seed": 532,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "3128c0af5132a026aa811875c1353ee370d08742c35c0759d16944bb195e01b9",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "c77a6044776734ee919ed02ebe9c532cd0c5551838761df606f6158f1df61e4d",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "8722cfe55e03d2b4b3f6e29c6ab66e98d7d300a3f7b8aea283b7838234d8ef2e",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "b7fa4946c39bbabffb3959e9e7a1559af0dd9d85525aa4ad5eff445c7732f78c",
+          "bytes": 14349
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000128",
+      "model_sha256": "db558fe7d9ce55aa4e3998931150e1f5343bd0e2efc5e9a36dfde91e5de16567",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 128,
+        "gradient_updates": 384,
+        "next_simulator_seed": 533,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "db558fe7d9ce55aa4e3998931150e1f5343bd0e2efc5e9a36dfde91e5de16567",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "fa7b6947ab4dfda2aee9d58066b6dedbe2b469ea683315aec28ba117c8a7e482",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "4335b9bff304132671a3124a23bdae152ca26bb50528cb20da750a93c1bc3833",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "51400a9ef17425e184fb2cd2a30e3357c4f724112e8935555267845073cd9504",
+          "bytes": 14349
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000132",
+      "model_sha256": "c72ad41eca20b2516f7b8871bee576b5d84c262df293ba67397bdca88b097e47",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 132,
+        "gradient_updates": 400,
+        "next_simulator_seed": 534,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "c72ad41eca20b2516f7b8871bee576b5d84c262df293ba67397bdca88b097e47",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "ed0c4f6788d8103ea1965001a87ffbd98a77a418f871a5265d065a1f7cab6e48",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "13b4fc877c81f75e968477066f85ef978f8e6d65862724d645e519e7e44ac205",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "ff504d994ee8ec612905b0943a7b7331190267a1763fcc64410c80f6628b0f63",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000136",
+      "model_sha256": "22770a1b7bbeefe305a2fa1c2d73b9353df9f7b24983942ffa3cace919ddd208",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 136,
+        "gradient_updates": 416,
+        "next_simulator_seed": 535,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "22770a1b7bbeefe305a2fa1c2d73b9353df9f7b24983942ffa3cace919ddd208",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "87e5fb4fdb6b63ce96b002e408bed8618ffa923671bb2b08b85f89b8e9875169",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "2237ec6423c4cce72da32e3f7f17d390503d9358c3ec54772faaea42a8010237",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "aaaaf598b6bf7fe44bdab56862169e7f524d74f3bb7bbe010685f5eb95ca117b",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000140",
+      "model_sha256": "42a62160fa657e777fdba0dec714b51f93bcf3b95dd03401874447f9f43222e6",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 140,
+        "gradient_updates": 432,
+        "next_simulator_seed": 536,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "42a62160fa657e777fdba0dec714b51f93bcf3b95dd03401874447f9f43222e6",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "2e3b5a0ed942f5dd90005a3c76aeb5e883ab48a2d66b6db62a93604279fb2538",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "58e1654e829aa84e6e859f8f637ae64a9a43a8054e906644d1657e220ad57579",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "9252c5a49bcc8e2fa759f66ad33299d3c89c00107bd84687d62677e2d5d9f14e",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000144",
+      "model_sha256": "ceaa23fc65380a997431cafd3ef3517762f62167361d9fba1afb5afe7dc214ae",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 144,
+        "gradient_updates": 448,
+        "next_simulator_seed": 537,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "ceaa23fc65380a997431cafd3ef3517762f62167361d9fba1afb5afe7dc214ae",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "28ff2839946376ca6cdbd42198f2e0287c4af597d8bdde09d4f5e9c0d61da2fb",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "86cbd02e549c1b7c9f288160d255686a8c10e782a8dd96b1d04c897b8f8a4543",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "d15e988d8216ba5c6ab5d4482e89c898b8c861932f8e869b2c517408ac4c0dbf",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000148",
+      "model_sha256": "e87728741923c2b6147a316e63dcfdcf05f20e3e5c4b1d4589b88ce6ab279f0f",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 148,
+        "gradient_updates": 464,
+        "next_simulator_seed": 538,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "e87728741923c2b6147a316e63dcfdcf05f20e3e5c4b1d4589b88ce6ab279f0f",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "68102b9e4b968eafa51af08f96551a6d940129259e4bfb92551143e26ab32ead",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "d4c70876b8921625a0a57b33a8565a274f966a4b2b872232f2d4f847816f78a2",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "22d8392d368d4488b94afa68e16ba2660d4c22068080bd56d213be28d6e35691",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000152",
+      "model_sha256": "2a100ca354bd4b9dfce366f15035a4be04ce4f0c6b8e22756c263baaa7491d0c",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 152,
+        "gradient_updates": 480,
+        "next_simulator_seed": 539,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "2a100ca354bd4b9dfce366f15035a4be04ce4f0c6b8e22756c263baaa7491d0c",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "58d041b772aad5d86c5a4e664cb315900da335bf2ebb6825a7fbbb9198b17c05",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "bea9f74b4e2c7f770ef7fff0300ee44d56d9fecc59881bd91b6638e80b4142a6",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "eb75796b104c3ae2feb5e4dc6025e4d48621ef5d3c64c0a438f0e6385e1a1bae",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000156",
+      "model_sha256": "2429720a9a3aa24b400154de2b9fc1ffc6e08aad727a99c787522441551c803b",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 156,
+        "gradient_updates": 496,
+        "next_simulator_seed": 540,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "2429720a9a3aa24b400154de2b9fc1ffc6e08aad727a99c787522441551c803b",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "3ba8811776028bf5113082dbbee70d88cc09d7da9b4bbbb36327a33a8b441a59",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "6924085b15adaa299cf27abbb537f15488b279db682cb195d4d995bb5c9cf8c3",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "493caf985207967f4d1470f70535bfa8fb6b451a271bc0b284203c97f19f4196",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000160",
+      "model_sha256": "43414a56ba09acb6edcc65ebf4138b63610d695478e08be072e0e0840dd9c562",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 160,
+        "gradient_updates": 512,
+        "next_simulator_seed": 541,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "43414a56ba09acb6edcc65ebf4138b63610d695478e08be072e0e0840dd9c562",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "bfae5cd07e0f3944c134a614e7d918481a838813bc81e7e9ce1fad06c02f37b0",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "0f41043530c09f1368fa6a83d00587dc561777f536cca31003f06a7b6e8b3d61",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "a20a6b04f5dd62a96d6f1cd1c88d8b30c55a7b8d54365456708402641e686663",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000164",
+      "model_sha256": "f335bd2be2eb296889ed282edf3443dfe78c814c1215f3f956afe1f8e7907504",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 164,
+        "gradient_updates": 528,
+        "next_simulator_seed": 542,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "f335bd2be2eb296889ed282edf3443dfe78c814c1215f3f956afe1f8e7907504",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "cdae092bf1f9e0c1b0e38d096a11a7968ad465811dcd757614d13d0cd5837f56",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "50298334ca6d0bca75cebdcd969d37517ad08a6aaa95f8e02ebffa6228226f5c",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "48117bcaca2f45c98db50fc31606b2e1119a4f56775aa2a213dbb524fff6735a",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000168",
+      "model_sha256": "74c6d105aad4386f26394bb767100fe1930031c6ec49e157ab9636a5428ffd05",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 168,
+        "gradient_updates": 544,
+        "next_simulator_seed": 543,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "74c6d105aad4386f26394bb767100fe1930031c6ec49e157ab9636a5428ffd05",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "faaba59d43bdbd34a6dddf9980358fb5884b3846b25efc54ea0799a85225f164",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "e6cbedfa8c5ad998e1e0d181a7767ba20da6f898e3945029344827bd9d3569fb",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "2f61a6678dbbafa03a5b26665424ba2afc81b92ff367142450369ebc63a7a538",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000172",
+      "model_sha256": "f4d5f3a6cefebd8dd0e6670fbb66af8cf27a463b740ea3e014ad97e73896868d",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 172,
+        "gradient_updates": 560,
+        "next_simulator_seed": 544,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "f4d5f3a6cefebd8dd0e6670fbb66af8cf27a463b740ea3e014ad97e73896868d",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "5e444cefa0e2506f51e560cfb57fc14c50704380cee759f67da8cae205b11e59",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "1a8b97be3983e5cf96d61992595c53004004ddcb53ce4ea861923772b6fcf4e3",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "16283d3b3417febd196953674cacfa3e599112d560f9363cac62e243668c31b3",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000176",
+      "model_sha256": "e55f67ccee88384c5b0966cf54afdfae90a8b0e0ea5849e1a2cfc7c953ea40f4",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 176,
+        "gradient_updates": 576,
+        "next_simulator_seed": 545,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "e55f67ccee88384c5b0966cf54afdfae90a8b0e0ea5849e1a2cfc7c953ea40f4",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "988ffb635c3c6c98ecf51891aa3422417e4ee3edaca1c9c3be412c97a0de403e",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "80f5b5867736640b32ab39acf7627669bfd0ba3262664e7e0546ec70c2d00e08",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "4f15c2421627498a29570a01176b5ad2cc74201e29756e588aebbfc59b118bba",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000180",
+      "model_sha256": "1030e79429dcc576e229c76113cee45617455c1ebe5691e719d1304a48e3c4c3",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 180,
+        "gradient_updates": 592,
+        "next_simulator_seed": 546,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "1030e79429dcc576e229c76113cee45617455c1ebe5691e719d1304a48e3c4c3",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "d9698d24ea0dfb13bbb0d04b0e6235dd8e19f440b9d1a3286b5c08672cb053a0",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "047fe9422a3711c3752544f19e4e1be1129c2799e19b920ccfa9cebc1474f633",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "bff72612fdd2dd6ad91116769504e9396008fa72ae52e1d9c04585705156bcc7",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000184",
+      "model_sha256": "4fa85c181b0e0ca92fac099c431f7344182dad7d3b7d49ca0236fefb90e261f9",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 184,
+        "gradient_updates": 608,
+        "next_simulator_seed": 547,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "4fa85c181b0e0ca92fac099c431f7344182dad7d3b7d49ca0236fefb90e261f9",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "24342e2df6c745a98647bb3925916b95ced0dacb8676bd161748631707fe083c",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "ff3462a7cc439570a0e0233ae068724b1d668813d929ed4e8a05425958825659",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "2c5fde4caa1dc8ae7c48a72738e88b1d0621de70dc136f580a25ef8376535ddb",
+          "bytes": 14349
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000188",
+      "model_sha256": "286be27128dd653033eed3d29d7c6f206ff3f6a5967e4a38938eb9a4def63acc",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 188,
+        "gradient_updates": 624,
+        "next_simulator_seed": 548,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "286be27128dd653033eed3d29d7c6f206ff3f6a5967e4a38938eb9a4def63acc",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "57db15be1365edec1d83687e88474a236f7af768f96849fba9a7a1c96a5d0930",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "5404966be4fe2a0625544c03e8b629ef8e1747f3be7861877c0968b5e0a3bf1a",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "0920c5d784e52585b13558893b814271adf737e1bdcb92c4bf01677e17774eb3",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000192",
+      "model_sha256": "9d3ba630718cf8dfd414b32b5eb58dc2998acbc1084730789c333e0a38c07f5a",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 192,
+        "gradient_updates": 640,
+        "next_simulator_seed": 549,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "9d3ba630718cf8dfd414b32b5eb58dc2998acbc1084730789c333e0a38c07f5a",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "ffbe883ba4bbe0c072a8e26cd1d1366075184a84de6e4403a3c7db433f0382d3",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "8a2a6f63f568a8f455e4a805918d695c508347a83975f2658d7f29439e793178",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "c14fc563b800cc9898348c4b8a51a6b87456f6a320f920307b78969bfbbf5ce3",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000196",
+      "model_sha256": "3902946fd059fb8e99cbf0e300378cb44612843509f360a5ddce09a2cca52507",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 196,
+        "gradient_updates": 656,
+        "next_simulator_seed": 550,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "3902946fd059fb8e99cbf0e300378cb44612843509f360a5ddce09a2cca52507",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "e5e8a7ae20bd910c1b278be799c0fc43295e073c32b6b71651a883098a045a76",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "a4521fb3fdb248b1d0e1f6e20cd2bc7aa6d760e71e5950e35ac43cc4a255caca",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "6063d3a38e03d0dcdfc8e5e46222d76d70bf171e86052184b148ab797a1c09ee",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend/checkpoint-000200",
+      "model_sha256": "d89305cefe2f924ddf6c01483755a6df253f25945669d59b6c852fda9d810074",
+      "model_bytes": 213707,
+      "progress": {
+        "transitions": 200,
+        "gradient_updates": 672,
+        "next_simulator_seed": 551,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "d89305cefe2f924ddf6c01483755a6df253f25945669d59b6c852fda9d810074",
+          "bytes": 213707
+        },
+        "progress.json": {
+          "sha256": "7bd828d4a2929032ce9a6ef0de420dc3560c375b921a174522f6cb2e96180c2a",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "262fd38746cbfbcb5652c08a613941333bfdafd16a4b23310cf943f10733aa33",
+          "bytes": 3801575
+        },
+        "rng.pt": {
+          "sha256": "6b2bb318bb71ea65fbb016dfb6e34ab52d6f1ea648d11e6fb2c1bdf6b4dcf5d2",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "794eaa8803251d71d93237ddc2ab16b607b877bebf4494c8ee1d2c162ea429dd",
+          "bytes": 602
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration/checkpoint-000053",
+      "model_sha256": "daae59a6f2b2b46009fd889bf5080b24457d9b4e75a674d631b772a75d88e62e",
+      "model_bytes": 213617,
+      "progress": {
+        "transitions": 53,
+        "gradient_updates": 21,
+        "next_simulator_seed": 111,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "daae59a6f2b2b46009fd889bf5080b24457d9b4e75a674d631b772a75d88e62e",
+          "bytes": 213617
+        },
+        "progress.json": {
+          "sha256": "9533090e7c54d0fd62cf56d3eb4e72b917ea937c2e073ae01ae02d695a76d23a",
+          "bytes": 283
+        },
+        "replay.pkl": {
+          "sha256": "ac7f07cccb1dc59b7cee57399c439dee78aee3e6a4cdbabaf7d28a89d0133541",
+          "bytes": 3401565
+        },
+        "rng.pt": {
+          "sha256": "ba1d8689103bb321698178249bb6a2ea0b2f5419690c410dd150a3fc17e1ecd1",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "053576f14100e8196995e613f975384df474cd86c0ce20263ee72be68e460138",
+          "bytes": 568
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration/checkpoint-000106",
+      "model_sha256": "035969210d1d2e4ead216572ccf5bbd021fe971471c2b65d475f9906c1030be3",
+      "model_bytes": 213647,
+      "progress": {
+        "transitions": 106,
+        "gradient_updates": 74,
+        "next_simulator_seed": 112,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "035969210d1d2e4ead216572ccf5bbd021fe971471c2b65d475f9906c1030be3",
+          "bytes": 213647
+        },
+        "progress.json": {
+          "sha256": "19e3f233419afc179bdd0ed925b3e7dd1f5d370093490cf1f5bb16342f853cc6",
+          "bytes": 284
+        },
+        "replay.pkl": {
+          "sha256": "6b60e9f94525fc079f3eadeb09af6f2a46e0881b7e1375ca4f153adc8ca875f4",
+          "bytes": 3401565
+        },
+        "rng.pt": {
+          "sha256": "fed89d6b1224839338ee5b052c94876e545bb12f6d4e0a339508645b7b070f68",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "053576f14100e8196995e613f975384df474cd86c0ce20263ee72be68e460138",
+          "bytes": 568
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration/checkpoint-000159",
+      "model_sha256": "a246091ee817309057989f23c9445225c233cefa61410be2007968379eba2507",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 159,
+        "gradient_updates": 127,
+        "next_simulator_seed": 113,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "a246091ee817309057989f23c9445225c233cefa61410be2007968379eba2507",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "4ed39504beb5337f95aef253c7337d6fa821ab05ac5b5f229848ac1961322b37",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "f4ac9ee11746a0b3b177ae847b779b4f744e128984a376ae9753eca031727d0c",
+          "bytes": 3401565
+        },
+        "rng.pt": {
+          "sha256": "2fca433ab8cc05caf50f66170885f3326be11f1d395fdc3b771815479b10d993",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "053576f14100e8196995e613f975384df474cd86c0ce20263ee72be68e460138",
+          "bytes": 568
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration/checkpoint-000200",
+      "model_sha256": "00304db1e44809df5764d64fe3cea1efcd9e052968d6f16a1ab1bf61f39a6e0e",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 200,
+        "gradient_updates": 168,
+        "next_simulator_seed": 114,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "00304db1e44809df5764d64fe3cea1efcd9e052968d6f16a1ab1bf61f39a6e0e",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "b1c90ba397b2c2548dc6c8f9b4f6e79f8cce3d7090521a41f556727647ed8dd0",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "1bc08d949aed0ff66773de0fd0f0f39c5cdd40fbf42dd180bb8e65c2990b40d1",
+          "bytes": 3401565
+        },
+        "rng.pt": {
+          "sha256": "a63a4acf28a5931a65e8b3d235965a338651d8c1817ce21da3c9425c8015c292",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "053576f14100e8196995e613f975384df474cd86c0ce20263ee72be68e460138",
+          "bytes": 568
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration/checkpoint-000212",
+      "model_sha256": "92f3cc91e0d23ac2ebcc27d4c5e3f9af85afce7b5fda7413b41e33c71d5c74ce",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 212,
+        "gradient_updates": 180,
+        "next_simulator_seed": 114,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "92f3cc91e0d23ac2ebcc27d4c5e3f9af85afce7b5fda7413b41e33c71d5c74ce",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "b0062e613098b9be4e15a5f77bb08229ef8b1960de8c48f099f977a997080ab8",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "878acd154498636902e0abc0c7cc4a76b98a0cb77e9050a49687cf122e35b706",
+          "bytes": 3401565
+        },
+        "rng.pt": {
+          "sha256": "ee68dd28dc20245e0be10f0ce5accbf33222dbf3e2b40ae2de1b91fc52834a9d",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "053576f14100e8196995e613f975384df474cd86c0ce20263ee72be68e460138",
+          "bytes": 568
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration/checkpoint-000265",
+      "model_sha256": "49f53ac0887ccda395b1af12dc122be6f69c479aeccf6564135e6174d04ef20c",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 265,
+        "gradient_updates": 233,
+        "next_simulator_seed": 115,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "49f53ac0887ccda395b1af12dc122be6f69c479aeccf6564135e6174d04ef20c",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "eb5c47435035f0e95811d5dedbf0ac114cd37c0ad3d324800e9f44cee6c68fd2",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "d7700458216541d0002293d8a12ee17a5143f8143c4ff339138a2c2cb906545e",
+          "bytes": 3401566
+        },
+        "rng.pt": {
+          "sha256": "f0fc1b7f58ef58c0da212fe9a69fb9682463d40d833f3ad46770be2f1bbef566",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "053576f14100e8196995e613f975384df474cd86c0ce20263ee72be68e460138",
+          "bytes": 568
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration/checkpoint-000318",
+      "model_sha256": "c68be492ea997d6159eaf59fa2edc6aa766b9597e0b546892dfc727048308120",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 318,
+        "gradient_updates": 286,
+        "next_simulator_seed": 116,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "c68be492ea997d6159eaf59fa2edc6aa766b9597e0b546892dfc727048308120",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "0caa246dd3f6621f56515740740ccd6e5260db02b980cebc9e20800873684980",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "56187fed831da136af029a669816fe1ef7f65d41ec3c47801ccc9da6ad42989b",
+          "bytes": 3401566
+        },
+        "rng.pt": {
+          "sha256": "a420933d7d965a0213d91a272151500c2eab46c859f6e1d4c97349c1fa7764b3",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "053576f14100e8196995e613f975384df474cd86c0ce20263ee72be68e460138",
+          "bytes": 568
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration/checkpoint-000371",
+      "model_sha256": "0c3243ba3e9a6daca20d33880656e705610bdee7e86741146822f92bbcd50fdc",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 371,
+        "gradient_updates": 339,
+        "next_simulator_seed": 117,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "0c3243ba3e9a6daca20d33880656e705610bdee7e86741146822f92bbcd50fdc",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "6730bb74b0274a434e2a91cedf3bf2ae6b64a1453a6dc708f16d3a3d5d7c7605",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "9bd1ba87ffdbe119f4d69f7d7802061313814347a98dfe7c2815325163a24c47",
+          "bytes": 3401566
+        },
+        "rng.pt": {
+          "sha256": "904c3fc32a1849141b0234ff499d36557ec32b908cee4098b7dca582af1898b6",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "053576f14100e8196995e613f975384df474cd86c0ce20263ee72be68e460138",
+          "bytes": 568
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration/checkpoint-000400",
+      "model_sha256": "f29bf619f7d915fee9948f40634c37f3bad6884a0eda0918717dd009f3c7ffaa",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 400,
+        "gradient_updates": 368,
+        "next_simulator_seed": 118,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "f29bf619f7d915fee9948f40634c37f3bad6884a0eda0918717dd009f3c7ffaa",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "ad49ac93445d5db7151be0d1dfa80ed015c09a3b077dc7dd4c626e2452b3118e",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "0eac7f5011dce34fd87fb9aa01022a205d59b337e4cf9e89813a7af982a8889d",
+          "bytes": 3401566
+        },
+        "rng.pt": {
+          "sha256": "937993ad09229b227bf9e677ed315b1fb1db5498ed50cdfaed0fd5c6d6ee26a5",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "053576f14100e8196995e613f975384df474cd86c0ce20263ee72be68e460138",
+          "bytes": 568
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration/checkpoint-000424",
+      "model_sha256": "addf81796c227c720ffe0a2b75ffafd8f26e5e6c554ffc8f07000f419940e3cd",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 424,
+        "gradient_updates": 392,
+        "next_simulator_seed": 118,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "addf81796c227c720ffe0a2b75ffafd8f26e5e6c554ffc8f07000f419940e3cd",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "a6f7d69e662aeeb61d03eeca19018f3dae59fcf8c70b6a35b2a7b53cf7d54d3d",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "401143899ab918831023954b532aa78c7745cf067f63344ad3afcc41022f3992",
+          "bytes": 3401566
+        },
+        "rng.pt": {
+          "sha256": "91e17f926838e9ec26d12d5f8093d7a17cc90a15af8503ab927e93dfe2d48a7b",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "053576f14100e8196995e613f975384df474cd86c0ce20263ee72be68e460138",
+          "bytes": 568
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration/checkpoint-000477",
+      "model_sha256": "ed9ebf712eb28633a59cd5071ed6d60b604cba32f9a37750ae6de21be7daa0fa",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 477,
+        "gradient_updates": 445,
+        "next_simulator_seed": 119,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "ed9ebf712eb28633a59cd5071ed6d60b604cba32f9a37750ae6de21be7daa0fa",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "9221755dcc81b6189725421eab3d35acbbdd0b7a3a93e49659dcc264d38cc9eb",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "7166e298b7d7be3776c606005a4f83ed8a7958371234e35b1edaeb8658b13726",
+          "bytes": 3401566
+        },
+        "rng.pt": {
+          "sha256": "669aa7fe11b572a493e8dad6434a8347df11bda58d1afc2fd2ddae3a2c372584",
+          "bytes": 14349
+        },
+        "settings.json": {
+          "sha256": "053576f14100e8196995e613f975384df474cd86c0ce20263ee72be68e460138",
+          "bytes": 568
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration/checkpoint-000530",
+      "model_sha256": "8a3bd490887840a8dca4b846547836549996c9a5075c1f965293eeaf43017b5b",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 530,
+        "gradient_updates": 498,
+        "next_simulator_seed": 120,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "8a3bd490887840a8dca4b846547836549996c9a5075c1f965293eeaf43017b5b",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "ad27fd155ca0ac797b6d373eca6629f9889e75d934e3dc2ede695637fe4884b6",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "61ec1bb7ade5268f07aa84657136195351cb91e9a5ff6767c1c15dd2e8a0aa80",
+          "bytes": 3401566
+        },
+        "rng.pt": {
+          "sha256": "e1043a751029811aea39950cc2298582e1bb81029a8edf4a45e07bc67b52e762",
+          "bytes": 14477
+        },
+        "settings.json": {
+          "sha256": "053576f14100e8196995e613f975384df474cd86c0ce20263ee72be68e460138",
+          "bytes": 568
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration/checkpoint-000583",
+      "model_sha256": "0952b67b41d0e511f698926091d7c014c0de84fd549a34215d68e07db2da0569",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 583,
+        "gradient_updates": 551,
+        "next_simulator_seed": 121,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "0952b67b41d0e511f698926091d7c014c0de84fd549a34215d68e07db2da0569",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "b34b6270782523cca362a1fc9b4f7f25ed1545500eb4518c54ffc30a1d9d67ec",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "7dae9af46732d2ce42b8413ab83867d54c3d139e291dd7dbe689917a7fa3f93b",
+          "bytes": 3401566
+        },
+        "rng.pt": {
+          "sha256": "be619a8b2815a2c43dc51a96379ee20c2bda9982fd45d35b8f50525a6b24907a",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "053576f14100e8196995e613f975384df474cd86c0ce20263ee72be68e460138",
+          "bytes": 568
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration/checkpoint-000600",
+      "model_sha256": "de0b9ca6ef1d0888e6b55716f6e2117f0a507583cf58f3b739ddc01563a9e7b5",
+      "model_bytes": 213648,
+      "progress": {
+        "transitions": 600,
+        "gradient_updates": 568,
+        "next_simulator_seed": 122,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "de0b9ca6ef1d0888e6b55716f6e2117f0a507583cf58f3b739ddc01563a9e7b5",
+          "bytes": 213648
+        },
+        "progress.json": {
+          "sha256": "33f82608910c6621d1b22ec172f7e091bf08b04b4a623ac47b9639ae6136f78e",
+          "bytes": 285
+        },
+        "replay.pkl": {
+          "sha256": "78befb40a85701c1b871925a6967d970ca4caa55ae2154340307ce17f16eea56",
+          "bytes": 3401566
+        },
+        "rng.pt": {
+          "sha256": "7cad149f87001f6ebdb7e1e4bdd4f6d468aa0bbff4a13d10b073ea8f719743dc",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "053576f14100e8196995e613f975384df474cd86c0ce20263ee72be68e460138",
+          "bytes": 568
+        }
+      }
+    },
+    {
+      "path": "sac/experiments/sac-smoke-102/checkpoint-000002",
+      "model_sha256": "affd42b18869c45764b5781416d7efd10ba8ed9c1ce3ee155bc9a564e4cdb14f",
+      "model_bytes": 213316,
+      "progress": {
+        "transitions": 2,
+        "gradient_updates": 1,
+        "next_simulator_seed": 103,
+        "learner_seed": 0,
+        "boundary": "fresh_episode",
+        "packages": {
+          "stable-baselines3": "2.9.2",
+          "torch": "2.15.0",
+          "gymnasium": "1.4.0",
+          "numpy": "2.5.5",
+          "requests": "2.34.2"
+        }
+      },
+      "files": {
+        "model.zip": {
+          "sha256": "affd42b18869c45764b5781416d7efd10ba8ed9c1ce3ee155bc9a564e4cdb14f",
+          "bytes": 213316
+        },
+        "progress.json": {
+          "sha256": "2a5d093febb40449f2a2c4775d4947669340f205079af8e4cea07f2e6506c216",
+          "bytes": 281
+        },
+        "replay.pkl": {
+          "sha256": "0ac77004c0edbb773cc3844ef1ec1b4678d32c3deb05fe14308b724682e71a13",
+          "bytes": 3401565
+        },
+        "rng.pt": {
+          "sha256": "2c6bd30874fc70804ff52dd4dc841155867efbed332142c31ad2c8c0ef4ec78e",
+          "bytes": 14413
+        },
+        "settings.json": {
+          "sha256": "0508a176203d8217cbcab0964fb8c113ca082745cc6e282ce521262a0457797b",
+          "bytes": 493
+        }
+      }
+    }
+  ],
+  "deployment_checkpoints": [
+    {
+      "path": "sac/experiments/sac-200-alpha01-settle1200-submission/checkpoint.json",
+      "sha256": "902a34bf884f08bb439dbe930f273b829df4f7b3ad4e5b580db57bce7329225e",
+      "model_id": "1bb8bb46fab4a5c8c1430e51a2f94a97427f5c2098aefc236655d8e5dccccaee",
+      "features": [
+        "overhead",
+        "completion_rate",
+        "population",
+        "population_trend",
+        "exploration",
+        "rerouting"
+      ],
+      "gradient_updates": 168
+    },
+    {
+      "path": "sac/experiments/sac-200-native-submission/checkpoint.json",
+      "sha256": "aa56b9a2ef662f1a491228269e03d27c7e4d5e2130e90370ebf5bbaed4e8d2b7",
+      "model_id": "2894fd85f1fc48b644562c84574b42a365f24e54dabca462f95bf2d92b8a9c37",
+      "features": [
+        "overhead",
+        "completion_rate",
+        "population",
+        "population_trend",
+        "exploration",
+        "rerouting"
+      ],
+      "gradient_updates": 168
+    },
+    {
+      "path": "sac/experiments/sac-200-scenario-trend-submission/checkpoint.json",
+      "sha256": "5d6b62e3a6529b71e59dcc3e92d61601fe07d5cef34b08a1986a73ad06a741ab",
+      "model_id": "d89305cefe2f924ddf6c01483755a6df253f25945669d59b6c852fda9d810074",
+      "features": [
+        "overhead",
+        "completion_rate",
+        "population",
+        "population_trend",
+        "exploration",
+        "rerouting",
+        "overhead_trend"
+      ],
+      "gradient_updates": 672
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration-submission-200/checkpoint.json",
+      "sha256": "acaaab802dc2be6e55217641d34b05604f088ca71635e232da3263dd5c515115",
+      "model_id": "00304db1e44809df5764d64fe3cea1efcd9e052968d6f16a1ab1bf61f39a6e0e",
+      "features": [
+        "overhead",
+        "completion_rate",
+        "population",
+        "population_trend",
+        "exploration",
+        "rerouting"
+      ],
+      "gradient_updates": 168
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration-submission-400/checkpoint.json",
+      "sha256": "42a552c1cd3af9071d099f082d3e0551298a1fd63b2201d290a81137e62fea9a",
+      "model_id": "f29bf619f7d915fee9948f40634c37f3bad6884a0eda0918717dd009f3c7ffaa",
+      "features": [
+        "overhead",
+        "completion_rate",
+        "population",
+        "population_trend",
+        "exploration",
+        "rerouting"
+      ],
+      "gradient_updates": 368
+    },
+    {
+      "path": "sac/experiments/sac-600-low-exploration-submission-600/checkpoint.json",
+      "sha256": "e5aff3c42fe51148f01b75f9907bb9eb1e284258788f63ab9bbb1c46e2a5fb82",
+      "model_id": "de0b9ca6ef1d0888e6b55716f6e2117f0a507583cf58f3b739ddc01563a9e7b5",
+      "features": [
+        "overhead",
+        "completion_rate",
+        "population",
+        "population_trend",
+        "exploration",
+        "rerouting"
+      ],
+      "gradient_updates": 568
+    },
+    {
+      "path": "sac/experiments/smoke-submission/checkpoint.json",
+      "sha256": "ee07ae0d12caf67bf4a861779d8403af6f4a839a882c4f11569d993874171948",
+      "model_id": "affd42b18869c45764b5781416d7efd10ba8ed9c1ce3ee155bc9a564e4cdb14f",
+      "features": [
+        "overhead",
+        "completion_rate",
+        "population",
+        "population_trend",
+        "exploration",
+        "rerouting"
+      ],
+      "gradient_updates": 1
+    }
+  ],
+  "latest_comparison": "sac/experiments/comparison-scenario-200/results.json",
+  "latest_training": "sac/experiments/sac-200-scenario-trend/training_result.json",
+  "retained_artifacts": "Training sources and settings, model and optimizer archives, replay buffers, RNG states, raw trip records, measurements, diagnostics, historical runs, and plots."
+}

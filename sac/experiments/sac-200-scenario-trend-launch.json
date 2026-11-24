@@ -1,0 +1,16 @@
+{
+  "pid": 38267,
+  "started_utc": "2026-11-24T08:58:27.457964+00:00",
+  "command": [
+    "/usr/bin/caffeinate",
+    "-i",
+    "/Users/gbianchi/uni/adapsw/sac/.venv/bin/python",
+    "-u",
+    "/Users/gbianchi/uni/adapsw/sac/experiments/train-scenario-200.py"
+  ],
+  "settings": "/Users/gbianchi/uni/adapsw/sac/SAC_SETTINGS_scenario_200.json",
+  "settings_sha256": "cd660a136776a07c516333b29e083a02bcfb314f278391d0cebafe8271cfb053",
+  "log": "/Users/gbianchi/uni/adapsw/sac/experiments/sac-200-scenario-trend.log",
+  "status": "/Users/gbianchi/uni/adapsw/sac/experiments/sac-200-scenario-trend-job.json",
+  "output": "/Users/gbianchi/uni/adapsw/sac/experiments/sac-200-scenario-trend"
+}

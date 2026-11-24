@@ -1,0 +1,29 @@
+services:
+  kafka:
+    container_name: kafka
+    image: spotify/kafka
+    environment:
+      - ADVERTISED_HOST=kafka
+      - ADVERTISED_PORT=9092
+    networks:
+      - fas-net
+
+  crowdnav:
+    container_name: crowdnav
+    build:
+      context: ./crowdnav
+      dockerfile: Dockerfile
+    depends_on:
+      - kafka
+    networks:
+      - fas-net
+    volumes:
+      - csvexchangevolume:/app/data/
+
+networks:
+  fas-net:
+    name: fas-net
+    driver: bridge
+
+volumes:
+  csvexchangevolume:

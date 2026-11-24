@@ -1,0 +1,3 @@
+seed,policy,final_step,trip_count,median_overhead,mean_overhead,p90_overhead,p95_overhead,complaints,complaint_rate,configuration_changes,wall_seconds_including_startup,data_directory
+11,baseline,10000,2927,2.47437402802188,3.173946109558115,5.7358440598503355,7.444312801830028,693,0.2367611889306457,0,205.592298746109,/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261113T201009Z/11-baseline
+11,strategy,10000,3796,2.0120150606041873,2.389791134665979,3.863999960527747,4.957867818803228,569,0.14989462592202318,7,218.19562911987305,/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261113T201009Z/11-strategy

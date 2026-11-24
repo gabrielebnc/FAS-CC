@@ -1,0 +1,13 @@
+{
+  "policy": "static",
+  "seed": 403,
+  "ticks": 10000,
+  "completed_trips": 3283,
+  "mean_overhead": 3.3115166619851704,
+  "median_overhead": 2.246637853016055,
+  "p95_overhead": 9.646349868060243,
+  "complaint_rate": 0.21565641181845874,
+  "configuration_changes": 0,
+  "wall_seconds": 227.58246362500358,
+  "teleports": 1491
+}

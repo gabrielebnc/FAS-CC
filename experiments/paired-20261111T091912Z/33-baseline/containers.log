@@ -1,0 +1,260 @@
+http-server-1  | INFO:     Started server process [1]
+http-server-1  | INFO:     Waiting for application startup.
+http-server-1  | INFO:     Application startup complete.
+http-server-1  | INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+http-server-1  | Topic crowd-nav-monitored-stats is not available during auto-create initialization
+http-server-1  | Topic crowd-nav-monitored-stats is not available during auto-create initialization
+http-server-1  | # KafkaConsumerMonitor Connected!
+http-server-1  | INFO:     127.0.0.1:39240 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:39242 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     172.20.0.4:57042 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:56854 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:56870 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:56876 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:56886 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:56900 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:45904 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:45918 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:45920 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:45922 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:45926 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:38052 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:38066 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:38076 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:38082 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:38090 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:41180 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:41192 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:41202 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:41204 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:41216 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:56842 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:56846 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:56862 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:56872 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:56888 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:41962 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:41964 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:41974 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:41990 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:41994 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:36012 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:36022 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:36034 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:36048 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:36052 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:46816 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:46820 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:46836 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:46840 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:46842 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:34614 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:34630 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:34638 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:34654 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:42710 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:42712 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:42726 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:42732 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:42740 - "GET / HTTP/1.1" 200 OK
+crowdnav-1     | [36m#####################################[39m
+crowdnav-1     | [36m#      Starting CrowdNav v0.2       #[39m
+crowdnav-1     | [36m#####################################[39m
+crowdnav-1     | [33m# Configuration:[39m
+crowdnav-1     | [33m# Kafka-Host   -> kafka:9092[39m
+crowdnav-1     | [33m# Kafka-Topic1 -> crowd-nav-trips[39m
+crowdnav-1     | [33m# Kafka-Topic2 -> crowd-nav-performance[39m
+crowdnav-1     | [32m# StreamForword OK![39m
+crowdnav-1     | [32m# KafkaConnector OK![39m
+crowdnav-1     | [32m# KafkaProducerMonitor Connected![39m
+crowdnav-1     | [32m# SUMO-Dependency check OK![39m
+crowdnav-1     | [36m[32m# Map loading OK! [39m[39m
+crowdnav-1     | [36m[36m# Nodes: 426 / Edges: 1131[39m[39m
+crowdnav-1     |  Retrying in 1 seconds
+crowdnav-1     | [32m
+crowdnav-1     | # SUMO-Application started OK![39m
+crowdnav-1     | [35m# Start adding initial cars to the simulation[39m
+crowdnav-1     | 0 -> Step:100 # Driving cars: 742/750 # avgTripDuration: 0(0) # avgTripOverhead: 0 # totalComplaints: 0
+crowdnav-1     | 0 -> Step:200 # Driving cars: 748/750 # avgTripDuration: 0(0) # avgTripOverhead: 0 # totalComplaints: 0
+crowdnav-1     | 0 -> Step:300 # Driving cars: 736/750 # avgTripDuration: 230.75(31) # avgTripOverhead: 1.7401561572630941 # totalComplaints: 1
+crowdnav-1     | 0 -> Step:400 # Driving cars: 736/750 # avgTripDuration: 256.8947368421053(56) # avgTripOverhead: 1.8988837723673844 # totalComplaints: 5
+crowdnav-1     | 0 -> Step:500 # Driving cars: 738/750 # avgTripDuration: 285.7402597402597(76) # avgTripOverhead: 2.115419075128179 # totalComplaints: 11
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-406' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-592' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:600 # Driving cars: 742/750 # avgTripDuration: 312.56862745098044(101) # avgTripOverhead: 2.242127854343039 # totalComplaints: 14
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-605' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:700 # Driving cars: 741/750 # avgTripDuration: 342.328125(127) # avgTripOverhead: 2.405362180664182 # totalComplaints: 22
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-488' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:800 # Driving cars: 744/750 # avgTripDuration: 352.21088435374156(146) # avgTripOverhead: 2.423396190671259 # totalComplaints: 27
+crowdnav-1     | 0 -> Step:900 # Driving cars: 744/750 # avgTripDuration: 386.3693181818181(175) # avgTripOverhead: 2.531737393537285 # totalComplaints: 35
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-229' (No connection between edge 'gneE34' and edge '-gneE34'.).
+crowdnav-1     | 0 -> Step:1000 # Driving cars: 746/750 # avgTripDuration: 407.4410256410256(194) # avgTripOverhead: 2.565294597792577 # totalComplaints: 42
+crowdnav-1     | 0 -> Step:1100 # Driving cars: 745/750 # avgTripDuration: 409.91441441441435(221) # avgTripOverhead: 2.593664781099434 # totalComplaints: 51
+crowdnav-1     | 0 -> Step:1200 # Driving cars: 743/750 # avgTripDuration: 417.58536585365846(245) # avgTripOverhead: 2.6434492716743114 # totalComplaints: 55
+crowdnav-1     | 0 -> Step:1300 # Driving cars: 743/750 # avgTripDuration: 435.4525547445255(273) # avgTripOverhead: 2.7329226532057294 # totalComplaints: 61
+crowdnav-1     | 0 -> Step:1400 # Driving cars: 743/750 # avgTripDuration: 449.48474576271184(294) # avgTripOverhead: 2.8016159573249295 # totalComplaints: 66
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-163' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:1500 # Driving cars: 741/750 # avgTripDuration: 463.3364779874214(317) # avgTripOverhead: 2.8155584607719923 # totalComplaints: 69
+crowdnav-1     | 0 -> Step:1600 # Driving cars: 743/750 # avgTripDuration: 472.1768115942029(344) # avgTripOverhead: 2.883559926130813 # totalComplaints: 75
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-540' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:1700 # Driving cars: 744/750 # avgTripDuration: 489.90314136125653(381) # avgTripOverhead: 2.9309947666201603 # totalComplaints: 85
+crowdnav-1     | 0 -> Step:1800 # Driving cars: 739/750 # avgTripDuration: 494.3495145631068(411) # avgTripOverhead: 2.9910645009069845 # totalComplaints: 92
+crowdnav-1     | 0 -> Step:1900 # Driving cars: 738/750 # avgTripDuration: 497.9864253393665(441) # avgTripOverhead: 2.9777796202247857 # totalComplaints: 96
+crowdnav-1     | 0 -> Step:2000 # Driving cars: 743/750 # avgTripDuration: 497.79956427015253(458) # avgTripOverhead: 2.9967635918937425 # totalComplaints: 101
+crowdnav-1     | 0 -> Step:2100 # Driving cars: 742/750 # avgTripDuration: 499.8151950718686(486) # avgTripOverhead: 3.0012678254953125 # totalComplaints: 106
+crowdnav-1     | 0 -> Step:2200 # Driving cars: 746/750 # avgTripDuration: 497.5703125(511) # avgTripOverhead: 2.9746227001640886 # totalComplaints: 111
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-602' (No connection between edge '-gneE34' and edge 'gneE34'.).
+crowdnav-1     | 0 -> Step:2300 # Driving cars: 744/750 # avgTripDuration: 515.2010968921389(546) # avgTripOverhead: 3.024174691523459 # totalComplaints: 119
+crowdnav-1     | 0 -> Step:2400 # Driving cars: 745/750 # avgTripDuration: 516.6759098786829(576) # avgTripOverhead: 3.0648771196619076 # totalComplaints: 124
+crowdnav-1     | 0 -> Step:2500 # Driving cars: 746/750 # avgTripDuration: 524.1289256198344(604) # avgTripOverhead: 3.1171289745242015 # totalComplaints: 132
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-690' (No connection between edge '-gneE76' and edge 'gneE76'.).
+crowdnav-1     | 0 -> Step:2600 # Driving cars: 740/750 # avgTripDuration: 526.4593301435403(626) # avgTripOverhead: 3.123045762407611 # totalComplaints: 141
+crowdnav-1     | 0 -> Step:2700 # Driving cars: 742/750 # avgTripDuration: 524.7748851454822(652) # avgTripOverhead: 3.105812346118617 # totalComplaints: 147
+crowdnav-1     | 0 -> Step:2800 # Driving cars: 739/750 # avgTripDuration: 520.2017543859647(683) # avgTripOverhead: 3.0769739168767805 # totalComplaints: 150
+crowdnav-1     | 0 -> Step:2900 # Driving cars: 740/750 # avgTripDuration: 521.2690140845069(709) # avgTripOverhead: 3.088085828491747 # totalComplaints: 159
+crowdnav-1     | 0 -> Step:3000 # Driving cars: 741/750 # avgTripDuration: 522.9460916442049(741) # avgTripOverhead: 3.067201560285189 # totalComplaints: 169
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-265' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-67' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-429' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:3100 # Driving cars: 742/750 # avgTripDuration: 525.3968668407315(765) # avgTripOverhead: 3.065952764151671 # totalComplaints: 174
+crowdnav-1     | 0 -> Step:3200 # Driving cars: 743/750 # avgTripDuration: 525.1209068010081(793) # avgTripOverhead: 3.1179685002877284 # totalComplaints: 187
+crowdnav-1     | 0 -> Step:3300 # Driving cars: 744/750 # avgTripDuration: 524.4957472661(822) # avgTripOverhead: 3.114644353153304 # totalComplaints: 196
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-25' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-742' (No connection between edge 'gneE100' and edge 'gneE101'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-329' (No connection between edge 'gneE100' and edge 'gneE101'.).
+crowdnav-1     | 0 -> Step:3400 # Driving cars: 740/750 # avgTripDuration: 522.8415492957754(851) # avgTripOverhead: 3.1023589545166845 # totalComplaints: 204
+http-server-1  | INFO:     127.0.0.1:59852 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:59868 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:59876 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:59886 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:59900 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:34512 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:34526 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:34530 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:34546 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:34560 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:34498 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:34504 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:34510 - "GET / HTTP/1.1" 200 OK
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-649' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1     | 0 -> Step:3500 # Driving cars: 742/750 # avgTripDuration: 526.0666666666674(884) # avgTripOverhead: 3.1072119612597464 # totalComplaints: 212
+crowdnav-1     | 0 -> Step:3600 # Driving cars: 743/750 # avgTripDuration: 527.3989071038261(914) # avgTripOverhead: 3.0962956585008947 # totalComplaints: 220
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-323' (No connection between edge '-gneE36' and edge 'gneE36'.).
+crowdnav-1     | 0 -> Step:3700 # Driving cars: 741/750 # avgTripDuration: 526.2351063829794(939) # avgTripOverhead: 3.097518979808438 # totalComplaints: 224
+crowdnav-1     | 0 -> Step:3800 # Driving cars: 743/750 # avgTripDuration: 526.7218813905937(977) # avgTripOverhead: 3.0912892247097528 # totalComplaints: 231
+crowdnav-1     | 0 -> Step:3900 # Driving cars: 740/750 # avgTripDuration: 526.5880597014929(1004) # avgTripOverhead: 3.084523575426735 # totalComplaints: 238
+crowdnav-1     | 0 -> Step:4000 # Driving cars: 741/750 # avgTripDuration: 527.4624277456651(1037) # avgTripOverhead: 3.0817397392396964 # totalComplaints: 246
+crowdnav-1     | 0 -> Step:4100 # Driving cars: 745/750 # avgTripDuration: 529.1291234684263(1060) # avgTripOverhead: 3.0839054352400543 # totalComplaints: 252
+crowdnav-1     | 0 -> Step:4200 # Driving cars: 741/750 # avgTripDuration: 526.5527039413386(1090) # avgTripOverhead: 3.0650659148266928 # totalComplaints: 256
+crowdnav-1     | 0 -> Step:4300 # Driving cars: 741/750 # avgTripDuration: 526.3983957219256(1121) # avgTripOverhead: 3.0558941009706153 # totalComplaints: 265
+crowdnav-1     | 0 -> Step:4400 # Driving cars: 748/750 # avgTripDuration: 527.1332164767753(1140) # avgTripOverhead: 3.054832424913482 # totalComplaints: 269
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-169' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:4500 # Driving cars: 742/750 # avgTripDuration: 527.7988013698633(1167) # avgTripOverhead: 3.051357704612013 # totalComplaints: 275
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-488' (No connection between edge '-gneE36' and edge 'gneE36'.).
+crowdnav-1     | 0 -> Step:4600 # Driving cars: 747/750 # avgTripDuration: 530.3539232053427(1197) # avgTripOverhead: 3.053486033814323 # totalComplaints: 283
+crowdnav-1     | 0 -> Step:4700 # Driving cars: 742/750 # avgTripDuration: 530.6835650040889(1222) # avgTripOverhead: 3.0454851442325683 # totalComplaints: 286
+crowdnav-1     | 0 -> Step:4800 # Driving cars: 740/750 # avgTripDuration: 532.4428457234218(1250) # avgTripOverhead: 3.048886728483987 # totalComplaints: 293
+http-server-1  | INFO:     127.0.0.1:34512 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:34524 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:43290 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:43292 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:43296 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:43312 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:43326 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:41862 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:41874 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:41878 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:41886 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:41896 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:54296 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:54302 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:54318 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:54330 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:54342 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:40098 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:40110 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:40122 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:40138 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:40146 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:55426 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:55428 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:55430 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:55434 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:55446 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:60864 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:60874 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:60886 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:60898 - "GET / HTTP/1.1" 200 OK
+http-server-1  | INFO:     127.0.0.1:34390 - "GET / HTTP/1.1" 200 OK
+kafka-1        | /usr/lib/python2.7/dist-packages/supervisor/options.py:296: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
+kafka-1        |   'Supervisord is running as root and it is searching '
+kafka-1        | 2026-11-11 09:29:59,489 CRIT Supervisor running as root (no user in config file)
+kafka-1        | 2026-11-11 09:29:59,490 WARN Included extra file "/etc/supervisor/conf.d/kafka.conf" during parsing
+kafka-1        | 2026-11-11 09:29:59,490 WARN Included extra file "/etc/supervisor/conf.d/zookeeper.conf" during parsing
+kafka-1        | 2026-11-11 09:29:59,495 INFO RPC interface 'supervisor' initialized
+kafka-1        | 2026-11-11 09:29:59,495 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+kafka-1        | 2026-11-11 09:29:59,495 INFO supervisord started with pid 1
+kafka-1        | 2026-11-11 09:30:00,509 INFO spawned: 'zookeeper' with pid 9
+kafka-1        | 2026-11-11 09:30:00,512 INFO spawned: 'kafka' with pid 10
+kafka-1        | 2026-11-11 09:30:01,593 INFO success: zookeeper entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+kafka-1        | 2026-11-11 09:30:01,593 INFO success: kafka entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+crowdnav-1     | 0 -> Step:4900 # Driving cars: 742/750 # avgTripDuration: 532.2127825409201(1282) # avgTripOverhead: 3.0447635883546518 # totalComplaints: 301
+crowdnav-1     | 0 -> Step:5000 # Driving cars: 746/750 # avgTripDuration: 533.7075038284845(1305) # avgTripOverhead: 3.051369605162688 # totalComplaints: 310
+crowdnav-1     | 0 -> Step:5100 # Driving cars: 740/750 # avgTripDuration: 533.7179294823715(1332) # avgTripOverhead: 3.0452476377370084 # totalComplaints: 314
+crowdnav-1     | 0 -> Step:5200 # Driving cars: 736/750 # avgTripDuration: 533.9244314013214(1362) # avgTripOverhead: 3.0502984705981055 # totalComplaints: 325
+crowdnav-1     | 0 -> Step:5300 # Driving cars: 739/750 # avgTripDuration: 532.7936278059385(1380) # avgTripOverhead: 3.0427419398107003 # totalComplaints: 328
+crowdnav-1     | 0 -> Step:5400 # Driving cars: 742/750 # avgTripDuration: 530.923897581793(1405) # avgTripOverhead: 3.0330842845197252 # totalComplaints: 332
+crowdnav-1     | 0 -> Step:5500 # Driving cars: 744/750 # avgTripDuration: 533.7586926286519(1437) # avgTripOverhead: 3.058175652948373 # totalComplaints: 341
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-576' (No connection between edge '-gneE24' and edge 'gneE24'.).
+crowdnav-1     | 0 -> Step:5600 # Driving cars: 741/750 # avgTripDuration: 532.8490822569693(1470) # avgTripOverhead: 3.0520924519138513 # totalComplaints: 347
+crowdnav-1     | 0 -> Step:5700 # Driving cars: 743/750 # avgTripDuration: 533.9411764705894(1495) # avgTripOverhead: 3.0535893835793346 # totalComplaints: 354
+crowdnav-1     | 0 -> Step:5800 # Driving cars: 738/750 # avgTripDuration: 534.8899803536358(1526) # avgTripOverhead: 3.0548834544147483 # totalComplaints: 363
+crowdnav-1     | 0 -> Step:5900 # Driving cars: 745/750 # avgTripDuration: 532.1186331399107(1550) # avgTripOverhead: 3.0493436425114804 # totalComplaints: 369
+crowdnav-1     | 0 -> Step:6000 # Driving cars: 744/750 # avgTripDuration: 534.2815472415991(1576) # avgTripOverhead: 3.0513098382496873 # totalComplaints: 371
+crowdnav-1     | 0 -> Step:6100 # Driving cars: 742/750 # avgTripDuration: 537.090230242689(1606) # avgTripOverhead: 3.054932108276085 # totalComplaints: 379
+crowdnav-1     | 0 -> Step:6200 # Driving cars: 741/750 # avgTripDuration: 536.8496932515345(1629) # avgTripOverhead: 3.0536850393718833 # totalComplaints: 385
+crowdnav-1     | 0 -> Step:6300 # Driving cars: 742/750 # avgTripDuration: 539.1117117117128(1664) # avgTripOverhead: 3.05441655970311 # totalComplaints: 388
+crowdnav-1     | 0 -> Step:6400 # Driving cars: 742/750 # avgTripDuration: 539.5703309692682(1691) # avgTripOverhead: 3.0584502810363503 # totalComplaints: 396
+crowdnav-1     | 0 -> Step:6500 # Driving cars: 743/750 # avgTripDuration: 538.1768470040729(1718) # avgTripOverhead: 3.0546988217992355 # totalComplaints: 403
+crowdnav-1     | 0 -> Step:6600 # Driving cars: 738/750 # avgTripDuration: 537.2314761631253(1740) # avgTripOverhead: 3.061300886491571 # totalComplaints: 410
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-406' (No connection between edge 'gneE40' and edge '-gneE40'.).
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-342' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1     | 0 -> Step:6700 # Driving cars: 742/750 # avgTripDuration: 538.2127056154285(1762) # avgTripOverhead: 3.0648752137781914 # totalComplaints: 417
+crowdnav-1     | 0 -> Step:6800 # Driving cars: 740/750 # avgTripDuration: 538.2114093959732(1787) # avgTripOverhead: 3.075389972669638 # totalComplaints: 425
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-416' (No connection between edge 'gneE95' and edge '-gneE95'.).
+crowdnav-1     | 0 -> Step:6900 # Driving cars: 738/750 # avgTripDuration: 540.3721058434401(1813) # avgTripOverhead: 3.0860669699467045 # totalComplaints: 434
+crowdnav-1     | 0 -> Step:7000 # Driving cars: 738/750 # avgTripDuration: 540.642973412914(1842) # avgTripOverhead: 3.0858902805938055 # totalComplaints: 443
+crowdnav-1     | 0 -> Step:7100 # Driving cars: 740/750 # avgTripDuration: 540.3829333333333(1874) # avgTripOverhead: 3.0749019596276894 # totalComplaints: 449
+crowdnav-1     | 0 -> Step:7200 # Driving cars: 738/750 # avgTripDuration: 538.9356694560666(1911) # avgTripOverhead: 3.0814782744526483 # totalComplaints: 457
+crowdnav-1     | 0 -> Step:7300 # Driving cars: 740/750 # avgTripDuration: 539.1826625386993(1937) # avgTripOverhead: 3.0800996942474526 # totalComplaints: 463
+crowdnav-1     | 0 -> Step:7400 # Driving cars: 744/750 # avgTripDuration: 539.6475659229206(1971) # avgTripOverhead: 3.0834580209100917 # totalComplaints: 469
+crowdnav-1     | 0 -> Step:7500 # Driving cars: 737/750 # avgTripDuration: 539.3104999999998(1999) # avgTripOverhead: 3.082322004269217 # totalComplaints: 474
+crowdnav-1     | 0 -> Step:7600 # Driving cars: 738/750 # avgTripDuration: 541.0566781665843(2028) # avgTripOverhead: 3.0896861898499743 # totalComplaints: 482
+crowdnav-1     | 0 -> Step:7700 # Driving cars: 741/750 # avgTripDuration: 539.6596679687498(2047) # avgTripOverhead: 3.0834707902947533 # totalComplaints: 487
+crowdnav-1     | 0 -> Step:7800 # Driving cars: 736/750 # avgTripDuration: 538.6915303176129(2077) # avgTripOverhead: 3.0861484597849325 # totalComplaints: 494
+crowdnav-1     | 0 -> Step:7900 # Driving cars: 738/750 # avgTripDuration: 538.0478219696968(2111) # avgTripOverhead: 3.081600505326797 # totalComplaints: 504
+crowdnav-1     | 0 -> Step:8000 # Driving cars: 743/750 # avgTripDuration: 540.519347319347(2144) # avgTripOverhead: 3.0987220296660567 # totalComplaints: 513
+crowdnav-1     | 0 -> Step:8100 # Driving cars: 741/750 # avgTripDuration: 539.6484374999998(2175) # avgTripOverhead: 3.092719237180362 # totalComplaints: 516
+crowdnav-1     | 0 -> Step:8200 # Driving cars: 740/750 # avgTripDuration: 539.8719346049044(2201) # avgTripOverhead: 3.094185303118002 # totalComplaints: 521
+crowdnav-1     | 0 -> Step:8300 # Driving cars: 740/750 # avgTripDuration: 539.0526079136688(2223) # avgTripOverhead: 3.0886255742042152 # totalComplaints: 524
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-748' (No connection between edge 'gneE94' and edge '-gneE94'.).
+crowdnav-1     | 0 -> Step:8400 # Driving cars: 735/750 # avgTripDuration: 539.9747564216117(2257) # avgTripOverhead: 3.0933048757241393 # totalComplaints: 533
+crowdnav-1     | 0 -> Step:8500 # Driving cars: 741/750 # avgTripDuration: 541.5937364071332(2298) # avgTripOverhead: 3.093295150481078 # totalComplaints: 547
+crowdnav-1     | 0 -> Step:8600 # Driving cars: 737/750 # avgTripDuration: 541.598018095648(2320) # avgTripOverhead: 3.092435863849234 # totalComplaints: 554
+crowdnav-1     | 0 -> Step:8700 # Driving cars: 742/750 # avgTripDuration: 540.0485106382973(2349) # avgTripOverhead: 3.0854438699074063 # totalComplaints: 560
+crowdnav-1     | 0 -> Step:8800 # Driving cars: 739/750 # avgTripDuration: 538.1880521665962(2376) # avgTripOverhead: 3.07889828886165 # totalComplaints: 567
+crowdnav-1     | 0 -> Step:8900 # Driving cars: 741/750 # avgTripDuration: 537.7007086285948(2398) # avgTripOverhead: 3.07600971563521 # totalComplaints: 572
+crowdnav-1     | 0 -> Step:9000 # Driving cars: 742/750 # avgTripDuration: 537.0708110333469(2428) # avgTripOverhead: 3.077139372469597 # totalComplaints: 581
+crowdnav-1     | 0 -> Step:9100 # Driving cars: 737/750 # avgTripDuration: 537.9265605875152(2450) # avgTripOverhead: 3.077621621348565 # totalComplaints: 586
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-450' (No connection between edge 'gneE6' and edge 'gneE7'.).
+crowdnav-1     | 0 -> Step:9200 # Driving cars: 739/750 # avgTripDuration: 538.2737903225803(2479) # avgTripOverhead: 3.0704885582951436 # totalComplaints: 593
+crowdnav-1     | 0 -> Step:9300 # Driving cars: 735/750 # avgTripDuration: 539.3615661206551(2502) # avgTripOverhead: 3.069808446305883 # totalComplaints: 598
+crowdnav-1     | 0 -> Step:9400 # Driving cars: 737/750 # avgTripDuration: 538.5694006309145(2535) # avgTripOverhead: 3.0630838839102914 # totalComplaints: 603
+crowdnav-1     | 0 -> Step:9500 # Driving cars: 735/750 # avgTripDuration: 538.6384976525816(2555) # avgTripOverhead: 3.0656034213765992 # totalComplaints: 613
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-298' (No connection between edge '-gneE35' and edge 'gneE35'.).
+crowdnav-1     | 0 -> Step:9600 # Driving cars: 737/750 # avgTripDuration: 540.3427575522842(2581) # avgTripOverhead: 3.07149089974189 # totalComplaints: 620
+crowdnav-1     | 0 -> Step:9700 # Driving cars: 736/750 # avgTripDuration: 539.9363496932505(2607) # avgTripOverhead: 3.0765707852485376 # totalComplaints: 627
+crowdnav-1     | 0 -> Step:9800 # Driving cars: 733/750 # avgTripDuration: 538.7929984779288(2627) # avgTripOverhead: 3.079293728852026 # totalComplaints: 631
+crowdnav-1     | 0 -> Step:9900 # Driving cars: 738/750 # avgTripDuration: 539.6495662014323(2650) # avgTripOverhead: 3.081783668368866 # totalComplaints: 635
+crowdnav-1     | Error: Answered with error to command 0xc4: Route replacement failed for vehicle 'car-438' (No connection between edge 'gneE7' and edge 'gneE6'.).
+crowdnav-1     | 0 -> Step:10000 # Driving cars: 735/750 # avgTripDuration: 539.8356982822993(2677) # avgTripOverhead: 3.086388058074949 # totalComplaints: 645

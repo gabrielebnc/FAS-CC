@@ -1,0 +1,6 @@
+fastapi==0.104.1
+uvicorn==0.23.2
+kafka-python
+colorama
+# Keep legacy record-format support for the spotify/kafka 0.10.1.0 broker.
+aiokafka==0.12.0

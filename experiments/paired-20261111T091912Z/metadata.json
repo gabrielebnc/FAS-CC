@@ -1,0 +1,28 @@
+{
+  "images": {
+    "crowdnav": "fas-evaluation/crowdnav:fe0635e97f54d083a7e1001f243bcaae922ee300234fa52122ca9b23f17464cd",
+    "api": "fas-evaluation/api:ae370b554766985dece166360881b75aeb9d6bec83eaddc56e96d82028f17224"
+  },
+  "seeds": [
+    22,
+    33,
+    44,
+    55
+  ],
+  "horizon": 10000,
+  "python_executable": "/Users/gbianchi/uni/adapsw/UPISAS/.venv/bin/python",
+  "python_version": "3.12.7 (v3.12.7:0b05ead877f, Sep 30 2024, 23:18:00) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "local_packages": {
+    "requests": "2.31.0",
+    "jsonschema": "4.19.2"
+  },
+  "source_sha256": {
+    "UPISAS/__init__.py": "fa9a4f2e794c78cb136caeb48be530f06b477c4df9f8fd0c7d92b434a9e38586",
+    "UPISAS/strategy.py": "fbbc88dabbb04413309975f70e7def1963465a3785f40333dec135b945a3db1a",
+    "UPISAS/knowledge.py": "4e4f7a3b04b039a145a895f2524f711d395b10a8a132123c5d9a26c344df5fb5",
+    "UPISAS/exceptions.py": "38bed3670e9166a0dcf3ef5a4d7ecfd89464aa56392cc5d5e6c52661051bc2a1",
+    "UPISAS/exemplars/crowdnav.py": "f60dc06e85d4527fd4fe1e89ec588af158d4b7d558f1de0179728112c7fb910a",
+    "UPISAS/strategies/my_strategy.py": "97f341622d85796db6963f00b8ad8d09a4f2caa943cde41ba75a76c8e98ad5e9",
+    "run_challenge.py": "87fbbd807eea467461f3c2fdee3949f44331bb3361d396e8923b03521cdaefa8"
+  }
+}

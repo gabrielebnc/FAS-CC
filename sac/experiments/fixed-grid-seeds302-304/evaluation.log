@@ -1,0 +1,25 @@
+Starting seed 302, exploration 0%, rerouting 60 ticks
+{'seed': 302, 'exploration_percent': 0, 'reroute_ticks': 60, 'completed_trips': 3197, 'mean_overhead': 2.3932325771025376, 'median_overhead': 1.995074580138861, 'p95_overhead': 4.8607858875528835, 'complaint_rate': 0.14982796371598373}
+Starting seed 302, exploration 0%, rerouting 150 ticks
+{'seed': 302, 'exploration_percent': 0, 'reroute_ticks': 150, 'completed_trips': 3237, 'mean_overhead': 2.4373630058952385, 'median_overhead': 2.019451135380384, 'p95_overhead': 5.174048745134162, 'complaint_rate': 0.1689836268149521}
+Starting seed 302, exploration 15%, rerouting 60 ticks
+{'seed': 302, 'exploration_percent': 15, 'reroute_ticks': 60, 'completed_trips': 2796, 'mean_overhead': 2.8098255882205914, 'median_overhead': 2.248972645863123, 'p95_overhead': 6.405360055045815, 'complaint_rate': 0.2142346208869814}
+Starting seed 302, exploration 15%, rerouting 150 ticks
+{'seed': 302, 'exploration_percent': 15, 'reroute_ticks': 150, 'completed_trips': 2908, 'mean_overhead': 2.686395352297608, 'median_overhead': 2.225270291689232, 'p95_overhead': 5.61821572016598, 'complaint_rate': 0.20735900962861073}
+Starting seed 303, exploration 0%, rerouting 60 ticks
+{'seed': 303, 'exploration_percent': 0, 'reroute_ticks': 60, 'completed_trips': 3337, 'mean_overhead': 2.4290537201781, 'median_overhead': 2.0272574337413234, 'p95_overhead': 4.93668007393177, 'complaint_rate': 0.16571771051842973}
+Starting seed 303, exploration 0%, rerouting 150 ticks
+{'seed': 303, 'exploration_percent': 0, 'reroute_ticks': 150, 'completed_trips': 3414, 'mean_overhead': 2.4276592447699947, 'median_overhead': 1.9936737757525864, 'p95_overhead': 5.0944913469443165, 'complaint_rate': 0.1555360281195079}
+Starting seed 303, exploration 15%, rerouting 60 ticks
+{'seed': 303, 'exploration_percent': 15, 'reroute_ticks': 60, 'completed_trips': 2962, 'mean_overhead': 2.6908885166193364, 'median_overhead': 2.2394776518396937, 'p95_overhead': 5.879806214032937, 'complaint_rate': 0.20324105334233625}
+Starting seed 303, exploration 15%, rerouting 150 ticks
+{'seed': 303, 'exploration_percent': 15, 'reroute_ticks': 150, 'completed_trips': 3062, 'mean_overhead': 2.6086692053788014, 'median_overhead': 2.1600614183508213, 'p95_overhead': 5.593465185108103, 'complaint_rate': 0.18876551273677336}
+Starting seed 304, exploration 0%, rerouting 60 ticks
+{'seed': 304, 'exploration_percent': 0, 'reroute_ticks': 60, 'completed_trips': 3623, 'mean_overhead': 2.3409303829280965, 'median_overhead': 1.9966116299013184, 'p95_overhead': 4.820773321794864, 'complaint_rate': 0.15291195142147393}
+Starting seed 304, exploration 0%, rerouting 150 ticks
+{'seed': 304, 'exploration_percent': 0, 'reroute_ticks': 150, 'completed_trips': 3535, 'mean_overhead': 2.3935357640595365, 'median_overhead': 1.9904516611146525, 'p95_overhead': 5.097777774683784, 'complaint_rate': 0.14794908062234796}
+Starting seed 304, exploration 15%, rerouting 60 ticks
+{'seed': 304, 'exploration_percent': 15, 'reroute_ticks': 60, 'completed_trips': 3261, 'mean_overhead': 2.6088719027582017, 'median_overhead': 2.2209522899287046, 'p95_overhead': 5.4139099527608385, 'complaint_rate': 0.19441888991107023}
+Starting seed 304, exploration 15%, rerouting 150 ticks
+{'seed': 304, 'exploration_percent': 15, 'reroute_ticks': 150, 'completed_trips': 3253, 'mean_overhead': 2.725203485601846, 'median_overhead': 2.1994765411083277, 'p95_overhead': 5.833350044666798, 'complaint_rate': 0.20227482324008608}
+All 12 runs and paired comparisons finished.

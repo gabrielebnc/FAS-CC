@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "properties": {
+    "route_random_sigma": {
+      "type": "number",
+      "description": "the randomization sigma of edge weights, number 0 to 1 ",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "exploration_percentage": {
+      "type": "number",
+      "description": "the percentage of routes we want to use for exploration, number 0 to 1",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "max_speed_and_length_factor": {
+      "type": "number",
+      "description": "how much the length/speed influences the routing, number > 0 to inf",
+      "minimum": 0
+    },
+    "average_edge_duration_factor": {
+      "type": "number",
+      "description": "how much the averageEdgeFactor influences the routing, number > 0 to inf",
+      "minimum": 0
+    },
+    "freshness_update_factor": {
+      "type": "number",
+      "description": "how much the freshnessUpdateFactor influences the routing, number 1 to inf",
+      "minimum": 1
+    },
+    "freshness_cut_off_value": {
+      "type": "number",
+      "description": "if data is older than this we do not consider it in the algorithm, number 1 to inf",
+      "minimum": 1
+    },
+    "re_route_every_ticks": {
+      "type": "integer",
+      "description": "check for a new route very x times after the car starts, int 1 to inf",
+      "minimum": 1
+    },
+    "total_car_counter": {
+      "type": "integer",
+      "description": "the total number of cars in the simulation, int 0 to inf",
+      "minimum": 0
+    },
+    "edge_average_influence": {
+      "type": "number",
+      "description": "how much the average edge duration influences the routing",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}

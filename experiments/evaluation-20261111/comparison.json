@@ -1,0 +1,238 @@
+{
+  "pairs": [
+    {
+      "seed": 11,
+      "baseline_median": 2.553671120501707,
+      "strategy_median": 1.9963339052231226,
+      "baseline_trips": 2822,
+      "strategy_trips": 3816,
+      "reduction_percent": 21.824940995890145,
+      "passed": true
+    },
+    {
+      "seed": 22,
+      "baseline_median": 2.49957974775839,
+      "strategy_median": 2.0491035108472646,
+      "baseline_trips": 2624,
+      "strategy_trips": 3599,
+      "reduction_percent": 18.022079004084993,
+      "passed": true
+    },
+    {
+      "seed": 33,
+      "baseline_median": 2.467220687969082,
+      "strategy_median": 1.9744899979862638,
+      "baseline_trips": 2677,
+      "strategy_trips": 3670,
+      "reduction_percent": 19.97108294306718,
+      "passed": true
+    },
+    {
+      "seed": 44,
+      "baseline_median": 2.4522163364328042,
+      "strategy_median": 1.9754539338282704,
+      "baseline_trips": 2868,
+      "strategy_trips": 3597,
+      "reduction_percent": 19.442102049530902,
+      "passed": true
+    },
+    {
+      "seed": 55,
+      "baseline_median": 2.5794927191838224,
+      "strategy_median": 1.9993130787367903,
+      "baseline_trips": 2547,
+      "strategy_trips": 3117,
+      "reduction_percent": 22.492005351757953,
+      "passed": true
+    }
+  ],
+  "runs": [
+    {
+      "seed": 11,
+      "policy": "baseline",
+      "final_step": 10000,
+      "trip_count": 2822,
+      "median_overhead": 2.553671120501707,
+      "mean_overhead": 3.2865694352801307,
+      "p90_overhead": 5.977622565565871,
+      "p95_overhead": 7.878847120846574,
+      "complaints": 755,
+      "complaint_rate": 0.2675407512402551,
+      "configuration_changes": 0,
+      "wall_seconds_including_startup": 197.128103017807,
+      "data_directory": "/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261111T091155Z/11-baseline"
+    },
+    {
+      "seed": 11,
+      "policy": "strategy",
+      "final_step": 10000,
+      "trip_count": 3816,
+      "median_overhead": 1.9963339052231226,
+      "mean_overhead": 2.384844537206747,
+      "p90_overhead": 3.9010554091533316,
+      "p95_overhead": 4.962704726869249,
+      "complaints": 561,
+      "complaint_rate": 0.1470125786163522,
+      "configuration_changes": 3,
+      "wall_seconds_including_startup": 221.1988649368286,
+      "data_directory": "/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261111T091155Z/11-strategy"
+    },
+    {
+      "seed": 22,
+      "policy": "baseline",
+      "final_step": 10000,
+      "trip_count": 2624,
+      "median_overhead": 2.49957974775839,
+      "mean_overhead": 3.3486745497598407,
+      "p90_overhead": 6.167010560722743,
+      "p95_overhead": 7.965020462906099,
+      "complaints": 636,
+      "complaint_rate": 0.2423780487804878,
+      "configuration_changes": 0,
+      "wall_seconds_including_startup": 201.8987307548523,
+      "data_directory": "/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261111T091912Z/22-baseline"
+    },
+    {
+      "seed": 22,
+      "policy": "strategy",
+      "final_step": 10000,
+      "trip_count": 3599,
+      "median_overhead": 2.0491035108472646,
+      "mean_overhead": 2.4127263422161085,
+      "p90_overhead": 3.8736370396376993,
+      "p95_overhead": 4.8871608348085935,
+      "complaints": 601,
+      "complaint_rate": 0.16699083078632954,
+      "configuration_changes": 7,
+      "wall_seconds_including_startup": 215.51802325248718,
+      "data_directory": "/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261111T091912Z/22-strategy"
+    },
+    {
+      "seed": 33,
+      "policy": "baseline",
+      "final_step": 10000,
+      "trip_count": 2677,
+      "median_overhead": 2.467220687969082,
+      "mean_overhead": 3.0875409860010103,
+      "p90_overhead": 5.386228227711744,
+      "p95_overhead": 6.970239917013778,
+      "complaints": 645,
+      "complaint_rate": 0.24094135225999253,
+      "configuration_changes": 0,
+      "wall_seconds_including_startup": 202.52769947052002,
+      "data_directory": "/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261111T091912Z/33-baseline"
+    },
+    {
+      "seed": 33,
+      "policy": "strategy",
+      "final_step": 10000,
+      "trip_count": 3670,
+      "median_overhead": 1.9744899979862638,
+      "mean_overhead": 2.3620359825782193,
+      "p90_overhead": 3.9065737391630786,
+      "p95_overhead": 4.911497053294921,
+      "complaints": 536,
+      "complaint_rate": 0.14604904632152588,
+      "configuration_changes": 5,
+      "wall_seconds_including_startup": 218.6565523147583,
+      "data_directory": "/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261111T091912Z/33-strategy"
+    },
+    {
+      "seed": 44,
+      "policy": "baseline",
+      "final_step": 10000,
+      "trip_count": 2868,
+      "median_overhead": 2.4522163364328042,
+      "mean_overhead": 3.1623230041929653,
+      "p90_overhead": 5.679702810773001,
+      "p95_overhead": 7.306698009650769,
+      "complaints": 733,
+      "complaint_rate": 0.25557880055788007,
+      "configuration_changes": 0,
+      "wall_seconds_including_startup": 204.1798961162567,
+      "data_directory": "/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261111T091912Z/44-baseline"
+    },
+    {
+      "seed": 44,
+      "policy": "strategy",
+      "final_step": 10000,
+      "trip_count": 3597,
+      "median_overhead": 1.9754539338282704,
+      "mean_overhead": 2.3844852521016904,
+      "p90_overhead": 3.7960812208821983,
+      "p95_overhead": 4.888854202275824,
+      "complaints": 556,
+      "complaint_rate": 0.15457325549068668,
+      "configuration_changes": 7,
+      "wall_seconds_including_startup": 211.87402892112732,
+      "data_directory": "/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261111T091912Z/44-strategy"
+    },
+    {
+      "seed": 55,
+      "policy": "baseline",
+      "final_step": 10000,
+      "trip_count": 2547,
+      "median_overhead": 2.5794927191838224,
+      "mean_overhead": 3.1983203724480695,
+      "p90_overhead": 5.527900587092937,
+      "p95_overhead": 6.833055849702114,
+      "complaints": 633,
+      "complaint_rate": 0.24852767962308597,
+      "configuration_changes": 0,
+      "wall_seconds_including_startup": 204.82358837127686,
+      "data_directory": "/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261111T091912Z/55-baseline"
+    },
+    {
+      "seed": 55,
+      "policy": "strategy",
+      "final_step": 10000,
+      "trip_count": 3117,
+      "median_overhead": 1.9993130787367903,
+      "mean_overhead": 2.460493198180835,
+      "p90_overhead": 3.917727671214251,
+      "p95_overhead": 5.265325597647032,
+      "complaints": 478,
+      "complaint_rate": 0.1533525826114854,
+      "configuration_changes": 7,
+      "wall_seconds_including_startup": 214.5022611618042,
+      "data_directory": "/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261111T091912Z/55-strategy"
+    }
+  ],
+  "completed_pairs": 5,
+  "requested_pairs": 5,
+  "requested_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "evaluation_complete": true,
+  "all_tested_seeds_pass": true,
+  "batches": [
+    "/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261111T091155Z",
+    "/Users/gbianchi/uni/adapsw/UPISAS/experiments/paired-20261111T091912Z"
+  ],
+  "provenance": {
+    "images": {
+      "crowdnav": "fas-evaluation/crowdnav:fe0635e97f54d083a7e1001f243bcaae922ee300234fa52122ca9b23f17464cd",
+      "api": "fas-evaluation/api:ae370b554766985dece166360881b75aeb9d6bec83eaddc56e96d82028f17224"
+    },
+    "horizon": 10000,
+    "source_sha256": {
+      "UPISAS/__init__.py": "fa9a4f2e794c78cb136caeb48be530f06b477c4df9f8fd0c7d92b434a9e38586",
+      "UPISAS/strategy.py": "fbbc88dabbb04413309975f70e7def1963465a3785f40333dec135b945a3db1a",
+      "UPISAS/knowledge.py": "4e4f7a3b04b039a145a895f2524f711d395b10a8a132123c5d9a26c344df5fb5",
+      "UPISAS/exceptions.py": "38bed3670e9166a0dcf3ef5a4d7ecfd89464aa56392cc5d5e6c52661051bc2a1",
+      "UPISAS/exemplars/crowdnav.py": "f60dc06e85d4527fd4fe1e89ec588af158d4b7d558f1de0179728112c7fb910a",
+      "UPISAS/strategies/my_strategy.py": "97f341622d85796db6963f00b8ad8d09a4f2caa943cde41ba75a76c8e98ad5e9",
+      "run_challenge.py": "87fbbd807eea467461f3c2fdee3949f44331bb3361d396e8923b03521cdaefa8"
+    },
+    "simulation_sha256": "608c680a703f546e82c4e25c4df2b840a0b9a9e8b23a7d70ea1d12dc4765b69f",
+    "python_version": "3.12.7 (v3.12.7:0b05ead877f, Sep 30 2024, 23:18:00) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "local_packages": {
+      "requests": "2.31.0",
+      "jsonschema": "4.19.2"
+    }
+  }
+}

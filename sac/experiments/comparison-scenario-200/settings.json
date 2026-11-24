@@ -1,0 +1,116 @@
+{
+  "seeds": [
+    601,
+    602,
+    603
+  ],
+  "ticks": 10000,
+  "initial": {
+    "route_random_sigma": 0.2,
+    "exploration_percentage": 0.0,
+    "max_speed_and_length_factor": 1,
+    "average_edge_duration_factor": 1,
+    "freshness_update_factor": 10,
+    "freshness_cut_off_value": 90,
+    "re_route_every_ticks": 60,
+    "total_car_counter": 750,
+    "edge_average_influence": 140
+  },
+  "models": {
+    "previous-sac-400": {
+      "source": "/Users/gbianchi/uni/adapsw/sac/experiments/sac-600-low-exploration-submission-400",
+      "model_id": "f29bf619f7d915fee9948f40634c37f3bad6884a0eda0918717dd009f3c7ffaa",
+      "checkpoint_sha256": "42a552c1cd3af9071d099f082d3e0551298a1fd63b2201d290a81137e62fea9a",
+      "features": [
+        "overhead",
+        "completion_rate",
+        "population",
+        "population_trend",
+        "exploration",
+        "rerouting"
+      ],
+      "settings": {
+        "settlement_ticks": 1200,
+        "window_ticks": 600,
+        "warmup_ticks": 200,
+        "overhead_scale": 3.0787950597099547,
+        "rate_scale": 0.3096153846153846,
+        "rate_floor": 0.2723333333333333,
+        "population_scale": 750,
+        "trend_ticks": 600,
+        "exploration_max": 0.1,
+        "reroute_min": 30,
+        "reroute_max": 150,
+        "throughput_weight": 1.0,
+        "retry_ticks": 200,
+        "max_attempts": 3,
+        "version": "relative-overhead-v1",
+        "calibration": "baseline-seed-101; normalization only; timing provisional",
+        "zero_exploration_for_negative_actions": true,
+        "reroute_midpoint": 60
+      }
+    },
+    "scenario-sac-200": {
+      "source": "/Users/gbianchi/uni/adapsw/sac/experiments/sac-200-scenario-trend-submission",
+      "model_id": "d89305cefe2f924ddf6c01483755a6df253f25945669d59b6c852fda9d810074",
+      "checkpoint_sha256": "5d6b62e3a6529b71e59dcc3e92d61601fe07d5cef34b08a1986a73ad06a741ab",
+      "features": [
+        "overhead",
+        "completion_rate",
+        "population",
+        "population_trend",
+        "exploration",
+        "rerouting",
+        "overhead_trend"
+      ],
+      "settings": {
+        "settlement_ticks": 1050,
+        "window_ticks": 600,
+        "warmup_ticks": 200,
+        "overhead_scale": 3.0787950597099547,
+        "rate_scale": 0.3096153846153846,
+        "rate_floor": 0.2723333333333333,
+        "population_scale": 750,
+        "trend_ticks": 600,
+        "exploration_max": 0.1,
+        "reroute_min": 30,
+        "reroute_max": 150,
+        "throughput_weight": 1.0,
+        "retry_ticks": 200,
+        "max_attempts": 3,
+        "version": "relative-overhead-v1",
+        "calibration": "baseline-seed-101; normalization only; timing provisional",
+        "zero_exploration_for_negative_actions": true,
+        "reroute_midpoint": 60,
+        "include_overhead_trend": true
+      }
+    }
+  },
+  "scenario": {
+    "enabled": true,
+    "horizon_ticks": 10000,
+    "initial_target_cars": 750,
+    "population_change": {
+      "tick": 2000,
+      "target_cars": 1000
+    },
+    "corridor": {
+      "edges": [
+        "2846#5",
+        "-2846#5",
+        "2846#6",
+        "-2846#6"
+      ],
+      "close_tick": 3000,
+      "reopen_tick": 7000,
+      "closed_max_speed_m_per_s": 0,
+      "restored_max_speed_m_per_s": 25
+    },
+    "sumo_teleport_wait_seconds": 120,
+    "schedule": "Repeat the same event schedule on fresh simulator seeds. Actor observes monitored traffic features.",
+    "information_available_to_actor": "Seven traffic and configuration features. Event schedule and road identities are absent from the actor inputs."
+  },
+  "policy_timing": "Each frozen actor uses its own checkpoint's settlement and measurement settings.",
+  "primary_metric": "Equal-seed mean of whole-run individual-trip mean overhead",
+  "interpretation": "Three matched fresh seeds, one stochastic execution per policy and seed. Completed smart-car trips only. The trials combine several training changes."
+}

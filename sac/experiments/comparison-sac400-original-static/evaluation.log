@@ -1,0 +1,7 @@
+Starting original static, seed 305
+Seed 305 complete: {'policy': 'static', 'seed': 305, 'ticks': 10000, 'completed_trips': 2581, 'mean_overhead': 3.223046489567835, 'median_overhead': 2.5061880633051126, 'p95_overhead': 7.457310361080712, 'complaint_rate': 0.2572646261139093, 'configuration_changes': 0, 'wall_seconds': 200.66215841600206}
+Starting original static, seed 306
+Seed 306 complete: {'policy': 'static', 'seed': 306, 'ticks': 10000, 'completed_trips': 2481, 'mean_overhead': 3.2677108063535583, 'median_overhead': 2.504912486540585, 'p95_overhead': 7.795812164397376, 'complaint_rate': 0.24989923417976623, 'configuration_changes': 0, 'wall_seconds': 198.34790287498618}
+Starting original static, seed 307
+Seed 307 complete: {'policy': 'static', 'seed': 307, 'ticks': 10000, 'completed_trips': 2420, 'mean_overhead': 3.1558180407202507, 'median_overhead': 2.4510485368318617, 'p95_overhead': 7.366397040243684, 'complaint_rate': 0.23305785123966943, 'configuration_changes': 0, 'wall_seconds': 197.45485049998388}
+[{"policy": "static", "mean_overhead": 3.2155251122138813, "median_overhead": 2.48738302889252, "p95_overhead": 7.539839855240591, "completed_trips": 2494, "complaint_rate": 0.246740570511115}, {"policy": "sac-400", "mean_overhead": 2.41632958495154, "median_overhead": 2.0227682491991, "p95_overhead": 4.96671690803547, "completed_trips": 3233.3333333333335, "complaint_rate": 0.16202745362631168}]

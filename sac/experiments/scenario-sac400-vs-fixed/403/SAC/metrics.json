@@ -1,0 +1,13 @@
+{
+  "policy": "SAC",
+  "seed": 403,
+  "ticks": 10000,
+  "completed_trips": 3127,
+  "mean_overhead": 3.319053246380025,
+  "median_overhead": 2.2698217484246586,
+  "p95_overhead": 9.384462092942716,
+  "complaint_rate": 0.22257755036776464,
+  "configuration_changes": 2,
+  "wall_seconds": 225.30436916596955,
+  "teleports": 1583
+}

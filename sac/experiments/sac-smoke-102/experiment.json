@@ -1,0 +1,10 @@
+{
+  "kind": "integration-smoke-only",
+  "python": "3.12.7",
+  "learner_seed": 0,
+  "first_simulator_seed": 102,
+  "requested_transitions": 2,
+  "episode_ticks": 10000,
+  "settlement_validation": "provisional; duration heuristic, not a clean-cohort guarantee",
+  "resume": null
+}

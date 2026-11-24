@@ -1,0 +1,20 @@
+{
+  "objective": "Finish 200 SAC transitions, freeze the final actor, compare with static and exact prior rule-based strategy on fresh matched seed 301; output results and PNG plots.",
+  "latest_user_direction": "Abort every attempt to make the simulation faster. Original simulation worker/runtime restored; no Docker CPU/RAM/image changes; one serial rollout.",
+  "settings_file": "/Users/gbianchi/uni/adapsw/sac/SAC_SETTINGS.json",
+  "training_pid": 89328,
+  "training_tool_session": 71907,
+  "comparison_watcher_pid": 89626,
+  "comparison_tool_session": 15310,
+  "training_output": "experiments/sac-200-native",
+  "comparison_output": "experiments/comparison-sac-200-seed301",
+  "comparison_automation": "Watcher starts compare_policies.py after training_result.json appears.",
+  "submission_output": "experiments/sac-200-native-submission",
+  "budget": "200 complete SAC transitions, including 32 warmup transitions; 168 expected gradient updates; final checkpoint checkpoint-000200.",
+  "tests": "20 tests passed; first episode 40 transitions and 41 windows independently verified against raw trip events.",
+  "pending": null,
+  "previous_repositories": "UPISAS and Crowdnav-FAS2024 remain untouched. Root sac workspace is separate and is not itself a git repository.",
+  "status": "complete",
+  "completion": "200 transitions and 168 updates; all five episodes audited; all three evaluation policies completed at tick 10000 on seed 301; PNG plots generated; no commits.",
+  "verification": "experiments/comparison-sac-200-seed301/verification.json"
+}

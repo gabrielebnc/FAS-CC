@@ -1,0 +1,24 @@
+Starting new-sac on seed 302
+{"policy": "new-sac", "seed": 302, "ticks": 10000, "completed_trips": 2774, "mean_overhead": 2.7969288446121805, "median_overhead": 2.19410344569445, "p95_overhead": 6.366855330632982, "complaint_rate": 0.19610670511896178, "configuration_changes": 4, "wall_seconds": 198.9100539170031, "model_id": "1bb8bb46fab4a5c8c1430e51a2f94a97427f5c2098aefc236655d8e5dccccaee"}
+Starting original-sac on seed 302
+{"policy": "original-sac", "seed": 302, "ticks": 10000, "completed_trips": 2675, "mean_overhead": 3.0197553996615074, "median_overhead": 2.3568559492248395, "p95_overhead": 7.019589218021159, "complaint_rate": 0.2366355140186916, "configuration_changes": 2, "wall_seconds": 200.40176733297994, "model_id": "2894fd85f1fc48b644562c84574b42a365f24e54dabca462f95bf2d92b8a9c37"}
+Starting rule-based on seed 302
+{"policy": "rule-based", "seed": 302, "ticks": 10000, "completed_trips": 3189, "mean_overhead": 2.450564578389007, "median_overhead": 2.0515280676123404, "p95_overhead": 5.133769608527693, "complaint_rate": 0.16745061147695203, "configuration_changes": 28, "wall_seconds": 211.8746326249966}
+Starting static on seed 302
+{"policy": "static", "seed": 302, "ticks": 10000, "completed_trips": 2408, "mean_overhead": 3.3702373527028664, "median_overhead": 2.573262183793207, "p95_overhead": 8.12037799081873, "complaint_rate": 0.2599667774086379, "configuration_changes": 0, "wall_seconds": 203.46084162502666}
+Starting new-sac on seed 303
+{"policy": "new-sac", "seed": 303, "ticks": 10000, "completed_trips": 3041, "mean_overhead": 2.74413691095046, "median_overhead": 2.1838672241221078, "p95_overhead": 6.15790078863936, "complaint_rate": 0.20124958895100295, "configuration_changes": 4, "wall_seconds": 201.12795937500778, "model_id": "1bb8bb46fab4a5c8c1430e51a2f94a97427f5c2098aefc236655d8e5dccccaee"}
+Starting original-sac on seed 303
+{"policy": "original-sac", "seed": 303, "ticks": 10000, "completed_trips": 2718, "mean_overhead": 3.055485892598128, "median_overhead": 2.377907615380428, "p95_overhead": 7.072706613909414, "complaint_rate": 0.24245768947755703, "configuration_changes": 2, "wall_seconds": 199.20295679199626, "model_id": "2894fd85f1fc48b644562c84574b42a365f24e54dabca462f95bf2d92b8a9c37"}
+Starting rule-based on seed 303
+{"policy": "rule-based", "seed": 303, "ticks": 10000, "completed_trips": 3206, "mean_overhead": 2.507178025902037, "median_overhead": 2.0266658311994066, "p95_overhead": 5.135757487694946, "complaint_rate": 0.16281971303805365, "configuration_changes": 26, "wall_seconds": 205.9916380000068}
+Starting static on seed 303
+{"policy": "static", "seed": 303, "ticks": 10000, "completed_trips": 2541, "mean_overhead": 3.305470468955448, "median_overhead": 2.5259433329097623, "p95_overhead": 8.350380681462854, "complaint_rate": 0.2377016922471468, "configuration_changes": 0, "wall_seconds": 197.1020578329917}
+Starting new-sac on seed 304
+{"policy": "new-sac", "seed": 304, "ticks": 10000, "completed_trips": 3089, "mean_overhead": 2.7538300870216914, "median_overhead": 2.2394184429118735, "p95_overhead": 5.8573863325953175, "complaint_rate": 0.19941728714794432, "configuration_changes": 4, "wall_seconds": 199.8908564579906, "model_id": "1bb8bb46fab4a5c8c1430e51a2f94a97427f5c2098aefc236655d8e5dccccaee"}
+Starting original-sac on seed 304
+{"policy": "original-sac", "seed": 304, "ticks": 10000, "completed_trips": 3052, "mean_overhead": 2.859221667128856, "median_overhead": 2.300076327398054, "p95_overhead": 6.445476426850869, "complaint_rate": 0.21559633027522937, "configuration_changes": 2, "wall_seconds": 195.28331862497726, "model_id": "2894fd85f1fc48b644562c84574b42a365f24e54dabca462f95bf2d92b8a9c37"}
+Starting rule-based on seed 304
+{"policy": "rule-based", "seed": 304, "ticks": 10000, "completed_trips": 3706, "mean_overhead": 2.3628059511429256, "median_overhead": 2.0123060883031876, "p95_overhead": 4.775751552246685, "complaint_rate": 0.15920129519697787, "configuration_changes": 16, "wall_seconds": 205.3450757919927}
+Starting static on seed 304
+{"policy": "static", "seed": 304, "ticks": 10000, "completed_trips": 2790, "mean_overhead": 3.0806638058260196, "median_overhead": 2.4612359453556634, "p95_overhead": 7.144170099616297, "complaint_rate": 0.24193548387096775, "configuration_changes": 0, "wall_seconds": 196.9018088330049}

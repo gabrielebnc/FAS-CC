@@ -1,0 +1,13 @@
+comparison,seed,overhead_difference,completed_trips_difference
+raise exploration to 15% at 60 ticks,302,0.4165930111180538,-401
+raise exploration to 15% at 60 ticks,303,0.2618347964412364,-375
+raise exploration to 15% at 60 ticks,304,0.26794151983010517,-362
+raise exploration to 15% at 150 ticks,302,0.2490323464023696,-329
+raise exploration to 15% at 150 ticks,303,0.1810099606088067,-352
+raise exploration to 15% at 150 ticks,304,0.3316677215423094,-282
+shorten interval to 60 ticks at 0%,302,-0.044130428792700904,-40
+shorten interval to 60 ticks at 0%,303,0.0013944754081052224,-77
+shorten interval to 60 ticks at 0%,304,-0.05260538113143998,88
+shorten interval to 60 ticks at 15%,302,0.1234302359229833,-112
+shorten interval to 60 ticks at 15%,303,0.08221931124053494,-100
+shorten interval to 60 ticks at 15%,304,-0.1163315828436442,8

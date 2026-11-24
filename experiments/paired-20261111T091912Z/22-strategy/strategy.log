@@ -1,0 +1,211 @@
+Waiting for CrowdNav: No monitoring snapshot yet
+Waiting for CrowdNav: No monitoring snapshot yet
+Waiting for CrowdNav: No monitoring snapshot yet
+Waiting for CrowdNav: No monitoring snapshot yet
+Waiting for CrowdNav: No monitoring snapshot yet
+Waiting for CrowdNav: No monitoring snapshot yet
+Waiting for CrowdNav: No monitoring snapshot yet
+Waiting for CrowdNav: No monitoring snapshot yet
+{   'properties': {   'car_stats': {   'properties': {   'driving_car_counter': {   'description': 'Counter '
+                                                                                                   'for '
+                                                                                                   'driving '
+                                                                                                   'cars',
+                                                                                    'type': 'integer'},
+                                                         'routing_duration': {   'description': 'The '
+                                                                                                'time '
+                                                                                                'it '
+                                                                                                'takes '
+                                                                                                'for '
+                                                                                                'routing',
+                                                                                 'type': 'integer'},
+                                                         'step': {   'description': 'Current '
+                                                                                    'step',
+                                                                     'type': 'integer'},
+                                                         'tick_duration': {   'description': 'Tick '
+                                                                                             'duration',
+                                                                              'type': 'integer'},
+                                                         'total_trip_average': {   'description': 'Average '
+                                                                                                  'duration '
+                                                                                                  'of '
+                                                                                                  'total '
+                                                                                                  'trips',
+                                                                                   'type': 'number'},
+                                                         'total_trip_overhead_average': {   'description': 'Average '
+                                                                                                           'overhead '
+                                                                                                           'of '
+                                                                                                           'total '
+                                                                                                           'trips',
+                                                                                            'type': 'number'},
+                                                         'total_trips': {   'description': 'Total '
+                                                                                           'number '
+                                                                                           'of '
+                                                                                           'trips',
+                                                                            'type': 'integer'}},
+                                       'type': 'object'},
+                      'configs': {   'properties': {   'average_edge_duration_factor': {   'description': 'How '
+                                                                                                          'much '
+                                                                                                          'the '
+                                                                                                          'averageEdgeDurationFactor '
+                                                                                                          'influences '
+                                                                                                          'the '
+                                                                                                          'routing',
+                                                                                           'type': 'number'},
+                                                       'edge_average_influence': {   'description': 'Edge '
+                                                                                                    'average '
+                                                                                                    'influence',
+                                                                                     'type': 'integer'},
+                                                       'exploration_percentage': {   'description': 'The '
+                                                                                                    'percentage '
+                                                                                                    'of '
+                                                                                                    'routes '
+                                                                                                    'we '
+                                                                                                    'want '
+                                                                                                    'to '
+                                                                                                    'use '
+                                                                                                    'for '
+                                                                                                    'exploration',
+                                                                                     'type': 'number'},
+                                                       'freshness_cut_off_value': {   'description': 'If '
+                                                                                                     'data '
+                                                                                                     'is '
+                                                                                                     'older '
+                                                                                                     'than '
+                                                                                                     'this, '
+                                                                                                     'it '
+                                                                                                     'is '
+                                                                                                     'not '
+                                                                                                     'considered '
+                                                                                                     'in '
+                                                                                                     'the '
+                                                                                                     'algorithm',
+                                                                                      'type': 'number'},
+                                                       'freshness_update_factor': {   'description': 'How '
+                                                                                                     'much '
+                                                                                                     'the '
+                                                                                                     'freshnessUpdateFactor '
+                                                                                                     'influences '
+                                                                                                     'the '
+                                                                                                     'routing',
+                                                                                      'type': 'number'},
+                                                       'max_speed_and_length_factor': {   'description': 'How '
+                                                                                                         'much '
+                                                                                                         'the '
+                                                                                                         'length/speed '
+                                                                                                         'influences '
+                                                                                                         'the '
+                                                                                                         'routing',
+                                                                                          'type': 'number'},
+                                                       're_route_every_ticks': {   'description': 'Check '
+                                                                                                  'for '
+                                                                                                  'a '
+                                                                                                  'new '
+                                                                                                  'route '
+                                                                                                  'every '
+                                                                                                  'x '
+                                                                                                  'times '
+                                                                                                  'after '
+                                                                                                  'the '
+                                                                                                  'car '
+                                                                                                  'starts',
+                                                                                   'type': 'integer'},
+                                                       'route_random_sigma': {   'description': 'The '
+                                                                                                'randomization '
+                                                                                                'sigma '
+                                                                                                'of '
+                                                                                                'edge '
+                                                                                                'weights',
+                                                                                 'type': 'number'},
+                                                       'total_car_counter': {   'description': 'The '
+                                                                                               'total '
+                                                                                               'amount '
+                                                                                               'of '
+                                                                                               'cars '
+                                                                                               'that '
+                                                                                               'should '
+                                                                                               'be '
+                                                                                               'in '
+                                                                                               'the '
+                                                                                               'system',
+                                                                                'type': 'integer'},
+                                                       'total_complaints': {   'description': 'The '
+                                                                                              'total '
+                                                                                              'of '
+                                                                                              'all '
+                                                                                              'trip '
+                                                                                              'complaints',
+                                                                               'type': 'integer'}},
+                                     'type': 'object'}},
+    'type': 'object'}
+Step 64: exploration=0.5, reroute interval=600
+[Execute] Configuration sent: {'route_random_sigma': 0.2, 'exploration_percentage': 0.0, 'max_speed_and_length_factor': 1, 'average_edge_duration_factor': 1, 'freshness_update_factor': 10, 'freshness_cut_off_value': 90, 're_route_every_ticks': 60, 'total_car_counter': 750, 'edge_average_influence': 140}
+Step 225: exploration=0.0, reroute interval=60
+Step 384: exploration=0.0, reroute interval=60
+Step 540: exploration=0.0, reroute interval=60
+Step 699: exploration=0.0, reroute interval=60
+Step 853: exploration=0.0, reroute interval=60
+Step 1009: exploration=0.0, reroute interval=60
+Step 1165: exploration=0.0, reroute interval=60
+Step 1319: exploration=0.0, reroute interval=60
+[Execute] Configuration sent: {'route_random_sigma': 0.2, 'exploration_percentage': 0.0, 'max_speed_and_length_factor': 1.0, 'average_edge_duration_factor': 1.0, 'freshness_update_factor': 10.0, 'freshness_cut_off_value': 90.0, 're_route_every_ticks': 45, 'total_car_counter': 750, 'edge_average_influence': 140.0}
+Step 1488: exploration=0.0, reroute interval=45
+Step 1645: exploration=0.0, reroute interval=45
+Step 1803: exploration=0.0, reroute interval=45
+Step 1959: exploration=0.0, reroute interval=45
+Step 2122: exploration=0.0, reroute interval=45
+Step 2281: exploration=0.0, reroute interval=45
+Step 2441: exploration=0.0, reroute interval=45
+Step 2599: exploration=0.0, reroute interval=45
+[Execute] Configuration sent: {'route_random_sigma': 0.2, 'exploration_percentage': 0.0, 'max_speed_and_length_factor': 1.0, 'average_edge_duration_factor': 1.0, 'freshness_update_factor': 10.0, 'freshness_cut_off_value': 90.0, 're_route_every_ticks': 60, 'total_car_counter': 750, 'edge_average_influence': 140.0}
+Step 2753: exploration=0.0, reroute interval=60
+Step 2916: exploration=0.0, reroute interval=60
+Step 3079: exploration=0.0, reroute interval=60
+Step 3239: exploration=0.0, reroute interval=60
+Step 3396: exploration=0.0, reroute interval=60
+Step 3550: exploration=0.0, reroute interval=60
+Step 3709: exploration=0.0, reroute interval=60
+Step 3869: exploration=0.0, reroute interval=60
+Step 4029: exploration=0.0, reroute interval=60
+Step 4184: exploration=0.0, reroute interval=60
+Step 4339: exploration=0.0, reroute interval=60
+Step 4499: exploration=0.0, reroute interval=60
+[Execute] Configuration sent: {'route_random_sigma': 0.2, 'exploration_percentage': 0.0, 'max_speed_and_length_factor': 1.0, 'average_edge_duration_factor': 1.0, 'freshness_update_factor': 10.0, 'freshness_cut_off_value': 90.0, 're_route_every_ticks': 45, 'total_car_counter': 750, 'edge_average_influence': 140.0}
+Step 4649: exploration=0.0, reroute interval=45
+Step 4809: exploration=0.0, reroute interval=45
+Step 4950: exploration=0.0, reroute interval=45
+Step 5091: exploration=0.0, reroute interval=45
+Step 5239: exploration=0.0, reroute interval=45
+Step 5380: exploration=0.0, reroute interval=45
+Step 5530: exploration=0.0, reroute interval=45
+Step 5687: exploration=0.0, reroute interval=45
+Step 5830: exploration=0.0, reroute interval=45
+Step 5979: exploration=0.0, reroute interval=45
+[Execute] Configuration sent: {'route_random_sigma': 0.2, 'exploration_percentage': 0.0, 'max_speed_and_length_factor': 1.0, 'average_edge_duration_factor': 1.0, 'freshness_update_factor': 10.0, 'freshness_cut_off_value': 90.0, 're_route_every_ticks': 30, 'total_car_counter': 750, 'edge_average_influence': 140.0}
+Step 6129: exploration=0.0, reroute interval=30
+Step 6277: exploration=0.0, reroute interval=30
+Step 6423: exploration=0.0, reroute interval=30
+Step 6567: exploration=0.0, reroute interval=30
+Step 6709: exploration=0.0, reroute interval=30
+Step 6858: exploration=0.0, reroute interval=30
+Step 7006: exploration=0.0, reroute interval=30
+Step 7149: exploration=0.0, reroute interval=30
+Step 7299: exploration=0.0, reroute interval=30
+Step 7446: exploration=0.0, reroute interval=30
+Step 7596: exploration=0.0, reroute interval=30
+Step 7745: exploration=0.0, reroute interval=30
+Step 7899: exploration=0.0, reroute interval=30
+Step 8039: exploration=0.0, reroute interval=30
+Step 8185: exploration=0.0, reroute interval=30
+[Execute] Configuration sent: {'route_random_sigma': 0.2, 'exploration_percentage': 0.0, 'max_speed_and_length_factor': 1.0, 'average_edge_duration_factor': 1.0, 'freshness_update_factor': 10.0, 'freshness_cut_off_value': 90.0, 're_route_every_ticks': 45, 'total_car_counter': 750, 'edge_average_influence': 140.0}
+Step 8341: exploration=0.0, reroute interval=45
+Step 8499: exploration=0.0, reroute interval=45
+Step 8659: exploration=0.0, reroute interval=45
+Step 8817: exploration=0.0, reroute interval=45
+Step 8979: exploration=0.0, reroute interval=45
+Step 9139: exploration=0.0, reroute interval=45
+Step 9299: exploration=0.0, reroute interval=45
+Step 9459: exploration=0.0, reroute interval=45
+[Execute] Configuration sent: {'route_random_sigma': 0.2, 'exploration_percentage': 0.0, 'max_speed_and_length_factor': 1.0, 'average_edge_duration_factor': 1.0, 'freshness_update_factor': 10.0, 'freshness_cut_off_value': 90.0, 're_route_every_ticks': 60, 'total_car_counter': 750, 'edge_average_influence': 140.0}
+Step 9619: exploration=0.0, reroute interval=60
+Step 9789: exploration=0.0, reroute interval=60
+Step 9950: exploration=0.0, reroute interval=60
+Finished at step 10000 (target: 10000).

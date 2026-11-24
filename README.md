@@ -1,5 +1,27 @@
 # CrowdNav challenge
 
+## Experiment archive
+
+Branch `experiment/sac-crowdnav-20261124` records the rule-based and SAC experiments through 24 November 2026. The SAC workspace is under [`sac/`](sac/README.md), including its CrowdNav source snapshot, training and measurement tools, settings, diagnostics, raw trip logs, plots and checkpoints. Earlier rule-based runs are under [`experiments/`](experiments).
+
+[`sac/CHECKPOINTS.md`](sac/CHECKPOINTS.md) describes the training attempts. [`sac/ARCHIVE.json`](sac/ARCHIVE.json) indexes 74 full training checkpoints and seven deployment checkpoints with SHA-256 hashes. Full checkpoints contain the model, optimizers, entropy state, replay buffer, random generator state and next simulator seed. Deployment bundles contain three Python files, requirements and the JSON actor.
+
+The latest attempt trained for 200 windows on fresh 10,000-tick disruption episodes, using seven state inputs, corrected critic inputs, four gradient updates per eligible sample, initial automatic entropy 0.01 and 1,050 settlement ticks followed by 600 measurement ticks. Each episode increases the target from 750 to 1,000 cars at tick 2,000, blocks a central corridor at tick 3,000 and reopens it at tick 7,000. [Full settings](sac/SAC_SETTINGS_scenario_200.json)
+
+The latest comparison averages three fresh seeds, 601–603. It measures completed smart-car trips with the existing SUMO teleport behavior.
+
+| Policy | Mean trip overhead | Completed trips per run |
+| --- | ---: | ---: |
+| Fixed 0% exploration / 60-tick rerouting | 3.3927 | 2,906.7 |
+| Previous six-input SAC-400 | 3.4413 | 2,782.0 |
+| Scenario-trained seven-input SAC-200 | 3.4520 | 2,961.7 |
+
+The scenario-trained policy had 1.75% higher mean overhead and 1.89% more completed trips than fixed routing. Training departure carryover averaged 11.37%, and 140 of 198 changed-routing windows exceeded the 8% target. These three-seed results support further investigation of timing and adaptation performance. [Per-seed measurements](sac/experiments/comparison-scenario-200/per_seed.csv) · [Overhead PNG](sac/experiments/comparison-scenario-200/overhead_comparison.png) · [Completed-trips PNG](sac/experiments/comparison-scenario-200/completed_trips_comparison.png)
+
+Run SAC tooling from `sac/`. Its guide covers environment setup and testing. Existing output directories hold recorded evidence, and a new training run requires a fresh output path. The source snapshots and recorded Docker metadata preserve the context of historical runs. The original CrowdNav working-tree changes are also available as [`sac/Crowdnav-local-changes.patch`](sac/Crowdnav-local-changes.patch).
+
+## Earlier reactive workflow
+
 The strategy and dashboard run locally in Python. CrowdNav, its HTTP API, and
 Kafka run in the separate CrowdNav backbone repository. The evaluator starts
 isolated backbone containers and runs the strategy as a local subprocess.

@@ -1,0 +1,79 @@
+{
+  "summary": {
+    "seed": 103,
+    "final_step": 10000,
+    "trip_count": 3076,
+    "configs": [
+      {
+        "step": 1,
+        "configuration": {
+          "exploration_percentage": 0.5,
+          "route_random_sigma": 0.2,
+          "max_speed_and_length_factor": 1,
+          "average_edge_duration_factor": 1,
+          "freshness_update_factor": 10,
+          "freshness_cut_off_value": 90,
+          "re_route_every_ticks": 600,
+          "total_car_counter": 750,
+          "edge_average_influence": 140
+        }
+      },
+      {
+        "step": 2610,
+        "configuration": {
+          "exploration_percentage": 0.2520280077428171,
+          "route_random_sigma": 0.2,
+          "max_speed_and_length_factor": 1.0,
+          "average_edge_duration_factor": 1.0,
+          "freshness_update_factor": 10.0,
+          "freshness_cut_off_value": 90.0,
+          "re_route_every_ticks": 125,
+          "total_car_counter": 750,
+          "edge_average_influence": 140.0
+        }
+      },
+      {
+        "step": 5020,
+        "configuration": {
+          "exploration_percentage": 0.24194704633046865,
+          "route_random_sigma": 0.2,
+          "max_speed_and_length_factor": 1.0,
+          "average_edge_duration_factor": 1.0,
+          "freshness_update_factor": 10.0,
+          "freshness_cut_off_value": 90.0,
+          "re_route_every_ticks": 128,
+          "total_car_counter": 750,
+          "edge_average_influence": 140.0
+        }
+      }
+    ],
+    "warmup_ticks": 200,
+    "smart_car_percentage": 0.2,
+    "map": "./app/map/eichstaedt.net.xml",
+    "sumo_version": [
+      20,
+      "SUMO 1.18.0"
+    ],
+    "published_overhead": 2.96327804414082,
+    "published_duration": 504.3750406239847,
+    "mean_overhead": 2.9642413985114877,
+    "median_overhead": 2.3778632585260437,
+    "p95_overhead": 6.7188709077800555,
+    "mean_duration": 504.53901170351105,
+    "p95_duration": 1283.5,
+    "complaint_rate": 0.238296488946684
+  },
+  "window_audit": {
+    "transitions": 2,
+    "windows_checked": 3,
+    "maximum_mean_error": 4.440892098500626e-14
+  },
+  "training_dependencies": "blocked during deployment",
+  "files": [
+    "UPISAS/exemplars/crowdnav.py",
+    "UPISAS/strategies/my_strategy.py",
+    "run_challenge.py",
+    "requirements.txt",
+    "checkpoint.json"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "smoke_deployment.py": "fa7b4ec9e243a7ce0bfb6e9ae976271642f5fbfcafaa65b88f51464c96506130",
+  "training_runtime.py": "4819a94b8e5297c606a29284bc8dc0047866a5a294ca63659bc967d64bb9c47a",
+  "requirements.txt": "965e75aaa304c31c83b76cd44709336bd65d32fbaeec98e6a0b91987042cfc2f",
+  "simulation_worker.py": "0520e080cda61fedfa3eb025f191dc49ae779de085396406a0b453823573d82a",
+  "train_parallel.py": "9cda8bc505487941b1f1adb6621621d33fcc1cc2f33273cc1eaa87cd64863889",
+  "verify_run.py": "d7cdbfc452f22a71ae50b94ce05eca7e18c7efb4dc71f146f44c45fc2d4931f8",
+  "benchmark_runtime.py": "f7058ed9ffe44e4a025c67a35c014e709ab479dcc1df0c5fe3ce7615d03bfb50",
+  "run_challenge.py": "c40023fc771f217f2db38613d29b6ca130916c7bf9972bb9be9434dbe4af71da",
+  "requirements-training.txt": "77c31d66dda3532a22953c829d5852e40d5b95ba05df550dd4ecf954cbfadd79",
+  "training.py": "31fea025a08b57ae17d27e2159e42a5328f3a314831129815b6df29cd19a2f1a",
+  "requirements-training-lock.txt": "5318fdfa75c0311dbea8c22f0e4a1e054baceb42bd9aabf4ecbddd7f9e898e06",
+  "UPISAS/__init__.py": "5f400d4c8351e03f9db5b62a858a2ca1f99f0c76ef0b54215b6180a394c3320e",
+  "UPISAS/strategy.py": "e383e2e7fa852495a7ad156b520f0d9e0f577346c6983444cdeb3f919ec5a447",
+  "UPISAS/exceptions.py": "38bed3670e9166a0dcf3ef5a4d7ecfd89464aa56392cc5d5e6c52661051bc2a1",
+  "UPISAS/knowledge.py": "4e4f7a3b04b039a145a895f2524f711d395b10a8a132123c5d9a26c344df5fb5",
+  "UPISAS/strategies/my_strategy.py": "947fbabdde2018f44109ed78f7736f23fddd98aeff52cd713c8add71e0a8920c",
+  "UPISAS/strategies/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "UPISAS/exemplars/crowdnav.py": "3b6409a1facfb59e1b7bde2ea55234a24161bb7198287255b86b4848d2bb6ecf",
+  "UPISAS/exemplars/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
